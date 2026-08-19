@@ -1,0 +1,37 @@
+<!--
+   This site provides a tool for planning out builds in the game Hades.
+   
+   @author: Plueschgiraffe
+   @date: 27.08.2021 
+-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- meta elements -->
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- font import -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400;500&family=Alegreya+Sans:wght@300;400;500&display=swap"
+         rel="stylesheet"
+      />
+      <!-- icon and title-->
+      <link rel="icon" href="img/Other/icon.webp" />
+      <title>Hades Build Board</title>
+      <!-- style and script -->
+      <link rel="stylesheet" href="tool_style.css" />
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <!-- main structure -->
+      <div id="head"></div>
+      <div id="side" class="hidden smooth"></div>
+      <div id="body"></div>
+      <!-- overlay and overbox -->
+      <div id="overlay" onclick="closeOverlay()"></div>
+      <div id="overbox"></div>
+   </body>
+</html>

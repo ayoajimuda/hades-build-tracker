@@ -1,0 +1,205 @@
+/*
+ * This is the stylesheet for the site. It includes: 
+ * styles for text, links, builds etc.
+ * 
+ * @author: Plueschgiraffe
+ * @date: 31.08.2021 
+ */
+
+/* -------------------------- global variables -------------------------- */
+:root {
+   /* colors */
+   --body-gray: rgb(25, 25, 25);
+   --header-gray: rgb(25, 30, 35);
+   --border-gray: rgb(180, 180, 180);
+   --link-gray: rgb(30, 35, 40);
+   --line-gray: rgb(100, 100, 100);
+   --text-white: rgb(205, 205, 205);
+   --link-red: rgb(215, 45, 80);
+   --title-orange: rgb(230, 135, 85);
+   --skill-gray: rgb(45, 45, 45);
+   /* other */
+   --max-width: 1000px;
+}
+
+/* -------------------------- scrollbar style -------------------------- */
+::-webkit-scrollbar {
+   width: 12px;
+}
+
+::-webkit-scrollbar-track {
+   background: rgb(60, 60, 60);
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgb(110, 110, 110);
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: var(--link-red);
+}
+
+/* -------------------------- basic page style -------------------------- */
+body {
+   background-color: var(--body-gray);
+   color: var(--text-white);
+   margin: 0px;
+   font-size: 22px;
+   font-family: 'Ubuntu';
+   font-weight: 300;
+   padding-bottom: 50px;
+}
+
+/* -------------------------- header style -------------------------- */
+.header {
+   position: sticky;
+   top: 0px;
+   background-color: var(--header-gray);
+   border-bottom: 2px solid var(--border-gray);
+   box-shadow: 0 0 4px var(--border-gray);
+   font-weight: 400;
+   font-size: 24px;
+   padding: 20px;
+}
+
+.header a {
+   margin-right: 25px;
+   color: var(--text-white);
+   text-decoration: none;
+   transition: all 100ms ease-in-out;
+}
+
+.header a.underline {
+   border-bottom: 1.5px solid var(--link-red);
+   padding-bottom: 3px;
+}
+
+.header a.right {
+   float: right;
+}
+
+.header a:hover {
+   color: var(--link-red);
+   cursor: pointer;
+}
+
+.link-container {
+   max-width: var(--max-width);
+   margin: auto;
+}
+
+/* -------------------------- main style -------------------------- */
+.main {
+   margin: auto;
+   max-width: var(--max-width);
+}
+
+.main a {
+   text-decoration: none;
+   color: var(--link-red);
+   background-color: var(--link-gray);
+   border-radius: 5px;
+}
+
+.section {
+   margin-top: 50px;
+}
+
+.content {
+   border-left: 2px solid var(--line-gray);
+   padding-left: 20px;
+   margin-bottom: 30px;
+}
+
+h1 {
+   font-size: 34px;
+   font-weight: 400;
+   margin-top: 40px;
+   color: var(--title-orange);
+   margin: 0px;
+   margin-bottom: 20px;
+}
+
+p {
+   margin: 0px;
+   margin-top: 15px;
+   line-height: 32px;
+}
+
+em {
+   color: var(--link-red);
+   background-color: var(--link-gray);
+   border-radius: 5px;
+   font-style: normal;
+}
+
+/* -------------------------- list style -------------------------- */
+ul {
+   list-style: none;
+   line-height: 35px;
+}
+
+li::before {
+   font-weight: bold;
+   display: inline-block;
+   width: 1em;
+   content: '\2022';
+}
+
+li.fix::before {
+   content: '\21AA';
+   color: lightgreen;
+   width: 1.5em;
+   margin-left: 25px;
+}
+
+li.fix:not(.last)::before {
+   margin-bottom: 10px;
+}
+
+/* -------------------------- build style -------------------------- */
+.preview-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 300px);
+   margin-top: 30px;
+   gap: 20px;
+}
+
+.preview {
+   background-color: rgb(15, 15, 20);
+   border: 2px solid var(--line-gray);
+   border-radius: 10px;
+   width: 256px;
+   padding: 10px;
+   padding-inline: 20px;
+   user-select: none;
+   transition: all 100ms ease-in-out;
+}
+
+.preview:hover {
+   transform: scale(1.03);
+   cursor: pointer;
+}
+
+.preview .title {
+   color: var(--title-orange);
+   font-family: 'Alegreya Sans SC';
+   font-size: 30px;
+   margin: 0px;
+}
+
+.preview .creator {
+   margin: 0px;
+   margin-bottom: 15px;
+   font-size: 13px;
+   line-height: 16px;
+}
+
+.preview img {
+   width: 75px;
+   height: 75px;
+}
+
+.preview img:not(.last) {
+   margin-right: 10px;
+}
