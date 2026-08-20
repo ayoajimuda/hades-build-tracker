@@ -1,18 +1,46 @@
-import React from 'react';
-import Header from "@/components/Header";
-import Link from 'next/link';
-import { view } from 'framer-motion/client';
-import Image from 'next/image';
-
-export default async function Tutorial() {
-
-    return (
-        <div>
-            <Header/>
-        <main>
-            <div className="section">
+<!--
+   This site provides a tool for planning out builds in the game Hades.
+   
+   @author: Plueschgiraffe
+   @date: 27.08.2021 
+-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- meta elements -->
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- font import -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+         rel="stylesheet"
+      />
+      <!-- icon and title-->
+      <link rel="icon" href="img/Other/icon.webp" />
+      <title>Hades Build Board</title>
+      <!-- style and script -->
+      <link rel="stylesheet" href="site_style.css" />
+   </head>
+   <body>
+      <!-- header -->
+      <div class="header">
+         <div class="link-container">
+            <a href="index.html">Home</a>
+            <a class="underline" href="tutorial.html">Tutorial</a>
+            <a href="builds.html">Builds</a>
+            <a href="patch.html">Patch Notes</a>
+            <a href="contact.html">Contact</a>
+            <a class="right" target="_blank" href="tool.html">Start Build</a>
+         </div>
+      </div>
+      <div class="main">
+         <!-- How to get started -->
+         <div class="section">
             <h1>How to get started</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   Click on
                   <a target="_blank" href="tool.html">Start Build</a> in the top
@@ -31,11 +59,10 @@ export default async function Tutorial() {
                </ul>
             </div>
          </div>
-
-         {/*Build Board */}
-         <div className="section">
+         <!-- Build Board -->
+         <div class="section">
             <h1>Build Board</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   On the build board you can click down the
                   <em>scroll wheel</em> to move around. At the top you will find
@@ -69,10 +96,10 @@ export default async function Tutorial() {
                </ul>
             </div>
          </div>
-         {/* Skills Selection */}
-         <div className="section">
+         <!-- Skill Selection -->
+         <div class="section">
             <h1>Skill Selection</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   This is the second page you can be on (besides the build
                   board). Here you can <em>left-click</em> on a skill to add it
@@ -96,11 +123,10 @@ export default async function Tutorial() {
                </ul>
             </div>
          </div>
-         
-         {/* Sidebar */}
-         <div className="section">
+         <!-- Sidebar -->
+         <div class="section">
             <h1>Sidebar</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   The sidebar consists of <em>two segments</em> which serve the
                   following purposes:
@@ -123,11 +149,10 @@ export default async function Tutorial() {
                </p>
             </div>
          </div>
-
-         {/* Section & Skills */}
-         <div className="section">
+         <!-- Sections and Skills -->
+         <div class="section">
             <h1>Sections and Skills</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   You can <em>move</em> a section around by <em>grabbing</em> it
                   at the top. You will see your cursor change when this is
@@ -145,11 +170,10 @@ export default async function Tutorial() {
                </p>
             </div>
          </div>
-
-         {/* Filter Settings */}
-         <div className="section">
+         <!-- Filter Settings -->
+         <div class="section">
             <h1>Filter Settings</h1>
-            <div className="content">
+            <div class="content">
                <p>
                   The filter settings consist of <em>five categories</em>. Those
                   are as follows:
@@ -184,8 +208,6 @@ export default async function Tutorial() {
                </p>
             </div>
          </div>
-        </main>
       </div>
-
-    );
-}
+   </body>
+</html>

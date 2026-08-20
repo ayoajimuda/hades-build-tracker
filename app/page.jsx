@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { view } from 'framer-motion/client';
 import Image from 'next/image';
 
-export default async function Home() {
+export default function Home() {
 
   return (
     <div>
@@ -40,8 +40,25 @@ export default async function Home() {
                         <div className="preview">
                             <p className="title">Life Theft</p>
                             <Image src="/img/Builds/Life_Theft/Aspect_of_Guan_Yu.webp" alt="Aspect of Guan Yu" width={200} height={200}/>
-                            <Image src="/img/Builds/Life_Theft/Aspect_of_Guan_Yu.webp" alt="Aspect of Guan Yu" width={200} height={200}/>
-                            <Image src="/img/Builds/Life_Theft/Aspect_of_Guan_Yu.webp" alt="Aspect of Guan Yu" width={200} height={200}/>
+                            <Image src="/img/Builds/Life_Theft/After_Party.webp" alt="After Party" width={200} height={200}/>
+                            <Image src="/img/Builds/Life_Theft/Nourished_Soul.webp" alt="Nourished Soul" width={200} height={200}/>
+                            <Image src="/img/Builds/Life_Theft/Massive_Spin.webp" alt="Massive Spin" width={200} height={200}/>
+                        </div>
+
+                        <div className="preview">
+                          <p className="title">Charged Up</p>
+                          <Image src="/img/Builds/Charged_Up/Aspect_of_Eris.webp" alt="Aspect of Eris" width={200} height={200}/>
+                          <Image src="/img/Builds/Charged_Up/Frost_Strike.webp" alt="Frost Strike" width={200} height={200}/>
+                          <Image src="/img/Builds/Charged_Up/Hide_Breaker.webp" alt="Hide Breaker" width={200} height={200}/>
+                          <Image src="/img/Builds/Charged_Up/Targeting_System.webp" alt="Targeting System" width={200} height={200}/>
+                        </div>
+
+                        <div className="preview">
+                          <p className="title">Perfect Aim</p>
+                          <Image src="/img/Builds/Perfect_Aim/Aspect_of_Chiron.webp" alt="Aspect of Chiron" width={200} height={200}/>
+                          <Image src="/img/Builds/Perfect_Aim/Deadly_Flourish.webp" alt="Deadly Flourish" width={200} height={200}/>
+                          <Image src="/img/Builds/Perfect_Aim/Lightning_Strike.webp" alt="Lightning Strike" width={200} height={200}/>
+                          <Image src="/img/Builds/Perfect_Aim/Concentrated_Volley.webp" alt="Concentrated Volley" width={200} height={200}/>
                         </div>
                     </div>
                 </div>
