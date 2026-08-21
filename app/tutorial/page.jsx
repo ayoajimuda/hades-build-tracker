@@ -14,10 +14,8 @@ export default async function Tutorial() {
             <h1>How to get started</h1>
             <div className="content">
                <p>
-                  Click on
-                  <a target="_blank" href="tool.html">Start Build</a> in the top
-                  right corner. You will land on a page I call the
-                  <em>Build Board</em>. This will be the place you create your
+                  Click on Create Build in the top
+                  right corner. You will land on a page I call the <em>Build Board</em>. This will be the place you create your
                   build. To get started do the following:
                </p>
                <ul>
@@ -37,8 +35,7 @@ export default async function Tutorial() {
             <h1>Build Board</h1>
             <div className="content">
                <p>
-                  On the build board you can click down the
-                  <em>scroll wheel</em> to move around. At the top you will find
+                  On the build board you can click down the <em>scroll wheel</em> to move around. At the top you will find
                   six <em>buttons</em>. Those do the following:
                </p>
                <ul>
@@ -80,8 +77,7 @@ export default async function Tutorial() {
                   show more <em>information</em>.
                </p>
                <p>
-                  At the top you will find 2 <em>buttons</em> and a
-                  <em>search bar</em>. Those do the following:
+                  At the top you will find 2 <em>buttons</em> and a <em>search bar</em>. Those do the following:
                </p>
                <ul>
                   <li>
@@ -108,8 +104,7 @@ export default async function Tutorial() {
                <ul>
                   <li>
                      <em>Skill Info</em>: Shows additional
-                     <em>information</em> about a skill and its
-                     <em>requirements</em>.
+                     <em>information</em> about a skill and its <em>requirements</em>.
                   </li>
                   <li>
                      <em>Skill Cache</em>: Holds new skills from the skill
@@ -138,8 +133,7 @@ export default async function Tutorial() {
                <p>
                   You can change the <em>rarity</em> or the <em>rank</em> of a
                   skill by <em>left-clicking</em> on it. You can <em>move</em> a
-                  skill by <em>grabbing</em> it. To see more
-                  <em>information</em> about a skill <em>right-click</em> it. A
+                  skill by <em>grabbing</em> it. To see more <em>information</em> about a skill <em>right-click</em> it. A
                   skill can be a boon, item, weapon, mirror upgrade, or heat
                   setting.
                </p>
@@ -176,11 +170,8 @@ export default async function Tutorial() {
                   </li>
                </ul>
                <p>
-                  Each <em>line</em> line you see, will add filters with a
-                  <em>logical and</em>, while filters inside the same block will
-                  be added with a <em>logical or</em>. Also not choosing
-                  <em>anything</em> inside a block is the same as choosing
-                  <em>everything</em> in that block.
+                  Each <em>line</em> line you see, will add filters with a <em>logical and</em>, while filters inside the same block will
+                  be added with a <em>logical or</em>. Also not choosing <em>anything</em> inside a block is the same as choosing <em>everything</em> in that block.
                </p>
             </div>
          </div>

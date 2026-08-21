@@ -1,15 +1,40 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import '../styles/header.css';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/builds', label: 'Builds' },
+  { href: '/tutorial', label: 'Tutorial' },
+  { href: '/create', label: 'Create', right: true },
+];
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header className="header">
-      <nav className="navbar">
+      <nav className="navbar" aria-label="Main">
         <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/builds">Builds</Link></li>
-          <li><Link href="/tutorial">Tutorial</Link></li>
-          <li><Link href="/create">Create</Link></li>
+          {links.map(({ href, label, right }) => {
+            const isActive =
+              href === '/' ? pathname === '/' : pathname.startsWith(href);
+
+            return (
+              <li key={href} className={right ? 'right' : undefined}>
+                <Link
+                  href={href}
+                  className={isActive ? 'active' : undefined}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

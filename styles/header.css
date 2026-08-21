@@ -1,0 +1,50 @@
+.header {
+   position: sticky;
+   top: 0px;
+   background-color: var(--header-gray);
+   border-bottom: 2px solid var(--border-gray);
+   box-shadow: 0 0 4px var(--border-gray);
+   font-family: var(--font-inter), system-ui, sans-serif;
+   font-weight: 400;
+   font-size: 24px;
+   padding: 20px;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li.right {
+  margin-left: auto;
+}
+
+.navbar a {
+   color: var(--text-white);
+   text-decoration: none;
+   padding-bottom: 3px;
+   border-bottom: 1.5px solid transparent;
+   transition: color 100ms ease-in-out, border-color 100ms ease-in-out;
+}
+
+.navbar a:hover {
+    color: var(--link-red)
+}
+
+.navbar a.active {
+    border-bottom-color: var(--link-red);
+}
+
+.navbar a.focus-visible {
+    outline: 2px solid var(--link-red);
+    outline-offset: 4px;
+}
