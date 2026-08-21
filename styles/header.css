@@ -1,9 +1,9 @@
 .header {
    position: sticky;
    top: 0px;
-   background-color: var(--header-gray);
-   border-bottom: 2px solid var(--border-gray);
-   box-shadow: 0 0 4px var(--border-gray);
+   background-color: #000000;
+   border-bottom: 1px solid var(--border-gray);
+   box-shadow: 0 0 1px var(--border-gray);
    font-family: var(--font-inter), system-ui, sans-serif;
    font-weight: 400;
    font-size: 24px;
@@ -37,14 +37,14 @@
 }
 
 .navbar a:hover {
-    color: var(--link-red)
+    color: var(--title-blue)
 }
 
 .navbar a.active {
-    border-bottom-color: var(--link-red);
+    border-bottom-color: var(--title-blue);
 }
 
 .navbar a.focus-visible {
-    outline: 2px solid var(--link-red);
+    outline: 2px solid var(--title-blue);
     outline-offset: 4px;
 }

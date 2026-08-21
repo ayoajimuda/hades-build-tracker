@@ -87,8 +87,8 @@
    --link-gray: rgb(30, 35, 40);
    --line-gray: rgb(100, 100, 100);
    --text-white: rgb(205, 205, 205);
-   --link-red: rgb(215, 45, 80);
-   --title-orange: rgb(230, 135, 85);
+   --link-red: #FF3030;
+   --title-blue: #7CB9E8;
    --skill-gray: rgb(45, 45, 45);
    --max-width: 1000px;
 }
@@ -153,18 +153,11 @@ body {
   padding: 20px;
 }
 
-.content {
-   border-left: 2px solid var(--line-gray);
-   padding-left: 20px;
-   margin-bottom: 30px;
-}
-
-
 h1 {
    font-size: 34px;
    font-weight: 400;
    margin-top: 40px;
-   color: var(--title-orange);
+   color: var(--title-blue);
    margin: 0px;
    margin-bottom: 20px;
 }
@@ -183,6 +176,12 @@ em {
 }
 
 /* -------------------------- list style -------------------------- */
+.content {
+   border-left: 2px solid var(--line-gray);
+   padding-left: 20px;
+   margin-bottom: 30px;
+}
+
 .content ul {
    list-style: none;
    line-height: 35px;
@@ -207,7 +206,22 @@ em {
    margin-bottom: 10px;
 }
 
+.content a {
+  color: var(--link-red);
+  background-color: var(--link-gray);
+  border-radius: 5px;
+  padding: 2px 6px;
+  text-decoration: none;
+  transition: color 100ms ease-in-out, background-color 100ms ease-in-out;
+}
+
 /* -------------------------- build style -------------------------- */
+.builds-content {
+     border-left: 2px solid var(--line-gray);
+   padding-left: 20px;
+   margin-bottom: 30px;
+}
+
 .preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -218,7 +232,7 @@ em {
 .preview {
   display: block;
   box-sizing: border-box;
-  background-color: rgb(15, 15, 20);
+  background-color: #0b0b0b;
   border: 2px solid var(--line-gray);
   border-radius: 10px;
   padding: 16px 20px;
@@ -235,7 +249,7 @@ em {
 }
 
 .preview .title {
-  color: var(--title-orange);
+  color: var(--title-blue);
   font-family: var(--font-display), serif;
   font-size: 30px;
   margin: 0 0 12px;

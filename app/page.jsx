@@ -13,17 +13,14 @@ export default function Home() {
             <main>
                 {/* Welcome */}
                 <div className="section">
-                    <h1>Welcome to hades-build-tracker.com</h1>
+                    <h1>Welcome to Hades Build Tracker</h1>
                     <div className="content">
                         <p>
-                            This site provides a tool which you can use to keep track
+                            This site provides a tool which you can use to keep track of previous builds, as well as
                             and plan out your next Hades run,
                             as well as read up on any boon, weapon, item in the game.
                             To get started, make sure you check out the{' '}
-                            <Link href="/tutorial">tutorial</Link>
-                        </p>
-                        <p>
-                            Check out my other (more recent) projects on my{' '} <a href="https://github.com/ayoajimuda" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                            <Link href="/tutorial">Tutorial</Link>. Check out my other (more recent) projects on my{''}<a href="https://github.com/ayoajimuda" target="_blank" rel="noopener noreferrer">GitHub</a>.
                         </p>
                     </div>
                 </div>
@@ -31,7 +28,7 @@ export default function Home() {
                 {/* Cool Builds */}
                 <div className="section">
                     <h1>Personal Builds</h1>
-                    <div className="content">
+                    <div className="builds-content">
                         <p>
                             You can find the builds you make on the builds page. Here are some cool
                             builds I&apos;ve made:
