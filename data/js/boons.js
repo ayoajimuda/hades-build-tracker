@@ -3,18 +3,6 @@
 
 /** @typedef {'attack'|'special'|'cast'|'dash'|'call'} Slot */
 
-export const GODS = [
-  { code: 'APH', name: 'Aphrodite', symbol: '/img/Gods/Aphrodite.png' },
-  { code: 'ARE', name: 'Ares', symbol: '/img/Gods/Ares.png' },
-  { code: 'ART', name: 'Artemis', symbol: '/img/Gods/Artemis.png' },
-  { code: 'ATH', name: 'Athena', symbol: '/img/Gods/Athena.png' },
-  { code: 'DEM', name: 'Demeter', symbol: '/img/Gods/Demeter.png' },
-  { code: 'DIO', name: 'Dionysus', symbol: '/img/Gods/Dionysus.png' },
-  { code: 'HER', name: 'Hermes', symbol: '/img/Gods/Hermes.png' },
-  { code: 'POS', name: 'Poseidon', symbol: '/img/Gods/Poseidon.png' },
-  { code: 'ZEU', name: 'Zeus', symbol: '/img/Gods/Zeus.png' },
-];
-
 export const boons = [
   // Aphrodite
   {
@@ -23,7 +11,7 @@ export const boons = [
     god: 'APH',
     slot: 'attack',
     text: "Your Attack deals more damage and inflicts Weak.",
-    iconsrc: "/img/Boons/Heartbreak Strike_I.png",
+    iconsrc: "/img/Aphrodite/Heartbreak_Strike.webp",
   },
   {
     id: 'APH02',
@@ -31,7 +19,7 @@ export const boons = [
     god: 'APH',
     slot: 'special',
     text: "Your Special deals more damage and inflicts Weak.",
-    iconsrc: "/img/Boons/Heartbreak Flourish_I.png",
+    iconsrc: "/img/Aphrodite/Heartbreak_Flourish.webp",
   },
   {
     id: 'APH03',
@@ -39,7 +27,7 @@ export const boons = [
     god: 'APH',
     slot: 'cast',
     text: "Your Cast is a wide, short-range blast that inflicts Weak.",
-    iconsrc: "/img/Boons/Crush Shot_I.png",
+    iconsrc: "/img/Aphrodite/Crush_Shot.webp",
   },
   {
     id: 'APH04',
@@ -47,7 +35,7 @@ export const boons = [
     god: 'APH',
     slot: 'cast',
     text: "Your Cast damages foes around you and inflicts Weak.",
-    iconsrc: "/img/Boons/Crush Shot_I.png",
+    iconsrc: "/img/Aphrodite/Passion_Flare.webp",
   },
   {
     id: 'APH05',
@@ -55,7 +43,7 @@ export const boons = [
     god: 'APH',
     slot: 'dash',
     text: "Your Dash inflicts damage where you end up, inflicting Weak.",
-    iconsrc: "/img/Boons/Passion Dash_I.png",
+    iconsrc: "/img/Aphrodite/Passion_Dash.webp",
   },
   {
     id: 'APH06',
@@ -63,7 +51,7 @@ export const boons = [
     god: 'APH',
     slot: 'call',
     text: "Your Call fires a seeking projectile that inflicts Charm.",
-    iconsrc: "/img/Boons/Aphrodite's Aid_I.png",
+    iconsrc: "/img/Aphrodite/Aphrodites_Aid.webp",
   },
   {
     id: 'APH07',
@@ -71,7 +59,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "When foes are slain, they damage nearby foes and inflict Weak.",
-    iconsrc: "/img/Boons/Dying Lament_I.png",
+    iconsrc: "/img/Aphrodite/Dying_Lament.webp",
   },
   {
     id: 'APH08',
@@ -79,7 +67,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "After you take damage, damage nearby foes and inflict Weak.",
-    iconsrc: "/img/Boons/Wave of Despair_I.png",
+    iconsrc: "/img/Aphrodite/Wave_of_Despair.webp",
   },
   {
     id: 'APH09',
@@ -87,7 +75,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Resist some damage from nearby foes' attacks.",
-    iconsrc: "/img/Boons/Different League_I.png",
+    iconsrc: "/img/Aphrodite/Different_League.webp",
   },
   {
     id: 'APH10',
@@ -95,7 +83,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Any Health chamber rewards are worth more.",
-    iconsrc: "/img/Boons/Life Affirmation_I.png",
+    iconsrc: "/img/Aphrodite/Life_Affirmation.webp",
   },
   {
     id: 'APH11',
@@ -103,7 +91,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Your Weak effects have a longer duration.",
-    iconsrc: "/img/Boons/Empty Inside_I.png",
+    iconsrc: "/img/Aphrodite/Emptynside.webp",
   },
   {
     id: 'APH12',
@@ -111,7 +99,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Weak-afflicted foes are also more susceptible to damage.",
-    iconsrc: "/img/Boons/Sweet Surrender_I.png",
+    iconsrc: "/img/Aphrodite/Sweet_Surrender.webp",
   },
   {
     id: 'APH13',
@@ -119,7 +107,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Your Weak effects are more potent.",
-    iconsrc: "/img/Boons/Broken Resolve_I.png",
+    iconsrc: "/img/Aphrodite/Broken_Resolve.webp",
   },
   {
     id: 'APH14',
@@ -127,7 +115,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Your Cast shoots farther and is stronger against undamaged foes.",
-    iconsrc: "/img/Boons/Blown Kiss_I.png",
+    iconsrc: "/img/Aphrodite/Blown_Kiss.webp",
   },
   {
     id: 'APH15',
@@ -135,7 +123,7 @@ export const boons = [
     god: 'APH',
     slot: null,
     text: "Your Weak effects also have a chance to Charm foes.",
-    iconsrc: "/img/Boons/Unhealthy Fixation_I.png",
+    iconsrc: "/img/Aphrodite/Unhealthy_Fixation.webp",
   },
 
   // Ares
@@ -145,119 +133,133 @@ export const boons = [
     god: 'ARE',
     slot: 'attack',
     text: "Your Attack inflicts Doom.",
-    iconsrc: "/img/Boons/Curse of Agony_I.png",
+    iconsrc: "/img/Ares/Curse_of_Agony.webp",
   },
+
   {
     id: 'ARE02',
     title: "Curse of Pain",
     god: 'ARE',
     slot: 'special',
     text: "Your Special inflicts Doom.",
-    iconsrc: "/img/Boons/Curse of Pain_I.png",
+    iconsrc: "/img/Ares/Curse_of_Pain.webp",
   },
+
   {
     id: 'ARE03',
     title: "Slicing Shot",
     god: 'ARE',
     slot: 'cast',
     text: "Your Cast sends a Blade Rift hurling ahead.",
-    iconsrc: "/img/Boons/Slicing Shot_I.png",
+    iconsrc: "/img/Ares/Slicing_Shot.webp",
   },
+
   {
     id: 'ARE04',
     title: "Slicing Flare",
     god: 'ARE',
     slot: 'cast',
     text: "Your Cast sends a large Blade Rift hurling ahead for a brief time.",
-    iconsrc: "/img/Boons/Slicing Shot_I.png",
+    iconsrc: "/img/Ares/Slicing_Flare.webp",
   },
+  
   {
     id: 'ARE05',
     title: "Blade Dash",
     god: 'ARE',
     slot: 'dash',
     text: "Your Dash creates a Blade Rift where you started.",
-    iconsrc: "/img/Boons/Blade Dash_I.png",
+    iconsrc: "/img/Ares/Blade_Dash.webp",
   },
+
   {
     id: 'ARE06',
     title: "Ares' Aid",
     god: 'ARE',
     slot: 'call',
     text: "Your Call turns you into an Impervious Blade Rift for a short time.",
-    iconsrc: "/img/Boons/Ares' Aid_I.png",
+    iconsrc: "/img/Ares/Ares_Aid.webp",
   },
+
   {
     id: 'ARE07',
     title: "Curse of Vengeance",
     god: 'ARE',
     slot: null,
     text: "After you take damage, inflict Doom on surrounding foes.",
-    iconsrc: "/img/Boons/Curse of Vengeance_I.png",
+    iconsrc: "/img/Ares/Curse_of_Vengeance.webp",
   },
+
   {
     id: 'ARE08',
     title: "Urge to Kill",
     god: 'ARE',
     slot: null,
     text: "Your Attack, Special, and Cast deal more damage.",
-    iconsrc: "/img/Boons/Urge to Kill_I.png",
+    iconsrc: "/img/Ares/Urge_to_Kill.webp",
   },
+
   {
     id: 'ARE09',
     title: "Battle Rage",
     god: 'ARE',
     slot: null,
     text: "After slaying a foe, your next Attack or Special deals more damage.",
-    iconsrc: "/img/Boons/Battle Rage_I.png",
+    iconsrc: "/img/Ares/Battle_Rage.webp",
   },
+
   {
     id: 'ARE10',
     title: "Blood Frenzy",
     god: 'ARE',
     slot: null,
     text: "After using Death Defiance, deal more damage that encounter.",
-    iconsrc: "/img/Boons/Blood Frenzy_I.png",
+    iconsrc: "/img/Ares/Blood_Frenzy.webp",
   },
+
   {
     id: 'ARE11',
     title: "Black Metal",
     god: 'ARE',
     slot: null,
     text: "Your Blade Rift powers deal damage in a wider area.",
-    iconsrc: "/img/Boons/Black Metal_I.png",
+    iconsrc: "/img/Ares/Black_Metal.webp",
   },
+
   {
     id: 'ARE12',
     title: "Engulfing Vortex",
     god: 'ARE',
     slot: null,
     text: "Your Blade Rift effects last longer and pull foes in.",
-    iconsrc: "/img/Boons/Engulfing Vortex_I.png",
+    iconsrc: "/img/Ares/Engulfing_Vortex.webp",
   },
+
   {
     id: 'ARE13',
     title: "Dire Misfortune",
     god: 'ARE',
     slot: null,
     text: "Your Doom effects deal more damage when applied multiple times.",
-    iconsrc: "/img/Boons/Dire Misfortune_I.png",
+    iconsrc: "/img/Ares/Dire_Misfortune.webp",
   },
+
   {
     id: 'ARE14',
     title: "Impending Doom",
     god: 'ARE',
     slot: null,
     text: "Your Doom effects deal more damage, after a slightly longer time.",
-    iconsrc: "/img/Boons/Impending Doom_I.png",
+    iconsrc: "/img/Ares/Impending_Doom.webp",
   },
+
   {
     id: 'ARE15',
     title: "Vicious Cycle",
     god: 'ARE',
     slot: null,
     text: "Your Blade Rift effects deal more damage for each consecutive hit.",
-    iconsrc: "/img/Boons/Vicious Cycle_I.png",
+    iconsrc: "/img/Ares/Vicious_Cycle.webp",
   },
 
   // Artemis
@@ -267,7 +269,7 @@ export const boons = [
     god: 'ART',
     slot: 'attack',
     text: "Your Attack is stronger, with a chance to deal Critical damage.",
-    iconsrc: "/img/Boons/Deadly Strike_I.png",
+    iconsrc: "/img/Artemis/Deadly_Strike.webp",
   },
   {
     id: 'ART02',
@@ -275,7 +277,7 @@ export const boons = [
     god: 'ART',
     slot: 'special',
     text: "Your Special is stronger, with a chance to deal Critical Damage.",
-    iconsrc: "/img/Boons/Deadly Flourish_I.png",
+    iconsrc: "/img/Artemis/Deadly_Flourish.webp",
   },
   {
     id: 'ART03',
@@ -283,7 +285,7 @@ export const boons = [
     god: 'ART',
     slot: 'cast',
     text: "Your Cast seeks foes, with a chance to deal Critical damage.",
-    iconsrc: "/img/Boons/True Shot_I.png",
+    iconsrc: "/img/Artemis/True_Shot.webp",
   },
   {
     id: 'ART04',
@@ -291,7 +293,7 @@ export const boons = [
     god: 'ART',
     slot: 'cast',
     text: "Your Cast damages foes around you, with a bonus Critical chance.",
-    iconsrc: "/img/Boons/True Shot_I.png",
+    iconsrc: "/img/Artemis/Hunters_Flare.webp",
   },
   {
     id: 'ART05',
@@ -299,7 +301,7 @@ export const boons = [
     god: 'ART',
     slot: 'dash',
     text: "Your Dash-Strike deals more damage.",
-    iconsrc: "/img/Boons/Hunter Dash_I.png",
+    iconsrc: "/img/Artemis/Hunter_Dash.webp",
   },
   {
     id: 'ART06',
@@ -307,7 +309,7 @@ export const boons = [
     god: 'ART',
     slot: 'call',
     text: "Your Call fires a seeking arrow with a large Critical chance.",
-    iconsrc: "/img/Boons/Artemis' Aid_I.png",
+    iconsrc: "/img/Artemis/Artemis_Aid.webp",
   },
   {
     id: 'ART07',
@@ -315,7 +317,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Any damage you deal has a chance to be Critical.",
-    iconsrc: "/img/Boons/Pressure Points_I.png",
+    iconsrc: "/img/Artemis/Pressure_Points.webp",
   },
   {
     id: 'ART08',
@@ -323,7 +325,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Your foes take damage when your Ammo stuck in them is dislodged.",
-    iconsrc: "/img/Boons/Exit Wounds_I.png",
+    iconsrc: "/img/Artemis/Exit_Wounds.webp",
   },
   {
     id: 'ART09',
@@ -331,7 +333,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Your Critical effects deal even more damage to Armor.",
-    iconsrc: "/img/Boons/Hide Breaker_I.png",
+    iconsrc: "/img/Artemis/Hide_Breaker.webp",
   },
   {
     id: 'ART10',
@@ -339,7 +341,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Your Critical effects deal even more damage.",
-    iconsrc: "/img/Boons/Clean Kill_I.png",
+    iconsrc: "/img/Artemis/Clean_Kill.webp",
   },
   {
     id: 'ART11',
@@ -347,7 +349,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Your God Gauge charges faster when you deal Critical damage.",
-    iconsrc: "/img/Boons/Hunter Instinct_I.png",
+    iconsrc: "/img/Artemis/Hunter_Instinct.webp",
   },
   {
     id: 'ART12',
@@ -355,7 +357,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "After you deal Critical damage to a foe, a foe near it is Marked.",
-    iconsrc: "/img/Boons/Hunter's Mark_I.png",
+    iconsrc: "/img/Artemis/Hunters_Mark.webp",
   },
   {
     id: 'ART13',
@@ -363,7 +365,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "After you Cast, or hit with an Attack or Special, fire a seeking arrow.",
-    iconsrc: "/img/Boons/Support Fire_I.png",
+    iconsrc: "/img/Artemis/Support_Fire.webp",
   },
   {
     id: 'ART14',
@@ -371,7 +373,7 @@ export const boons = [
     god: 'ART',
     slot: null,
     text: "Gain extra Ammo for your Cast.",
-    iconsrc: "/img/Boons/Fully Loaded_I.png",
+    iconsrc: "/img/Artemis/Fully_Loaded.webp",
   },
 
   // Athena
@@ -381,7 +383,7 @@ export const boons = [
     god: 'ATH',
     slot: 'attack',
     text: "Your Attack is stronger, and can Deflect.",
-    iconsrc: "/img/Boons/Divine Strike_I.png",
+    iconsrc: "/img/Athena/Divine_Strike.webp",
   },
   {
     id: 'ATH02',
@@ -389,7 +391,7 @@ export const boons = [
     god: 'ATH',
     slot: 'special',
     text: "Your Special is stronger, and can Deflect.",
-    iconsrc: "/img/Boons/Divine Flourish_I.png",
+    iconsrc: "/img/Athena/Divine_Flourish.webp",
   },
   {
     id: 'ATH03',
@@ -397,7 +399,7 @@ export const boons = [
     god: 'ATH',
     slot: 'cast',
     text: "Your Cast damages foes in a small area, and can Deflect.",
-    iconsrc: "/img/Boons/Phalanx Shot_I.png",
+    iconsrc: "/img/Athena/Phalanx_Shot.webp",
   },
   {
     id: 'ATH04',
@@ -405,7 +407,7 @@ export const boons = [
     god: 'ATH',
     slot: 'cast',
     text: "Your Cast damages foes around you, and can Deflect.",
-    iconsrc: "/img/Boons/Phalanx Shot_I.png",
+    iconsrc: "/img/Athena/Phalanx_Flare.webp",
   },
   {
     id: 'ATH05',
@@ -413,7 +415,7 @@ export const boons = [
     god: 'ATH',
     slot: 'dash',
     text: "Your Dash deals damage and can Deflect.",
-    iconsrc: "/img/Boons/Divine Dash_I.png",
+    iconsrc: "/img/Athena/Divine_Dash.webp",
   },
   {
     id: 'ATH06',
@@ -421,7 +423,7 @@ export const boons = [
     god: 'ATH',
     slot: 'call',
     text: "Your Call briefly makes you Invulnerable and Deflect all attacks.",
-    iconsrc: "/img/Boons/Athena's Aid_I.png",
+    iconsrc: "/img/Athena/Athenas_Aid.webp",
   },
   {
     id: 'ATH07',
@@ -429,7 +431,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "After you take damage, damage nearby foes and briefly Deflect.",
-    iconsrc: "/img/Boons/Holy Shield_I.png",
+    iconsrc: "/img/Athena/Holy_Shield.webp",
   },
   {
     id: 'ATH08',
@@ -437,7 +439,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "Resist damage from foes' attacks.",
-    iconsrc: "/img/Boons/Bronze Skin_I.png",
+    iconsrc: "/img/Athena/Bronze_Skin.webp",
   },
   {
     id: 'ATH09',
@@ -445,7 +447,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "Resist damage from Traps.",
-    iconsrc: "/img/Boons/Sure Footing_I.png",
+    iconsrc: "/img/Athena/Sure_Footing.webp",
   },
   {
     id: 'ATH10',
@@ -453,7 +455,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "You begin each Encounter with your God Gauge partly full.",
-    iconsrc: "/img/Boons/Proud Bearing_I.png",
+    iconsrc: "/img/Athena/Proud_Bearing.webp",
   },
   {
     id: 'ATH11',
@@ -461,7 +463,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "Your abilities that can Deflect also make foes Exposed.",
-    iconsrc: "/img/Boons/Blinding Flash_I.png",
+    iconsrc: "/img/Athena/Blinding_Flash.webp",
   },
   {
     id: 'ATH12',
@@ -469,7 +471,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "When you Deflect attacks, they deal more damage.",
-    iconsrc: "/img/Boons/Brilliant Riposte_I.png",
+    iconsrc: "/img/Athena/Brilliant_Riposte.webp",
   },
   {
     id: 'ATH13',
@@ -477,7 +479,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "Death Defiance makes you Impervious longer. Replenish a charge immediately.",
-    iconsrc: "/img/Boons/Deathless Stand_I.png",
+    iconsrc: "/img/Athena/Deathless_Stand.webp",
   },
   {
     id: 'ATH14',
@@ -485,7 +487,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "Death Defiance restores more Health than usual. Replenish a charge immediately.",
-    iconsrc: "/img/Boons/Last Stand_I.png",
+    iconsrc: "/img/Athena/Last_Stand.webp",
   },
   {
     id: 'ATH15',
@@ -493,7 +495,7 @@ export const boons = [
     god: 'ATH',
     slot: null,
     text: "You have a barrier that negates incoming damage.",
-    iconsrc: "/img/Boons/Divine Protection_I.png",
+    iconsrc: "/img/Athena/Divine_Protection.webp",
   },
 
   // Demeter
@@ -503,7 +505,7 @@ export const boons = [
     god: 'DEM',
     slot: 'attack',
     text: "Your Attack is stronger and inflicts Chill.",
-    iconsrc: "/img/Boons/Frost Strike_I.png",
+    iconsrc: "/img/Boons/Frost Strike.webp",
   },
   {
     id: 'DEM02',
@@ -511,7 +513,7 @@ export const boons = [
     god: 'DEM',
     slot: 'special',
     text: "Your Special is stronger and inflicts Chill.",
-    iconsrc: "/img/Boons/Frost Flourish_I.png",
+    iconsrc: "/img/Boons/Frost Flourish.webp",
   },
   {
     id: 'DEM03',
@@ -519,7 +521,7 @@ export const boons = [
     god: 'DEM',
     slot: 'cast',
     text: "Your Cast drops a crystal that fires a beam straight ahead for a few seconds.",
-    iconsrc: "/img/Boons/Crystal Beam_I.png",
+    iconsrc: "/img/Boons/Crystal Beam.webp",
   },
   {
     id: 'DEM04',
@@ -527,7 +529,7 @@ export const boons = [
     god: 'DEM',
     slot: 'cast',
     text: "Your Cast damages foes around you and inflicts Chill.",
-    iconsrc: "/img/Boons/Crystal Beam_I.png",
+    iconsrc: "/img/Boons/Crystal Beam.webp",
   },
   {
     id: 'DEM05',
@@ -535,7 +537,7 @@ export const boons = [
     god: 'DEM',
     slot: 'dash',
     text: "Your Dash shoots a gust ahead that inflicts Chill.",
-    iconsrc: "/img/Boons/Mistral Dash_I.png",
+    iconsrc: "/img/Boons/Mistral Dash.webp",
   },
   {
     id: 'DEM06',
@@ -543,7 +545,7 @@ export const boons = [
     god: 'DEM',
     slot: 'call',
     text: "Your Call creates a winter vortex for a few seconds that deals damage and inflicts Chill.",
-    iconsrc: "/img/Boons/Demeter's Aid_I.png",
+    iconsrc: "/img/Boons/Demeter's Aid.webp",
   },
   {
     id: 'DEM07',
@@ -551,7 +553,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "After you take damage, damage and completely Chill your foe.",
-    iconsrc: "/img/Boons/Frozen Touch_I.png",
+    iconsrc: "/img/Boons/Frozen Touch.webp",
   },
   {
     id: 'DEM08',
@@ -559,7 +561,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Your Boons become Common, then gain Rarity every few Encounters.",
-    iconsrc: "/img/Boons/Rare Crop_I.png",
+    iconsrc: "/img/Boons/Rare Crop.webp",
   },
   {
     id: 'DEM09',
@@ -567,7 +569,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "While you have no Ammo, take less damage and deal more.",
-    iconsrc: "/img/Boons/Ravenous Will_I.png",
+    iconsrc: "/img/Boons/Ravenous Will.webp",
   },
   {
     id: 'DEM10',
@@ -575,7 +577,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Any Health effects are more potent. Restore some health now.",
-    iconsrc: "/img/Boons/Nourished Soul_I.png",
+    iconsrc: "/img/Boons/Nourished Soul.webp",
   },
   {
     id: 'DEM11',
@@ -583,7 +585,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Whenever you Cast, damage nearby foes and inflict Chill.",
-    iconsrc: "/img/Boons/Snow Burst_I.png",
+    iconsrc: "/img/Boons/Snow Burst.webp",
   },
   {
     id: 'DEM12',
@@ -591,7 +593,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Applying 10 stacks of Chill causes a blast, clearing the effect.",
-    iconsrc: "/img/Boons/Arctic Blast_I.png",
+    iconsrc: "/img/Boons/Arctic Blast.webp",
   },
   {
     id: 'DEM13',
@@ -599,7 +601,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "When all foes are Chill afflicted, they become Slow and Decay.",
-    iconsrc: "/img/Boons/Killing Freeze_I.png",
+    iconsrc: "/img/Boons/Killing Freeze.webp",
   },
   {
     id: 'DEM14',
@@ -607,7 +609,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Your Cast fires longer and inflicts Chill.",
-    iconsrc: "/img/Boons/Glacial Glare_I.png",
+    iconsrc: "/img/Boons/Glacial Glare.webp",
   },
   {
     id: 'DEM15',
@@ -615,7 +617,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Chill-affected foes shatter at low hp, inflicting Chill nearby.",
-    iconsrc: "/img/Boons/Winter Harvest_I.png",
+    iconsrc: "/img/Boons/Winter Harvest.webp",
   },
 
   // Dionysus
@@ -625,7 +627,7 @@ export const boons = [
     god: 'DIO',
     slot: 'attack',
     text: "Your Attack inflicts Hangover.",
-    iconsrc: "/img/Boons/Drunken Strike_I.png",
+    iconsrc: "/img/Boons/Drunken Strike.webp",
   },
   {
     id: 'DIO02',
@@ -633,7 +635,7 @@ export const boons = [
     god: 'DIO',
     slot: 'special',
     text: "Your Special inflicts Hangover.",
-    iconsrc: "/img/Boons/Drunken Flourish_I.png",
+    iconsrc: "/img/Boons/Drunken Flourish.webp",
   },
   {
     id: 'DIO03',
@@ -641,7 +643,7 @@ export const boons = [
     god: 'DIO',
     slot: 'cast',
     text: "Your Cast lobs a projectile that bursts into Festive Fog.",
-    iconsrc: "/img/Boons/Trippy Shot_I.png",
+    iconsrc: "/img/Boons/Trippy Shot.webp",
   },
   {
     id: 'DIO04',
@@ -649,7 +651,7 @@ export const boons = [
     god: 'DIO',
     slot: 'cast',
     text: "Your Cast damages foes around you, leaving behind Festive Fog.",
-    iconsrc: "/img/Boons/Trippy Shot_I.png",
+    iconsrc: "/img/Boons/Trippy Shot.webp",
   },
   {
     id: 'DIO05',
@@ -657,7 +659,7 @@ export const boons = [
     god: 'DIO',
     slot: 'dash',
     text: "Your Dash inflicts foes near you with Hangover.",
-    iconsrc: "/img/Boons/Drunken Dash_I.png",
+    iconsrc: "/img/Boons/Drunken Dash.webp",
   },
   {
     id: 'DIO06',
@@ -665,7 +667,7 @@ export const boons = [
     god: 'DIO',
     slot: 'call',
     text: "Your Call inflicts Hangover to foes all around you for a few seconds.",
-    iconsrc: "/img/Boons/Dionysus' Aid_I.png",
+    iconsrc: "/img/Boons/Dionysus' Aid.webp",
   },
   {
     id: 'DIO07',
@@ -673,7 +675,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "If your Health is low after Encounters, restore to the threshold.",
-    iconsrc: "/img/Boons/After Party_I.png",
+    iconsrc: "/img/Boons/After Party.webp",
   },
   {
     id: 'DIO08',
@@ -681,7 +683,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Take less damage while at low Health.",
-    iconsrc: "/img/Boons/Positive Outlook_I.png",
+    iconsrc: "/img/Boons/Positive Outlook.webp",
   },
   {
     id: 'DIO09',
@@ -689,7 +691,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Gain Health when you pick up Nectar. Receive a Nectar now.",
-    iconsrc: "/img/Boons/Premium Vintage_I.png",
+    iconsrc: "/img/Boons/Premium Vintage.webp",
   },
   {
     id: 'DIO10',
@@ -697,7 +699,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Using a Fountain restores all Health and gives you bonus damage.",
-    iconsrc: "/img/Boons/Strong Drink_I.png",
+    iconsrc: "/img/Boons/Strong Drink.webp",
   },
   {
     id: 'DIO11',
@@ -705,7 +707,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Deal more damage while multiple foes are Hangover-afflicted.",
-    iconsrc: "/img/Boons/Bad Influence_I.png",
+    iconsrc: "/img/Boons/Bad Influence.webp",
   },
   {
     id: 'DIO12',
@@ -713,7 +715,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Your Hangover effects also make foes move slower.",
-    iconsrc: "/img/Boons/Numbing Sensation_I.png",
+    iconsrc: "/img/Boons/Numbing Sensation.webp",
   },
   {
     id: 'DIO13',
@@ -721,7 +723,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Hangover-afflicted foes contaminate other nearby foes.",
-    iconsrc: "/img/Boons/Peer Pressure_I.png",
+    iconsrc: "/img/Boons/Peer Pressure.webp",
   },
   {
     id: 'DIO14',
@@ -729,7 +731,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Take less damage while standing in Festive Fog.",
-    iconsrc: "/img/Boons/High Tolerance_I.png",
+    iconsrc: "/img/Boons/High Tolerance.webp",
   },
   {
     id: 'DIO15',
@@ -737,7 +739,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Hangover-afflicted foes take bonus damage in Festive Fog.",
-    iconsrc: "/img/Boons/Black Out_I.png",
+    iconsrc: "/img/Boons/Black Out.webp",
   },
 
   // Hermes
@@ -747,7 +749,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Attack is +X% faster.",
-    iconsrc: "/img/Boons/Swift Strike I.png",
+    iconsrc: "/img/Boons/Swift Strike I.webp",
   },
   {
     id: 'HER02',
@@ -755,7 +757,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Special is +X% faster.",
-    iconsrc: "/img/Boons/Swift Flourish I.png",
+    iconsrc: "/img/Boons/Swift Flourish I.webp",
   },
   {
     id: 'HER03',
@@ -763,7 +765,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Cast is +X% faster and fully automatic.",
-    iconsrc: "/img/Boons/Flurry Cast I.png",
+    iconsrc: "/img/Boons/Flurry Cast I.webp",
   },
   {
     id: 'HER04',
@@ -771,7 +773,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Call charges up automatically.",
-    iconsrc: "/img/Boons/Quick Favor I.png",
+    iconsrc: "/img/Boons/Quick Favor I.webp",
   },
   {
     id: 'HER05',
@@ -779,7 +781,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "For X seconds after you Dash, become Sturdy and run +100% faster.",
-    iconsrc: "/img/Boons/Hyper Sprint I.png",
+    iconsrc: "/img/Boons/Hyper Sprint I.webp",
   },
   {
     id: 'HER06',
@@ -787,7 +789,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You move X% faster.",
-    iconsrc: "/img/Boons/Greater Haste I.png",
+    iconsrc: "/img/Boons/Greater Haste I.webp",
   },
   {
     id: 'HER07',
@@ -795,7 +797,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "After you take damage, quickly Dash to recover up to X% Health lost.",
-    iconsrc: "/img/Boons/Quick Recovery I.png",
+    iconsrc: "/img/Boons/Quick Recovery I.webp",
   },
   {
     id: 'HER08',
@@ -803,7 +805,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You have +X% chance to Dodge.",
-    iconsrc: "/img/Boons/Greater Evasion I.png",
+    iconsrc: "/img/Boons/Greater Evasion I.webp",
   },
   {
     id: 'HER09',
@@ -811,7 +813,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You can Dash +X more time(s) in a row.",
-    iconsrc: "/img/Boons/Greatest Reflex I.png",
+    iconsrc: "/img/Boons/Greatest Reflex I.webp",
   },
   {
     id: 'HER10',
@@ -819,7 +821,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "After using Call, gain Dodge chance and move speed for 10 Sec.",
-    iconsrc: "/img/Boons/Second Wind I.png",
+    iconsrc: "/img/Boons/Second Wind I.webp",
   },
   {
     id: 'HER11',
@@ -827,7 +829,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Foes drop Ammo stuck in them faster.",
-    iconsrc: "/img/Boons/Quick Reload I.png",
+    iconsrc: "/img/Boons/Quick Reload I.webp",
   },
   {
     id: 'HER12',
@@ -835,7 +837,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Each time you enter a Chamber, gain a bit of wealth.",
-    iconsrc: "/img/Boons/Side Hustle I.png",
+    iconsrc: "/img/Boons/Side Hustle I.webp",
   },
   {
     id: 'HER13',
@@ -843,7 +845,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You deal bonus damage based on any bonus move speed.",
-    iconsrc: "/img/Boons/Rush Delivery I.png",
+    iconsrc: "/img/Boons/Rush Delivery I.webp",
   },
   {
     id: 'HER14',
@@ -851,7 +853,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You regenerate Ammo faster.",
-    iconsrc: "/img/Boons/Auto Reload I.png",
+    iconsrc: "/img/Boons/Auto Reload I.webp",
   },
   {
     id: 'HER15',
@@ -859,7 +861,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Ammo automatically return to you.",
-    iconsrc: "/img/Boons/Greater Recall I.png",
+    iconsrc: "/img/Boons/Greater Recall I.webp",
   },
   {
     id: 'HER16',
@@ -867,7 +869,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your cast deals more damage to foes without Ammo on them.",
-    iconsrc: "/img/Boons/Bad News I.png",
+    iconsrc: "/img/Boons/Bad News I.webp",
     notes: ["First shot damage: +50%"],
   },
 
@@ -878,7 +880,7 @@ export const boons = [
     god: 'POS',
     slot: 'attack',
     text: "Your Attack deals more damage and knocks foes away.",
-    iconsrc: "/img/Boons/Tempest Strike_I.png",
+    iconsrc: "/img/Boons/Tempest Strike.webp",
   },
   {
     id: 'POS02',
@@ -886,7 +888,7 @@ export const boons = [
     god: 'POS',
     slot: 'special',
     text: "Your Special deals more damage and knocks foes away.",
-    iconsrc: "/img/Boons/Tempest Flourish_I.png",
+    iconsrc: "/img/Boons/Tempest Flourish.webp",
   },
   {
     id: 'POS03',
@@ -894,7 +896,7 @@ export const boons = [
     god: 'POS',
     slot: 'cast',
     text: "Your Cast damages foes in an area and knocks them away.",
-    iconsrc: "/img/Boons/Flood Shot_I.png",
+    iconsrc: "/img/Boons/Flood Shot.webp",
   },
   {
     id: 'POS04',
@@ -902,7 +904,7 @@ export const boons = [
     god: 'POS',
     slot: 'cast',
     text: "Your Cast damages foes around you and knocks them away.",
-    iconsrc: "/img/Boons/Flood Shot_I.png",
+    iconsrc: "/img/Boons/Flood Shot.webp",
   },
   {
     id: 'POS05',
@@ -910,7 +912,7 @@ export const boons = [
     god: 'POS',
     slot: 'dash',
     text: "Your Dash damages foes in an area and knocks them away.",
-    iconsrc: "/img/Boons/Tidal Dash_I.png",
+    iconsrc: "/img/Boons/Tidal Dash.webp",
   },
   {
     id: 'POS06',
@@ -918,7 +920,7 @@ export const boons = [
     god: 'POS',
     slot: 'call',
     text: "Your Call makes you surge into foes while Impervious for a few seconds.",
-    iconsrc: "/img/Boons/Poseidon's Aid_I.png",
+    iconsrc: "/img/Boons/Poseidon's Aid.webp",
   },
   {
     id: 'POS07',
@@ -926,7 +928,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "You deal more damage when slamming foes into barriers.",
-    iconsrc: "/img/Boons/Typhoon's Fury_I.png",
+    iconsrc: "/img/Boons/Typhoon's Fury.webp",
   },
   {
     id: 'POS08',
@@ -934,7 +936,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your Attack and Special are stronger the first few seconds of an Encounter.",
-    iconsrc: "/img/Boons/Hydraulic Might_I.png",
+    iconsrc: "/img/Boons/Hydraulic Might.webp",
   },
   {
     id: 'POS09',
@@ -942,7 +944,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Any Gemstones, Darkness or Obols chamber rewards are worth more.",
-    iconsrc: "/img/Boons/Ocean's Bounty_I.png",
+    iconsrc: "/img/Boons/Ocean's Bounty.webp",
   },
   {
     id: 'POS10',
@@ -950,7 +952,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Gain an assortment of Gemstones, Darkness, Obols and Health.",
-    iconsrc: "/img/Boons/Sunken Treasure_I.png",
+    iconsrc: "/img/Boons/Sunken Treasure.webp",
   },
   {
     id: 'POS11',
@@ -958,7 +960,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Using knock-away effects also Rupture foes.",
-    iconsrc: "/img/Boons/Razor Shoals_I.png",
+    iconsrc: "/img/Boons/Razor Shoals.webp",
   },
   {
     id: 'POS12',
@@ -966,7 +968,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your God Gauge charges faster when you take damage.",
-    iconsrc: "/img/Boons/Boiling Point_I.png",
+    iconsrc: "/img/Boons/Boiling Point.webp",
   },
   {
     id: 'POS13',
@@ -974,7 +976,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Slamming foes into walls or corners creates a watery blast in the area.",
-    iconsrc: "/img/Boons/Breaking Wave_I.png",
+    iconsrc: "/img/Boons/Breaking Wave.webp",
   },
   {
     id: 'POS14',
@@ -982,7 +984,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your boons with Knock-Away effects deal bonus damage to bosses.",
-    iconsrc: "/img/Boons/Wave Pounding_I.png",
+    iconsrc: "/img/Boons/Wave Pounding.webp",
   },
   {
     id: 'POS15',
@@ -990,7 +992,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your Call pulls in foes and the effect lasts longer.",
-    iconsrc: "/img/Boons/Rip Current_I.png",
+    iconsrc: "/img/Boons/Rip Current.webp",
   },
   {
     id: 'POS16',
@@ -998,7 +1000,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "You have a greater chance to find Fishing Point in each Chamber.",
-    iconsrc: "/img/Boons/Huge Catch_I.png",
+    iconsrc: "/img/Boons/Huge Catch.webp",
   },
   {
     id: 'POS17',
@@ -1006,7 +1008,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your knock-away effects shove foes a second time after the first.",
-    iconsrc: "/img/Boons/Second Wave_I.png",
+    iconsrc: "/img/Boons/Second Wave.webp",
   },
 
   // Zeus
@@ -1016,7 +1018,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'attack',
     text: "Your Attack emits chain-lightning when you damage a foe.",
-    iconsrc: "/img/Boons/Lightning Strike_I.png",
+    iconsrc: "/img/Boons/Lightning Strike.webp",
   },
   {
     id: 'ZEU02',
@@ -1024,7 +1026,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'special',
     text: "Your Special causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Thunder Flourish_I.png",
+    iconsrc: "/img/Boons/Thunder Flourish.webp",
   },
   {
     id: 'ZEU03',
@@ -1032,7 +1034,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'cast',
     text: "Your Cast is a burst of chain-lightning that bounces between foes.",
-    iconsrc: "/img/Boons/Electric Shot_I.png",
+    iconsrc: "/img/Boons/Electric Shot.webp",
   },
   {
     id: 'ZEU04',
@@ -1040,7 +1042,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'cast',
     text: "Your Cast causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Electric Shot_I.png",
+    iconsrc: "/img/Boons/Electric Shot.webp",
   },
   {
     id: 'ZEU05',
@@ -1048,7 +1050,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'dash',
     text: "Your Dash causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Thunder Dash_I.png",
+    iconsrc: "/img/Boons/Thunder Dash.webp",
   },
   {
     id: 'ZEU06',
@@ -1056,7 +1058,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'call',
     text: "Your Call makes lightning strike nearby foes repeatedly for a few seconds.",
-    iconsrc: "/img/Boons/Zeus' Aid_I.png",
+    iconsrc: "/img/Boons/Zeus' Aid.webp",
   },
   {
     id: 'ZEU07',
@@ -1064,7 +1066,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After you take damage, your foe is struck by lightning.",
-    iconsrc: "/img/Boons/Heaven's Vengeance_I.png",
+    iconsrc: "/img/Boons/Heaven's Vengeance.webp",
   },
   {
     id: 'ZEU08',
@@ -1072,7 +1074,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After you Dash just before getting hit, a bolt strikes a nearby foes.",
-    iconsrc: "/img/Boons/Lightning Reflexes_I.png",
+    iconsrc: "/img/Boons/Lightning Reflexes.webp",
   },
   {
     id: 'ZEU09',
@@ -1080,7 +1082,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your chain-lightning effects bounce more times before expiring.",
-    iconsrc: "/img/Boons/Storm Lightning_I.png",
+    iconsrc: "/img/Boons/Storm Lightning.webp",
   },
   {
     id: 'ZEU10',
@@ -1088,7 +1090,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning bolt effects deal damage in a larger area.",
-    iconsrc: "/img/Boons/High Voltage_I.png",
+    iconsrc: "/img/Boons/High Voltage.webp",
   },
   {
     id: 'ZEU11',
@@ -1096,7 +1098,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning bolt effects have a chance to strike twice.",
-    iconsrc: "/img/Boons/Double Strike_I.png",
+    iconsrc: "/img/Boons/Double Strike.webp",
   },
   {
     id: 'ZEU12',
@@ -1104,7 +1106,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning effects also make foes Jolted.",
-    iconsrc: "/img/Boons/Static Discharge_I.png",
+    iconsrc: "/img/Boons/Static Discharge.webp",
   },
   {
     id: 'ZEU13',
@@ -1112,7 +1114,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your God Gauge charges faster when you deal or take damage.",
-    iconsrc: "/img/Boons/Clouded Judgment_I.png",
+    iconsrc: "/img/Boons/Clouded Judgment.webp",
   },
   {
     id: 'ZEU14',
@@ -1120,7 +1122,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After using Call, you deal more damage for a short time.",
-    iconsrc: "/img/Boons/Billowing Strength_I.png",
+    iconsrc: "/img/Boons/Billowing Strength.webp",
   },
   {
     id: 'ZEU15',
@@ -1128,7 +1130,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "All your lightning effects create an additional burst.",
-    iconsrc: "/img/Boons/Splitting Bolt_I.png",
+    iconsrc: "/img/Boons/Splitting Bolt.webp",
   },
 ];
 

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import SlotIcon from '@/components/SlotIcon';
 import SkillPicker from '@/components/SkillPicker';
 import { SLOTS, EMPTY_SLOTS } from '@/lib/slots';
-import { boonsById, boonsForSlot } from '@/data/boons';
+import { boonsById, boonsForSlot } from '@/data/js/boons';
 import { initialLevel, cycleLevel } from '@/lib/skills';
 import { subscribe, getSnapshot, getServerSnapshot, saveBuilds } from '@/lib/buildsStore';
 import '@/styles/create.css';

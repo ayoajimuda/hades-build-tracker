@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Link from 'next/link';
 import { view } from 'framer-motion/client';
 import Image from 'next/image';
-import { featuredBuilds } from '@/data/featuredBuilds';
+import { featuredBuilds } from '@/data/js/featuredBuilds';
 
 export default function Home() {
 
