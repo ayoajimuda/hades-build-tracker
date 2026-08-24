@@ -1,0 +1,117 @@
+== Upgrades ==
+These are all the upgrades the Adamant Rail can receive when using the [[Daedalus Hammer]]. Some upgrades are mutually exclusive and cannot be combined with each other.
+
+Daedalus Hammer upgrades for the Rail can either change its "Fire" ('''Attack''') pattern, add new effects to the Rail's bullets, or change its "Bombard" ('''Special''') attack pattern.
+{| class="sortable wikitable"
+! Upgrade !! Description !! Notes
+|-
+| style="text-align:center;" |[[File:Flurry_Fire.png|100x100px]]<br />Flurry Fire
+| Your '''Attack''' is faster and more accurate; gain {{Green|+6}} ammo capacity.
+|
+* Cannot be combined with Spread Fire or Delta Chamber
+* Incompatible with the Aspect of Lucifer
+* Reduce '''Attack''' cooldown to {{Green|60%}}
+|-
+| style="text-align:center;" |[[File:Ricochet Fire.png|100x100px]]<br />Ricochet Fire
+| Your '''Attack''' bounces to +1 other foe
+|
+* Cannot be combined with Explosive Fire, Spread Fire, or Seeking Fire
+* Incompatible with the Aspect of Lucifer
+|-
+| style="text-align:center;" |[[File:Spread_Fire.png|100x100px]]<br />Spread Fire
+| Your '''Attack''' becomes a short spread that deals {{Green|40}} base damage; lose {{Red|-6}} ammo capacity.
+|
+* Cannot be combined with Flurry Fire, Delta Chamber, Ricochet Fire or Seeking Fire
+* Incompatible with the Aspect of Lucifer
+* Reduce '''Attack''' range to {{Red|320}}
+* Increase '''Attack''' cooldown to {{Red|150%}}
+|-
+| style="text-align:center;" |[[File:Explosive Fire.png|100x100px]]<br />Explosive Fire
+| Your '''Attack''' deals damage in an area and briefly slows foes. 
+|
+* Cannot be combined with Ricochet Fire or Piercing Fire
+* Incompatible with the Aspect of Lucifer
+* Damage radius: {{Green|275}}
+* 
+|-
+| style="text-align:center;" |[[File:Infinity_Chamber.png|100x100px]]<br />Delta Chamber
+| Your '''Attack''' is a 3-round burst; you never have to '''Reload'''.
+|
+* Cannot be combined with Spread Fire or Flurry Fire
+* Incompatible with the Aspect of Lucifer
+* Cooldown between each shot: decreased to {{Green|0.035 sec}}
+* Cooldown between bursts of fire: {{Green|0.5 sec}}
+
+|-
+| style="text-align:center;" |[[File:Piercing_Fire.png|100x100px]]<br />Piercing Fire
+| Your '''Attack''' pierces foes and deals {{Green|+50%}} damage to '''Armor'''.
+|
+* Makes the '''Attack''' [[Unblockable]] and [[Piercing]]
+* Cannot be combined with Explosive Fire or Seeking Fire
+|-
+| style="text-align:center;" |[[File:Triple_Bomb.png|100x100px]]<br />Triple Bomb
+| You can use your '''Special''' {{Green|3}} times in rapid succession.
+|
+* Cannot be combined with Cluster Bomb or Hazard Bomb
+|-
+| style="text-align:center;" |[[File:Rocket_Bomb.png|100x100px]]<br />Rocket Bomb
+|Your '''Special''' is replaced with a rocket that deals {{Green|80}} base damage.
+|
+* Cannot be combined with Hazard Bomb
+* Incompatible with the Aspect of Lucifer
+|-
+| style="text-align:center;" |[[File:Targeting System.png|100x100px]]<br />Targeting System
+|Foes targeted by your '''Special''' move slower and take {{Green|+30%}} damage.
+|
+* The damage bonus is additive.
+|-
+| style="text-align:center;" |[[File:Hazard_Bomb.png|100x100px]]<br />Hazard Bomb
+|Your '''Special''' deals {{Green|+300%}} base damage in a large area, but can hurt ''you''.
+|
+* Cannot be combined with Rocket Bomb, Cluster Bomb or Triple Bomb
+*Incompatible with the Aspect of Lucifer
+* Increase damage radius to 145%
+*The damage bonus is multiplicative.
+* Deals 1% [[Damage Calculation|damage to Zag himself]]
+|-
+| style="text-align:center;" |[[File:Cluster_Bomb.png|100x100px]]<br />Cluster Bomb
+|Your '''Special''' fires a spread of 5 bombs, but each deals {{Red|-30%}} damage.
+|
+* Cannot be combined with Hazard Bomb or Triple Bomb
+* Incompatible with the Aspect of Lucifer
+* Reduce damage radius to {{Green|350}}
+*If used with Rocket Bomb, 5 rockets are fired in a 150° spread over about a second, firing right to left
+|-
+| style="text-align:center;" |[[File:Seeking_Fire.png|100x100px]]<br />Seeking Fire
+|Your '''Attack''' seeks the nearest foe and deals {{Green|+10%}} damage.
+|
+* Cannot be combined with Piercing Fire, Ricochet Fire, or Spread Fire
+* Incompatible with the Aspect of Lucifer
+|-
+| style="text-align:center;" |[[File:Concentrated_Beam.png|100x100px]]<br />Concentrated Beam
+|Your '''Igneus Eden Attack''' damage to a foe ramps up {{Green|+100%}} faster.
+|
+* Aspect of Lucifer Exclusive
+* Cannot be combined with Eternal Chamber
+|-
+| style="text-align:center;" |[[File:Flash_Fire.png|100x100px]]<br />Flash Fire
+|Your '''Igneus Eden Attack''' starts firing and fires {{Green|+50%}} faster with {{Green|+15%}} range.
+|
+* Aspect of Lucifer Exclusive
+|-
+| style="text-align:center;" |[[File:Triple_Beam.png|100x100px]]<br />Triple Beam
+|Your '''Igneus Eden Attack''' fires {{Green|3}} beams in a spread pattern.
+|
+* Aspect of Lucifer Exclusive
+|-
+| style="text-align:center;" |[[File:Eternal_Chamber.png|100x100px]]<br />Eternal Chamber
+|Your '''Igneus Eden''' has ∞ ammo, but its damage no longer ramps.
+|
+* Aspect of Lucifer Exclusive
+* Cannot be combined with Concentrated Beam
+|-
+| style="text-align:center;" |[[File:Greater_Inferno.png|100x100px]]<br />Greater Inferno
+|Your '''Igneus Eden Hellfire''' radiates {{Green|+250%}} damage in a larger area.
+|
+* Aspect of Lucifer Exclusive
+|}

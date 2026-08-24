@@ -1,0 +1,165 @@
+== Wares ==
+{{Quote|The five rivers flowing through the Underworld imbue the dead's detritus with great power.}}
+{| class="wikitable" style="text-align: center;"
+|+
+!Item
+!Description
+!Price 
+!Duration
+|-
+|[[File:Aether Net.png|100x100px]]
+[[Aether (God)|Aether]] Net
+|You start '''Encounter(s)''' with your '''God Gauge''' '''{{Green|15%}}''' full'''.'''
+| 15 {{Obol}}
+|6 Encounters
+|-
+|[[File:Braid_of_Atlas.png|100x100px]]
+Braid of [[Atlas]]
+|Your '''Cast''' deals '''{{Green|+50%}}''' damage.
+|20 {{Obol}}
+|6 Encounters
+|-
+|[[File:Centaur Soul.png|100x100px]]
+Centaur Soul
+| Gain '''{{Green|+25}}'''{{HealthUp}} ''(without restoring {{Heart}})''.
+|100 {{Obol}}
+|Instant
+|-
+|[[File:Chimaera Jerky.png|100x100px]]
+Chimaera Jerky
+| Your '''Special''' deals '''{{Green|+40%}}''' damage.
+|35 {{Obol}}
+|6 Encounters
+|-
+|[[File:Cyclops_Jerky.png|100x100px]]
+Cyclops Jerky
+|Your '''Attack''' deals '''{{Green|+30%}}''' damage. 
+|40 {{Obol}}
+|6 Encounters
+|-
+|[[File:Eris Bangle.png|100x100px]]
+[[Eris]] Bangle
+|You deal '''{{Green|+50%}}''' damage striking undamaged foes.
+|30 {{Obol}}
+|6 Encounters
+|-
+|[[File:Eye_of_Lamia.png|100x100px]]
+Eye of Lamia
+|Slain foes have a '''{{Green|15%}}''' chance to drop healing items.
+|25 {{Obol}}
+|3 Encounters
+|-
+|[[File:Fateful Twist.png|100x100px]]
+[[Fates|Fateful]] Twist
+|Gain a random item offered from the '''Well of Charon'''.
+|45 {{Obol}}
+|Instant
+|-
+|[[File:Flame Wheels Release.png|100x100px]]
+[[Flame Wheel|Flame Wheels]] Release
+|Prevent '''[[Flame Wheel]]''' foes from appearing in '''Encounter(s)'''.
+|75 {{Obol}}
+|10 Encounters
+|-
+|[[File:Gaea's Treasure.png|100x100px]]
+[[Gaea]]'s Treasure
+|Gain '''{{Green|11-14}}''' {{Gemstones}} (WIP)
+|{{Obol}} = '''{{Green|350%}}''' {{Gemstones}} (rounded up)
+|Instant
+|-
+|[[File:HydraLite.png|100x100px]]
+[[Hydra]]Lite
+|You recover '''{{Green|10%}}''' {{Heart}} when you enter a chamber.
+|45 {{Obol}}
+|3 Chambers
+|-
+|[[File:Ignited_Ichor.png|100x100px]]
+Ignited Ichor
+|Gain '''{{Green|20%}}''' move speed.
+|10 {{Obol}}
+|8 Encounters
+|-
+|[[File:Kiss_of_Styx.png|100x100px]]
+Kiss of [[Styx]]
+| Replenish {{Green|1}} use of '''[[Death Defiance]]'''.
+|200 {{Obol}}
+|Instant
+|-
+|[[File:Life_Essence.png|100x100px]]
+Life Essence
+|Restore up to '''{{Green|22-38%}}''' {{Heart}} (rounded up).
+|{{Obol}} = '''{{Green|65-80%}}''' {{Heart}} (rounded down)
+|Instant
+|-
+|[[File:Light_of_Ixion.png|100x100px]]
+Light of [[Ixion]]
+|Ensure a '''[[Chaos Gate]]''' will spawn ahead ''(where possible)''.
+|40 {{Obol}}
+|Until Spawn
+|-
+|[[File:Nail of Talos.png|100x100px]]
+Nail of [[Talos]]
+|You deal '''{{Green|+50%}}''' damage to '''[[Gameplay mechanics#Armor|Armor]]'''.
+|65 {{Obol}}
+|6 Encounters
+|-
+|[[File:Nemesis Crest.png|100x100px]]
+[[Nemesis]] Crest
+|You deal '''{{Green|+50%}}''' damage striking foes from behind.
+|60 {{Obol}}
+|6 Encounters
+|-
+|[[File:Night Spindle.png|100x100px]]
+[[Nyx|Night]] Spindle
+|Gain {{Green|+1}} use of your '''Chthonic Companion'''<nowiki/>'s '''Summon'''.
+|40{{Obol}}
+|Instant
+|-
+|[[File:Price of Midas.png|100x100px]]
+Price of [[Midas]]
+|Gain  {{Obol}} = 1.1 - 1.8x {{Heart}} cost ''(for a blood price)'' (WIP)
+|10-50 {{Heart}}
+|Instant
+|-
+|[[File:Prometheus_Stone.png|100x100px]]
+[[Prometheus]] Stone
+|Gain '''{{Green|+1}}''' {{Ammo}} for your '''Cast'''.
+|50 {{Obol}}
+|6 Encounters
+|-
+|[[File:Skeletal Lure.png|100x100px]]
+Skeletal Lure
+|Ensure a '''[[Fishing|Fishing Point]]''' will spawn ahead ''(where possible)''.
+|60 {{Obol}}
+|Until Spawn
+|-
+|[[File:Stygian Shard.png|100x100px]]
+[[Styx|Stygian]] Shard
+|'''Traps''' deal '''{{Green|+500%}}''' damage to your foes.
+|35 {{Obol}}
+|6 Encounters next Boon
+|-
+|[[File:Tinge_of_Erebus.png|100x100px]]
+Tinge of [[Erebus]]
+|Gain '''{{Green|12-26}}''' {{Darkness}}
+|{{Obol}} = '''{{Green|75%}}''' {{Darkness}} (rounded down)
+|Instant
+|-
+|[[File:Kiss of Styx.png|100x100px]]
+Touch of [[Styx]]
+|Your '''[[Mirror of Night#Talents|Stubborn Defiance]]''' restores '''{{Green|+10%}}''' {{Heart}}.
+| 55 {{Obol}}
+|15 Encounters
+|-
+|[[File:Trove_Tracker.png|100x100px]]
+Trove Tracker
+|Ensure a '''[[Infernal Trove]]''' will spawn ahead ''(where possible)''.
+|50 {{Obol}}
+|Until Spawn
+|-
+|[[File:Yarn_of_Ariadne.png|100x100px]]
+Yarn of [[Ariadne]]
+|The next '''Boon''' you find has upgraded '''Rarity''' (in reality, only guarantees Rare while increasing chances of Epic by +25% and duo/legendary by +10%).
+|70 {{Obol}}
+|Until next Boon 
+|}{{Quote|Upon demise, all {{Obol}} returned to Charon. All sales are final.}}

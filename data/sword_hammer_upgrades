@@ -1,0 +1,78 @@
+==Upgrades==
+{| class="sortable wikitable" id="hammers"
+!Upgrade!!Description !!Notes
+|-
+| style="text-align:center;" |[[File:Armor_Slayer.png|100x100px]]<br />Breaching Slash
+|Your '''Attack''' deals {{Green|+300% damage}} to '''Armor'''.
+|
+*This upgrade also applies to '''Dash-Strike'''
+|-
+| style="text-align:center;" |[[File:Cruel_Thrust.png|100x100px]]<br />Cruel Thrust
+|Your '''Thrust''' deals {{Green|+200%}} damage and has a {{Green|+40%}} '''[[Critical]]''' chance.
+|
+*Cannot be combined with World Splitter or Flurry Slash
+*Although '''Dash-Strike''' looks like a thrust, it does not benefit from Cruel Thrust
+*Incompatible with Aspect of Arthur
+|-
+| style="text-align:center;" |[[File:Cursed Slash.png|100x100px]]<br />Cursed Slash
+|Your '''Attack''' restores {{Green|2}} {{Heart}}, but you have {{Red|-60%}} {{Heart}}.
+|
+*This upgrade's bane not only affects the initial health pool you have when drawing or activating it, but also applies to any increases to max health in that run.
+*'''Dash-Strike''' does not restore health.
+*Piercing Wave has no benefit from this upgrade; only melee strikes will restore health.
+|-
+| style="text-align:center;" | [[File:Sword Snap Nova.png|100x100px]]<br />Dash Nova
+|Your '''Special''' makes you lunge ahead, then become '''[[Gameplay mechanics#Sturdy|Sturdy]]''' for {{Green|0.8}} Sec.
+|
+*Lunges towards cursor, not in current direction of movement.
+|-
+| style="text-align:center;" |[[File:Double_Edge.png|100x100px]]<br />Double Edge
+| Your '''Dash-Strike''' hits twice and deals {{Green|+20%}} damage.
+|
+|-
+| style="text-align:center;" |[[File:Sudden_Sunder.png|100x100px]]<br />Double Nova
+|Your '''Special''' hits twice but no longer knocks foes away.
+|
+|-
+| style="text-align:center;" |[[File:Flurry_Blade.png|100x100px]]<br />Flurry Slash
+|Hold '''Attack''' to strike rapidly, dealing {{Green|25}} base damage per hit.
+|
+*Cannot be combined with World Splitter or Cruel Thrust
+*Incompatible with Aspect of Arthur
+|-
+| style="text-align:center;" | [[File:Sword Hoarding Slash.png|100x100px]]<br />Hoarding Slash
+| Your '''Attack''' deals bonus damage equal to '''{{Green|1=5%}}''' of your current {{Obol}}.
+|
+*This upgrade also applies to '''Dash-Strike'''
+|-
+| style="text-align:center;" |[[File:Piercing Wave.png|100x100px]]<br />Piercing Wave
+|Your '''Attack''' fires a wave that [[Pierce|pierces]] foes, dealing {{Green|30}} damage.
+|
+*Piercing Waves cannot restore health if used with Cursed Slash.
+*This upgrade also applies to '''Dash-Strike'''
+|-
+| style="text-align:center;" | [[File:Shadow Slash.png|100x100px]]<br />Shadow Slash
+|Your '''Attack''' deals {{Green|+200%}} damage when striking foes from behind.
+|
+*The damage bonus is additive
+*This upgrade does not apply to '''Dash-Strike'''
+*This upgrade does not apply to '''Parting Shot'''
+|-
+| style="text-align:center;" |[[File:Super_Nova.png|100x100px]]<br />Super Nova
+| Your '''Special''' hits a wider area and deals {{Green|+20% damage}}.
+|
+*Increases damage radius by 20%
+*Does not impact '''Hallowed Ground''' aura size
+|-
+| style="text-align:center;" |[[File:World_Splitter.png|100x100px]]<br />World Splitter
+|Your '''Attack''' is replaced with a big chop that deals {{Green|90}} base damage.
+|
+*Cannot be combined with Flurry Slash or Cruel Thrust
+*Incompatible with Aspect of Arthur
+|-
+| style="text-align:center;" |[[File:Sword Greater Consecration.png|100x100px]]
+Greater Consecration
+|Your '''Holy Excalibur''' aura is {{Green|+45%}} larger; makes foes {{Green|+10%}} slower
+|
+* Aspect of Arthur exclusive
+|}

@@ -1,0 +1,90 @@
+==Upgrades ==
+
+{| class="sortable wikitable"
+|+
+!Upgrade
+! Description
+!Notes
+|-
+| style="text-align:center;" |[[File:Extended_Jab.png|100x100px]]<br />Extending Jab
+|Your '''Attack''' has more range and deals {{Green|+40%}} damage to distant foes.
+|
+*Increases attack range by '''{{Green|40%}}''' ({{Green|430}} => {{Green|602}})
+*Increases damage to foes farther than '''{{Green|475}}''' away
+*The damage bonus is additive.
+|-
+| style="text-align:center;" |[[File:Multi_Skewer.png|100x100px]]<br />Chain Skewer
+|Your '''Special''' bounces to up to {{Green|7}} foes, dealing {{Green|+30%}} damage for each.
+|
+*Cannot be combined with Exploding Launcher
+*Incompatible with Aspect of Guan Yu and Aspect of Achilles
+|-
+| scope="row" style="text-align:center;" |[[File:Armor_Skewer.png|100x100px]]<br>Breaching Skewer
+|Your '''Special''' deals {{Green|+400%}} damage to '''Armor'''.
+|
+|-
+| style="text-align:center;" |[[File:Vicious_Skewer.png|100x100px]]<br />Vicious Skewer
+|Your '''Special''' deals {{Green|+50%}} damage; {{Green|+50%}} '''Critical''' chance on recovery.
+|
+*Cannot be combined with Exploding Launcher
+*Incompatible with Aspect of Guan Yu
+*The damage bonus is additive.
+|-
+| style="text-align:center;" |[[File:Exploding_Launcher.png|100x100px]]<br />Exploding Launcher
+|Your '''Special''' is replaced with a shot that deals {{Green|50}} damage in an area.
+|
+*Cannot be combined with Chain Skewer or Vicious Skewer
+*Incompatible with Aspect of Achilles and Aspect of Guan Yu
+*Disables '''Special''' backstab bonuses
+|-
+| style="text-align:center;" |[[File:Massive_Spin.png|100x100px]]<br />Massive Spin
+|Your '''Spin Attack''' deals {{Green|+125%}} damage and hits a larger area.
+|
+*Increases damage radius of '''Spin Attack''' by {{Green|30%}}
+* Cannot be combined with Flurry Jab
+|-
+| style="text-align:center;" |[[File:Quick_Spin.png|100x100px]]<br />Quick Spin
+|Your '''Spin Attack''' charges and recovers much faster.
+|
+*Cannot be combined with Flurry Jab
+*New charge timing:
+**1st stage removed
+**2nd stage: 0.15s
+**3rd stage: 0.30s
+|-
+| style="text-align:center;" |[[File:Flurry_Jab.png|100x100px]]<br />Flurry Jab
+|Hold '''Attack''' to strike rapidly, but you cannot '''Spin Attack'''.
+|
+*Cannot be combined with Flaring Spin, Massive Spin or Quick Spin
+*Incompatible with Aspect of Hades and Aspect of Guan Yu
+|-
+| style="text-align:center;" |[[File:Spear Charged Skewer.png|100x100px]]
+Charged Skewer
+|Hold '''Special''' to charge your skewer for up to {{Green|+200%}} [[base damage]]. Minimum range reduced*.
+|
+*Incompatible with Aspect of Achilles
+*Causes the spear to stop at a much closer distance than usual when the '''Special''' button is simply tapped
+|-
+| style="text-align:center;" |[[File:Spear Serrated Point.png|100x100px]]
+Serrated Point
+|Your '''Dash-Strike''' hits {{Green|3}} times, but your dash has {{Red|-25%}} range.
+|
+*Incompatible with Flurry Jab, forcing a hit delay between dash-attacks
+|-
+| style="text-align:center;" |[[File:Spear Flaring Spin.png|100x100px]]
+Flaring Spin
+|Charging your '''Spin Attack''' makes you '''Sturdy''' and pulse {{Green|40}} damage. 
+|
+*Incompatible with Flurry Jab
+|-
+| style="text-align:center;" |[[File:Spear Triple Jab.png|100x100px|link=Special:FilePath/Spear_Triple_Jab.png]]
+Triple Jab
+|Your '''Attack''' strikes {{Green|3}} times in a spread pattern.
+|
+|-
+| style="text-align:center;" |[[File:Spear Winged Serpent.png|100x100px]]
+Winged Serpent
+|Your '''Frost Fair Blade Spin Attack''' travels for {{Green|+80%}} longer.
+|
+*Exclusive to Aspect of Guan Yu
+|}
