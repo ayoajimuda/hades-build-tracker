@@ -1,39 +1,36 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import SkillCard from './SkillCard';
-import { initialLevel } from '@/lib/skills';
+import { useState, useMemo, useEffect } from 'react';
+import Image from 'next/image';
+import { GODS } from '@/data/boons';
 
-const GODS = ['APH','ARE','ART','ATH','DEM','DIO','POS','ZEU','HER','CHA'];
-
-export default function SkillPicker({ data, onPick, onClose }) {
+export default function SkillPicker({ candidates, slotLabel, onPick, onClose }) {
   const [search, setSearch] = useState('');
   const [gods, setGods] = useState([]);
 
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
   const results = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return data.categories
-      .map(({ name, skills }) => ({
-        name,
-        skills: skills.filter((s) => {
-          if (gods.length && !s.tags?.some((t) => gods.includes(t))) return false;
-          if (!q) return true;
-          const hay = [s.title, s.text, ...(s.effect ?? [])].join(' ').toLowerCase();
-          return hay.includes(q);
-        }),
-      }))
-      .filter((c) => c.skills.length > 0);
-  }, [data, search, gods]);
+    return candidates.filter((b) => {
+      if (gods.length && !gods.includes(b.god)) return false;
+      if (!q) return true;
+      return `${b.title} ${b.text}`.toLowerCase().includes(q);
+    });
+  }, [candidates, search, gods]);
 
-  function toggleGod(g) {
-    setGods((prev) => (prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g]));
-  }
+  const toggleGod = (code) =>
+    setGods((prev) => (prev.includes(code) ? prev.filter((g) => g !== code) : [...prev, code]));
 
   return (
     <div className="overlay" onClick={onClose}>
       <div className="picker" onClick={(e) => e.stopPropagation()}>
         <div className="picker-head">
-          <p className="picker-title">Skill Selection</p>
+          <p className="picker-title">{slotLabel} Boons</p>
           <input
             className="picker-search"
             value={search}
@@ -48,35 +45,27 @@ export default function SkillPicker({ data, onPick, onClose }) {
         <div className="picker-filters">
           {GODS.map((g) => (
             <button
-              key={g}
-              className={`filter-chip ${gods.includes(g) ? 'on' : ''}`}
-              onClick={() => toggleGod(g)}
+              key={g.code}
+              className={`filter-chip ${gods.includes(g.code) ? 'on' : ''}`}
+              onClick={() => toggleGod(g.code)}
             >
-              {g}
+              {g.name}
             </button>
           ))}
         </div>
 
         <div className="picker-body">
           {results.length === 0 ? (
-            <p className="picker-empty">
-              Nothing matches those filters. Try loosening them.
-            </p>
+            <p className="picker-empty">No {slotLabel.toLowerCase()} boons match those filters.</p>
           ) : (
-            results.map(({ name, skills }) => (
-              <section key={name}>
-                <p className="picker-category">{name}</p>
-                <div className="skill-grid">
-                  {skills.map((s) => (
-                    <SkillCard
-                      key={s.id}
-                      skill={s}
-                      level={initialLevel(s)}
-                      onCycle={() => onPick(s)}
-                    />
-                  ))}
-                </div>
-              </section>
+            results.map((b) => (
+              <button key={b.id} className="picker-row" onClick={() => onPick(b)}>
+                <Image src={b.iconsrc} alt="" width={72} height={72} draggable={false} />
+                <span className="picker-row-text">
+                  <span className="picker-row-name">{b.title}</span>
+                  <span className="picker-row-effect">{b.text}</span>
+                </span>
+              </button>
             ))
           )}
         </div>

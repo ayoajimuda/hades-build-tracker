@@ -1,0 +1,76 @@
+==List of Curses==
+If you're in the middle of a biome and trying to decide whether to accept a curse, check your current chamber number (upper right corner of the Boons screen) and be mindful of upcoming boss encounters. Bosses for the first 3 biomes appear in chambers 14, 24, and 36. The rooms immediately before them (13, 23, and 35) will always be non-combat chambers. 
+
+With the exception of Enshrouded, curses last for numbers of encounters (chambers with enemies) rather than chambers, so a 3-encounter curse accepted in chamber 10 would still be around for the boss fight in chamber 14 because of the shop or Pom in chamber 13. 
+
+Or a 4-encounter curse in chamber 8 could be around for the boss fight if you get a fountain afterwards - a fight in chamber 9, fountain in 10, fights 11 and 12, and shop/Pom in 13.
+
+Zagreus will make a comment when injured by a curse (Addled, Flayed, and Maimed) and a visual effect displaying bleeding will play. The damage from these curses has no cooldown, which means that activating their condition rapidly (for example, with a weapon with very fast fire rate) can drain large swaths of HP near instantly. These curses will not reduce your health below 1 HP, albeit the visual effect and Zagreus's comment will still play.
+
+{| class="wikitable sortable"
+|+
+!Curse
+!Description
+!Rarity
+!Notes
+!Prequisites
+|-
+{{Boon table row
+| name = Abyssal
+| description = For the next 3–4 encounters, you take {{Red|+300%–500%}} damage from traps.
+}}
+{{Boon table row
+| name = Addled
+| description = For the next 3–4 encounters, each time you '''Cast''', get hit for {{Red|3–5}} {{Heart}}.
+}}
+{{Boon table row
+| name = Atrophic
+| description =  For the next 3-4 encounters, your Life Total is reduced by {{Red|25–49}} {{Heart}}.
+| notes =  Will not appear if you have less than 50 total health.
+}}
+{{Boon table row
+| name = Caustic
+| description = For the next 3–4 encounters, slain foes toss an Inferno-Bomb at you.
+}}
+{{Boon table row
+| name = Enshrouded
+| description = For the next 4–5 chambers, chamber reward previews are hidden.
+| notes =  Counts down in all chambers, including the areas between biomes and NPC encounters.
+}}
+{{Boon table row
+| name = Excruciating
+| description = For the next 3–4 encounters, you take {{Red|+20%–50%}} damage.
+}}
+{{Boon table row
+| name = Flayed
+| description = For the next 3–4 encounters, each time you '''Special''', get hit for {{Red|3–5}} {{Heart}}.
+}}
+{{Boon table row
+| name = Halting
+| description = For the next 3–4 encounters, your '''Dash''' has {{Red|-20%–50%}} reduced range.
+| notes =  May reduce travel speed under normal walking. Invulnerability frames are not affected.
+}}
+{{Boon table row
+| name = Maimed
+| description = For the next 3–4 encounters, each time you '''Attack''', get hit for {{Red|3–5}} {{Heart}}.
+}}
+{{Boon table row
+| name = Pauper's
+| description = For the next 3–4 encounters, you cannot earn {{Obol}}.
+| notes =  Applies to all possible sources of Obol. Obol chamber rewards will still appear but do nothing. Price of Midas may also be offered but it will only inflict damage without giving anything.
+}}
+{{Boon table row
+| name = Roiling
+| description = For the next 3–4 encounters, you face {{Red|+30%–80%}} more foes.
+| notes = Does not count down in mini-boss or boss encounters.
+}}
+{{Boon table row
+| name = Slippery
+| description = For the next 3–4 encounters, you cannot collect {{Ammo}} for {{Red|10–15}} seconds.
+| notes = {{Ammo}} is dropped normally from enemies but will appear transparent. Will not appear when [[Mirror_of_Night|Stygian Soul]] talent is selected.
+}}
+{{Boon table row
+| name = Slothful
+| description = For the next 3–4 encounters, you have {{Red|-40%–-60%}} move speed.
+}}
+|}

@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import Header from '@/components/Header';
-import SkillCard from '@/components/SkillCard';
+import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
+import SlotIcon from '@/components/SlotIcon';
 import SkillPicker from '@/components/SkillPicker';
-import { loadSkillData, initialLevel, cycleLevel } from '@/lib/skills';
-import { getSnapshot, saveBuilds } from '@/lib/buildsStore';
+import { SLOTS, EMPTY_SLOTS } from '@/lib/slots';
+import { boonsById, boonsForSlot } from '@/data/boons';
+import { initialLevel, cycleLevel } from '@/lib/skills';
+import { subscribe, getSnapshot, getServerSnapshot, saveBuilds } from '@/lib/buildsStore';
 import '@/styles/create.css';
 
 const slugify = (s) =>
@@ -19,56 +20,49 @@ function uniqueSlug(base, builds) {
 }
 
 export default function Create() {
-  const [data, setData] = useState(null);
+  const builds = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
   const [title, setTitle] = useState('');
-  const [entries, setEntries] = useState([]); // { uid, id, level }
+  const [slots, setSlots] = useState(EMPTY_SLOTS);
   const [currentSlug, setCurrentSlug] = useState(null);
-  const [picking, setPicking] = useState(false);
+  const [picking, setPicking] = useState(null);   // slot id, or null
   const [loadOpen, setLoadOpen] = useState(false);
   const [status, setStatus] = useState(null);
 
-  const dragFrom = useRef(null);
-  const uid = useRef(0);
+  const loadRef = useRef(null);
 
   useEffect(() => {
-    loadSkillData().then(setData).catch(() =>
-      setStatus({ type: 'error', text: "Couldn't load skill data." })
-    );
-  }, []);
+    if (!loadOpen) return;
+    const onDown = (e) => {
+      if (loadRef.current && !loadRef.current.contains(e.target)) setLoadOpen(false);
+    };
+    const onKey = (e) => e.key === 'Escape' && setLoadOpen(false);
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [loadOpen]);
 
-  const skillOf = (id) => data?.byId.get(id);
+  const boonOf = (id) => boonsById.get(id);
 
-  function addSkill(skill) {
-    setEntries((prev) => [
-      ...prev,
-      { uid: `e${uid.current++}`, id: skill.id, level: initialLevel(skill) },
-    ]);
+  function assign(boon) {
+    setSlots((prev) => ({ ...prev, [picking]: { id: boon.id, level: initialLevel(boon) } }));
+    setPicking(null);
+    setStatus(null);
   }
 
-  function cycle(entryUid) {
-    setEntries((prev) =>
-      prev.map((e) =>
-        e.uid === entryUid
-          ? { ...e, level: cycleLevel(skillOf(e.id), e.level) }
-          : e
-      )
-    );
-  }
-
-  function remove(entryUid) {
-    setEntries((prev) => prev.filter((e) => e.uid !== entryUid));
-  }
-
-  function reorder(toIndex) {
-    const from = dragFrom.current;
-    if (from == null || from === toIndex) return;
-    setEntries((prev) => {
-      const next = [...prev];
-      const [moved] = next.splice(from, 1);
-      next.splice(toIndex, 0, moved);
-      return next;
+  function cycle(slotId) {
+    setSlots((prev) => {
+      const entry = prev[slotId];
+      if (!entry) return prev;
+      return { ...prev, [slotId]: { ...entry, level: cycleLevel(boonOf(entry.id), entry.level) } };
     });
-    dragFrom.current = toIndex;
+  }
+
+  function clear(slotId) {
+    setSlots((prev) => ({ ...prev, [slotId]: null }));
   }
 
   function handleSave() {
@@ -78,24 +72,20 @@ export default function Create() {
       return;
     }
 
-    const existing = getSnapshot();
-    const slug = currentSlug ?? uniqueSlug(slugify(name), existing);
+    const slug = currentSlug ?? uniqueSlug(slugify(name), builds);
 
-    // icons drive the preview tiles on /builds
-    const icons = entries.slice(0, 4).map((e) => {
-      const s = skillOf(e.id);
-      return {
-        src: s.iconsrc,
-        alt: s.title,
-        name: s.title,
-        detail: e.level.rarity ?? `Rank ${e.level.rank}`,
-      };
-    });
+    const icons = SLOTS
+      .map((slot) => ({ slot, entry: slots[slot.id] }))
+      .filter(({ entry }) => entry)
+      .map(({ slot, entry }) => {
+        const b = boonOf(entry.id);
+        return { src: b.iconsrc, alt: b.title, name: b.title, detail: slot.label };
+      });
 
-    const build = { slug, name, entries, icons, updatedAt: Date.now() };
-    const next = existing.some((b) => b.slug === slug)
-      ? existing.map((b) => (b.slug === slug ? build : b))
-      : [...existing, build];
+    const build = { slug, name, slots, icons, updatedAt: Date.now() };
+    const next = builds.some((b) => b.slug === slug)
+      ? builds.map((b) => (b.slug === slug ? build : b))
+      : [...builds, build];
 
     try {
       saveBuilds(next);
@@ -108,84 +98,95 @@ export default function Create() {
 
   function handleLoad(build) {
     setTitle(build.name);
-    setEntries(build.entries ?? []);
+    setSlots({ ...EMPTY_SLOTS, ...(build.slots ?? {}) });
     setCurrentSlug(build.slug);
     setLoadOpen(false);
     setStatus(null);
-    uid.current = (build.entries?.length ?? 0) + 1;
+  }
+
+  function handleNew() {
+    setTitle('');
+    setSlots(EMPTY_SLOTS);
+    setCurrentSlug(null);
+    setStatus(null);
   }
 
   return (
-    <div>
-      <main>
-        <div className="board-toolbar">
-          <input
-            className="board-title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter Title"
-            aria-label="Build title"
-            spellCheck={false}
-          />
-          <div className="toolbar-actions">
-            <button className="board-button" onClick={() => setPicking(true)} disabled={!data}>
-              Add Skills
+    <main>
+      <div className="board-toolbar">
+        <input
+          className="board-title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter Title"
+          aria-label="Build title"
+          spellCheck={false}
+        />
+
+        <div className="toolbar-actions">
+          <button className="board-button" onClick={handleNew}>New Build</button>
+          <button className="board-button" onClick={handleSave}>Save Build</button>
+
+          <div className="load-wrap" ref={loadRef}>
+            <button
+              className="board-button"
+              onClick={() => setLoadOpen((o) => !o)}
+              aria-haspopup="menu"
+              aria-expanded={loadOpen}
+            >
+              Load Build
             </button>
-            <button className="board-button" onClick={handleSave}>Save Build</button>
-            <div className="load-wrap">
-              <button className="board-button" onClick={() => setLoadOpen((o) => !o)}>
-                Load Build
-              </button>
-              {loadOpen && (
-                <ul className="load-menu">
-                  {getSnapshot().length === 0 ? (
-                    <li className="load-empty">No saved builds</li>
-                  ) : (
-                    getSnapshot().map((b) => (
-                      <li key={b.slug}>
-                        <button className="load-item" onClick={() => handleLoad(b)}>
-                          {b.name}
-                        </button>
-                      </li>
-                    ))
-                  )}
-                </ul>
-              )}
-            </div>
+
+            {loadOpen && (
+              <ul className="load-menu" role="menu">
+                {builds.length === 0 ? (
+                  <li className="load-empty">No saved builds</li>
+                ) : (
+                  builds.map((b) => (
+                    <li key={b.slug}>
+                      <button role="menuitem" className="load-item" onClick={() => handleLoad(b)}>
+                        {b.name}
+                      </button>
+                    </li>
+                  ))
+                )}
+              </ul>
+            )}
           </div>
         </div>
+      </div>
 
-        {status && <p className={`board-status ${status.type}`} role="status">{status.text}</p>}
+      {status && (
+        <p className={`board-status ${status.type}`} role="status">{status.text}</p>
+      )}
 
-        <div className="board">
-          <div className="skill-grid board-grid">
-            {entries.map((e, i) => {
-              const skill = skillOf(e.id);
-              if (!skill) return null;
-              return (
-                <SkillCard
-                  key={e.uid}
-                  skill={skill}
-                  level={e.level}
-                  draggable
-                  onDragStart={() => (dragFrom.current = i)}
-                  onDragEnter={() => reorder(i)}
-                  onDragEnd={() => (dragFrom.current = null)}
-                  onCycle={() => cycle(e.uid)}
-                  onDelete={() => remove(e.uid)}
-                />
-              );
-            })}
-          </div>
-          {entries.length === 0 && (
-            <p className="board-empty">Click <strong>Add Skills</strong> to start your build.</p>
-          )}
+      <div className="board">
+        <div className="slot-column">
+          {SLOTS.map((slot) => {
+            const entry = slots[slot.id];
+            return (
+              <SlotIcon
+                key={slot.id}
+                slot={slot}
+                boon={entry ? boonOf(entry.id) : null}
+                level={entry?.level}
+                onPick={() => setPicking(slot.id)}
+                onCycle={() => cycle(slot.id)}
+                onClear={() => clear(slot.id)}
+              />
+            );
+          })}
         </div>
+      </div>
 
-        {picking && data && (
-          <SkillPicker data={data} onPick={addSkill} onClose={() => setPicking(false)} />
-        )}
-      </main>
-    </div>
+      {picking && (
+        <SkillPicker
+          candidates={boonsForSlot(picking)}
+          slotLabel={SLOTS.find((s) => s.id === picking).label}
+          onPick={assign}
+          onClose={() => setPicking(null)}
+        />
+      )}
+    </main>
   );
 }

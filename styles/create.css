@@ -111,8 +111,113 @@
 .board {
   min-height: calc(100vh - 12rem);
   background-color: #0f1115;
-  background-image:
-    linear-gradient(to right, #23262d 1px, transparent 1px),
-    linear-gradient(to bottom, #23262d 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+
+.slot-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 108px;
+}
+
+.slot-diamond {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 108px;
+  height: 108px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* diamond backing so the near-black glyph is visible */
+.slot-plate {
+  position: absolute;
+  inset: 14px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #2c313a, #16181d);
+  border: 1px solid #3a3f47;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.slot-diamond img {
+  position: relative;
+  filter: brightness(2.6) saturate(1.4);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.slot-diamond:hover img { transform: scale(1.06); }
+.slot-diamond:hover .slot-plate { border-color: #d81e4a; }
+
+.slot-diamond:focus-visible { outline: none; }
+.slot-diamond:focus-visible .slot-plate {
+  border-color: #f2f2f2;
+  box-shadow: 0 0 0 2px rgb(242 242 242 / 0.3);
+}
+
+/* filled: boon art is full-colour, so drop the brightness boost */
+.filled .slot-diamond img { filter: none; }
+.filled .slot-plate {
+  background: linear-gradient(135deg, #3a2028, #1a1418);
+  border-color: #d81e4a;
+}
+
+.slot-text { position: relative; min-width: 24rem; }
+
+.slot-name {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #f2f2f2;
+}
+
+.slot-effect {
+  margin: 0.2rem 0 0;
+  max-width: 42ch;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #9aa0a8;
+}
+
+.slot-placeholder {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4f58;
+}
+
+.slot-clear {
+  position: absolute;
+  top: -0.25rem;
+  right: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #6b7079;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.slot:hover .slot-clear { opacity: 1; }
+.slot-clear:hover { color: #ff6b81; }
+
+/* rarity tint on the plate */
+.filled.common    .slot-plate { border-color: #8a8f98; }
+.filled.rare      .slot-plate { border-color: #4a9fe0; }
+.filled.epic      .slot-plate { border-color: #a45fd8; }
+.filled.heroic    .slot-plate { border-color: #d8a13a; }
+.filled.legendary .slot-plate { border-color: #e0c04a; }
