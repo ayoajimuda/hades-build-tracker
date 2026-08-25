@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
-import { GODS } from '@/data/js/boons';
 
 export default function SkillPicker({ candidates, slotLabel, onPick, onClose }) {
   const [search, setSearch] = useState('');

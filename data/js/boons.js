@@ -505,7 +505,7 @@ export const boons = [
     god: 'DEM',
     slot: 'attack',
     text: "Your Attack is stronger and inflicts Chill.",
-    iconsrc: "/img/Boons/Frost Strike.webp",
+    iconsrc: "/img/Demeter/Frost_Strike.webp",
   },
   {
     id: 'DEM02',
@@ -513,7 +513,7 @@ export const boons = [
     god: 'DEM',
     slot: 'special',
     text: "Your Special is stronger and inflicts Chill.",
-    iconsrc: "/img/Boons/Frost Flourish.webp",
+    iconsrc: "/img/Demeter/Frost_Flourish.webp",
   },
   {
     id: 'DEM03',
@@ -521,7 +521,7 @@ export const boons = [
     god: 'DEM',
     slot: 'cast',
     text: "Your Cast drops a crystal that fires a beam straight ahead for a few seconds.",
-    iconsrc: "/img/Boons/Crystal Beam.webp",
+    iconsrc: "/img/Demeter/Crystal_Beam.webp",
   },
   {
     id: 'DEM04',
@@ -529,7 +529,7 @@ export const boons = [
     god: 'DEM',
     slot: 'cast',
     text: "Your Cast damages foes around you and inflicts Chill.",
-    iconsrc: "/img/Boons/Crystal Beam.webp",
+    iconsrc: "/img/Demeter/Icy_Flare.webp",
   },
   {
     id: 'DEM05',
@@ -537,7 +537,7 @@ export const boons = [
     god: 'DEM',
     slot: 'dash',
     text: "Your Dash shoots a gust ahead that inflicts Chill.",
-    iconsrc: "/img/Boons/Mistral Dash.webp",
+    iconsrc: "/img/Demeter/Mistral_Dash.webp",
   },
   {
     id: 'DEM06',
@@ -545,7 +545,7 @@ export const boons = [
     god: 'DEM',
     slot: 'call',
     text: "Your Call creates a winter vortex for a few seconds that deals damage and inflicts Chill.",
-    iconsrc: "/img/Boons/Demeter's Aid.webp",
+    iconsrc: "/img/Demeter/Demeters_Aid.webp",
   },
   {
     id: 'DEM07',
@@ -553,15 +553,15 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "After you take damage, damage and completely Chill your foe.",
-    iconsrc: "/img/Boons/Frozen Touch.webp",
+    iconsrc: "/img/Demeter/Frozen_Touch.webp",
   },
   {
     id: 'DEM08',
     title: "Rare Crop",
     god: 'DEM',
     slot: null,
-    text: "Your Boons become Common, then gain Rarity every few Encounters.",
-    iconsrc: "/img/Boons/Rare Crop.webp",
+    text: "Your Demeter become Common, then gain Rarity every few Encounters.",
+    iconsrc: "/img/Demeter/Rare_Crop.webp",
   },
   {
     id: 'DEM09',
@@ -569,7 +569,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "While you have no Ammo, take less damage and deal more.",
-    iconsrc: "/img/Boons/Ravenous Will.webp",
+    iconsrc: "/img/Demeter/Ravenous_Will.webp",
   },
   {
     id: 'DEM10',
@@ -577,7 +577,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Any Health effects are more potent. Restore some health now.",
-    iconsrc: "/img/Boons/Nourished Soul.webp",
+    iconsrc: "/img/Demeter/Nourished_Soul.webp",
   },
   {
     id: 'DEM11',
@@ -585,7 +585,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Whenever you Cast, damage nearby foes and inflict Chill.",
-    iconsrc: "/img/Boons/Snow Burst.webp",
+    iconsrc: "/img/Demeter/Snow_Burst.webp",
   },
   {
     id: 'DEM12',
@@ -593,7 +593,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Applying 10 stacks of Chill causes a blast, clearing the effect.",
-    iconsrc: "/img/Boons/Arctic Blast.webp",
+    iconsrc: "/img/Demeter/Arctic_Blast.webp",
   },
   {
     id: 'DEM13',
@@ -601,7 +601,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "When all foes are Chill afflicted, they become Slow and Decay.",
-    iconsrc: "/img/Boons/Killing Freeze.webp",
+    iconsrc: "/img/Demeter/Killing_Freeze.webp",
   },
   {
     id: 'DEM14',
@@ -609,7 +609,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Your Cast fires longer and inflicts Chill.",
-    iconsrc: "/img/Boons/Glacial Glare.webp",
+    iconsrc: "/img/Demeter/Glacial_Glare.webp",
   },
   {
     id: 'DEM15',
@@ -617,7 +617,7 @@ export const boons = [
     god: 'DEM',
     slot: null,
     text: "Chill-affected foes shatter at low hp, inflicting Chill nearby.",
-    iconsrc: "/img/Boons/Winter Harvest.webp",
+    iconsrc: "/img/Demeter/Winter_Harvest.webp",
   },
 
   // Dionysus
@@ -627,7 +627,7 @@ export const boons = [
     god: 'DIO',
     slot: 'attack',
     text: "Your Attack inflicts Hangover.",
-    iconsrc: "/img/Boons/Drunken Strike.webp",
+    iconsrc: "/img/Dionysus/Drunken_Strike.webp",
   },
   {
     id: 'DIO02',
@@ -635,7 +635,7 @@ export const boons = [
     god: 'DIO',
     slot: 'special',
     text: "Your Special inflicts Hangover.",
-    iconsrc: "/img/Boons/Drunken Flourish.webp",
+    iconsrc: "/img/Dionysus/Drunken_Flourish.webp",
   },
   {
     id: 'DIO03',
@@ -643,7 +643,7 @@ export const boons = [
     god: 'DIO',
     slot: 'cast',
     text: "Your Cast lobs a projectile that bursts into Festive Fog.",
-    iconsrc: "/img/Boons/Trippy Shot.webp",
+    iconsrc: "/img/Dionysus/Trippy_Shot.webp",
   },
   {
     id: 'DIO04',
@@ -651,7 +651,7 @@ export const boons = [
     god: 'DIO',
     slot: 'cast',
     text: "Your Cast damages foes around you, leaving behind Festive Fog.",
-    iconsrc: "/img/Boons/Trippy Shot.webp",
+    iconsrc: "/img/Dionysus/Trippy_Flare.webp",
   },
   {
     id: 'DIO05',
@@ -659,7 +659,7 @@ export const boons = [
     god: 'DIO',
     slot: 'dash',
     text: "Your Dash inflicts foes near you with Hangover.",
-    iconsrc: "/img/Boons/Drunken Dash.webp",
+    iconsrc: "/img/Dionysus/Drunken_Dash.webp",
   },
   {
     id: 'DIO06',
@@ -667,7 +667,7 @@ export const boons = [
     god: 'DIO',
     slot: 'call',
     text: "Your Call inflicts Hangover to foes all around you for a few seconds.",
-    iconsrc: "/img/Boons/Dionysus' Aid.webp",
+    iconsrc: "/img/Dionysus/Dionysus_Aid.webp",
   },
   {
     id: 'DIO07',
@@ -675,7 +675,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "If your Health is low after Encounters, restore to the threshold.",
-    iconsrc: "/img/Boons/After Party.webp",
+    iconsrc: "/img/Dionysus/After_Party.webp",
   },
   {
     id: 'DIO08',
@@ -683,7 +683,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Take less damage while at low Health.",
-    iconsrc: "/img/Boons/Positive Outlook.webp",
+    iconsrc: "/img/Dionysus/Positive_Outlook.webp",
   },
   {
     id: 'DIO09',
@@ -691,7 +691,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Gain Health when you pick up Nectar. Receive a Nectar now.",
-    iconsrc: "/img/Boons/Premium Vintage.webp",
+    iconsrc: "/img/Dionysus/Premium_Vintage.webp",
   },
   {
     id: 'DIO10',
@@ -699,7 +699,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Using a Fountain restores all Health and gives you bonus damage.",
-    iconsrc: "/img/Boons/Strong Drink.webp",
+    iconsrc: "/img/Dionysus/Strong_Drink.webp",
   },
   {
     id: 'DIO11',
@@ -707,7 +707,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Deal more damage while multiple foes are Hangover-afflicted.",
-    iconsrc: "/img/Boons/Bad Influence.webp",
+    iconsrc: "/img/Dionysus/Bad_Influence.webp",
   },
   {
     id: 'DIO12',
@@ -715,7 +715,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Your Hangover effects also make foes move slower.",
-    iconsrc: "/img/Boons/Numbing Sensation.webp",
+    iconsrc: "/img/Dionysus/Numbing_Sensation.webp",
   },
   {
     id: 'DIO13',
@@ -723,7 +723,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Hangover-afflicted foes contaminate other nearby foes.",
-    iconsrc: "/img/Boons/Peer Pressure.webp",
+    iconsrc: "/img/Dionysus/Peer_Pressure.webp",
   },
   {
     id: 'DIO14',
@@ -731,7 +731,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Take less damage while standing in Festive Fog.",
-    iconsrc: "/img/Boons/High Tolerance.webp",
+    iconsrc: "/img/Dionysus/High_Tolerance.webp",
   },
   {
     id: 'DIO15',
@@ -739,7 +739,7 @@ export const boons = [
     god: 'DIO',
     slot: null,
     text: "Hangover-afflicted foes take bonus damage in Festive Fog.",
-    iconsrc: "/img/Boons/Black Out.webp",
+    iconsrc: "/img/Dionysus/Black_Out.webp",
   },
 
   // Hermes
@@ -749,7 +749,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Attack is +X% faster.",
-    iconsrc: "/img/Boons/Swift Strike I.webp",
+    iconsrc: "/img/Hermes/Swift_Strike.webp",
   },
   {
     id: 'HER02',
@@ -757,7 +757,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Special is +X% faster.",
-    iconsrc: "/img/Boons/Swift Flourish I.webp",
+    iconsrc: "/img/Hermes/Swift_Flourish.webp",
   },
   {
     id: 'HER03',
@@ -765,7 +765,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Cast is +X% faster and fully automatic.",
-    iconsrc: "/img/Boons/Flurry Cast I.webp",
+    iconsrc: "/img/Hermes/Flurry_Cast.webp",
   },
   {
     id: 'HER04',
@@ -773,7 +773,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Call charges up automatically.",
-    iconsrc: "/img/Boons/Quick Favor I.webp",
+    iconsrc: "/img/Hermes/Quick_Favor.webp",
   },
   {
     id: 'HER05',
@@ -781,7 +781,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "For X seconds after you Dash, become Sturdy and run +100% faster.",
-    iconsrc: "/img/Boons/Hyper Sprint I.webp",
+    iconsrc: "/img/Hermes/Hyper_Sprint.webp",
   },
   {
     id: 'HER06',
@@ -789,7 +789,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You move X% faster.",
-    iconsrc: "/img/Boons/Greater Haste I.webp",
+    iconsrc: "/img/Hermes/Greater_Haste.webp",
   },
   {
     id: 'HER07',
@@ -797,7 +797,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "After you take damage, quickly Dash to recover up to X% Health lost.",
-    iconsrc: "/img/Boons/Quick Recovery I.webp",
+    iconsrc: "/img/Hermes/Quick_Recovery.webp",
   },
   {
     id: 'HER08',
@@ -805,7 +805,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You have +X% chance to Dodge.",
-    iconsrc: "/img/Boons/Greater Evasion I.webp",
+    iconsrc: "/img/Hermes/Greater_Evasion.webp",
   },
   {
     id: 'HER09',
@@ -813,7 +813,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You can Dash +X more time(s) in a row.",
-    iconsrc: "/img/Boons/Greatest Reflex I.webp",
+    iconsrc: "/img/Hermes/Greatest_Reflex.webp",
   },
   {
     id: 'HER10',
@@ -821,7 +821,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "After using Call, gain Dodge chance and move speed for 10 Sec.",
-    iconsrc: "/img/Boons/Second Wind I.webp",
+    iconsrc: "/img/Hermes/Second_Wind.webp",
   },
   {
     id: 'HER11',
@@ -829,7 +829,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Foes drop Ammo stuck in them faster.",
-    iconsrc: "/img/Boons/Quick Reload I.webp",
+    iconsrc: "/img/Hermes/Quick_Reload.webp",
   },
   {
     id: 'HER12',
@@ -837,7 +837,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Each time you enter a Chamber, gain a bit of wealth.",
-    iconsrc: "/img/Boons/Side Hustle I.webp",
+    iconsrc: "/img/Hermes/Side_Hustle.webp",
   },
   {
     id: 'HER13',
@@ -845,7 +845,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You deal bonus damage based on any bonus move speed.",
-    iconsrc: "/img/Boons/Rush Delivery I.webp",
+    iconsrc: "/img/Hermes/Rush_Delivery.webp",
   },
   {
     id: 'HER14',
@@ -853,7 +853,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "You regenerate Ammo faster.",
-    iconsrc: "/img/Boons/Auto Reload I.webp",
+    iconsrc: "/img/Hermes/Auto_Reload.webp",
   },
   {
     id: 'HER15',
@@ -861,7 +861,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your Ammo automatically return to you.",
-    iconsrc: "/img/Boons/Greater Recall I.webp",
+    iconsrc: "/img/Hermes/Greater_Recall.webp",
   },
   {
     id: 'HER16',
@@ -869,7 +869,7 @@ export const boons = [
     god: 'HER',
     slot: null,
     text: "Your cast deals more damage to foes without Ammo on them.",
-    iconsrc: "/img/Boons/Bad News I.webp",
+    iconsrc: "/img/Hermes/Bad_News.webp",
     notes: ["First shot damage: +50%"],
   },
 
@@ -880,7 +880,7 @@ export const boons = [
     god: 'POS',
     slot: 'attack',
     text: "Your Attack deals more damage and knocks foes away.",
-    iconsrc: "/img/Boons/Tempest Strike.webp",
+    iconsrc: "/img/Poseidon/Tempest_Strike.webp",
   },
   {
     id: 'POS02',
@@ -888,7 +888,7 @@ export const boons = [
     god: 'POS',
     slot: 'special',
     text: "Your Special deals more damage and knocks foes away.",
-    iconsrc: "/img/Boons/Tempest Flourish.webp",
+    iconsrc: "/img/Poseidon/Tempest_Flourish.webp",
   },
   {
     id: 'POS03',
@@ -896,7 +896,7 @@ export const boons = [
     god: 'POS',
     slot: 'cast',
     text: "Your Cast damages foes in an area and knocks them away.",
-    iconsrc: "/img/Boons/Flood Shot.webp",
+    iconsrc: "/img/Poseidon/Flood_Shot.webp",
   },
   {
     id: 'POS04',
@@ -904,7 +904,7 @@ export const boons = [
     god: 'POS',
     slot: 'cast',
     text: "Your Cast damages foes around you and knocks them away.",
-    iconsrc: "/img/Boons/Flood Shot.webp",
+    iconsrc: "/img/Poseidon/Flood_Flare.webp",
   },
   {
     id: 'POS05',
@@ -912,7 +912,7 @@ export const boons = [
     god: 'POS',
     slot: 'dash',
     text: "Your Dash damages foes in an area and knocks them away.",
-    iconsrc: "/img/Boons/Tidal Dash.webp",
+    iconsrc: "/img/Poseidon/Tidal_Dash.webp",
   },
   {
     id: 'POS06',
@@ -920,7 +920,7 @@ export const boons = [
     god: 'POS',
     slot: 'call',
     text: "Your Call makes you surge into foes while Impervious for a few seconds.",
-    iconsrc: "/img/Boons/Poseidon's Aid.webp",
+    iconsrc: "/img/Poseidon/Poseidons_Aid.webp",
   },
   {
     id: 'POS07',
@@ -928,7 +928,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "You deal more damage when slamming foes into barriers.",
-    iconsrc: "/img/Boons/Typhoon's Fury.webp",
+    iconsrc: "/img/Poseidon/Typhoons_Fury.webp",
   },
   {
     id: 'POS08',
@@ -936,7 +936,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your Attack and Special are stronger the first few seconds of an Encounter.",
-    iconsrc: "/img/Boons/Hydraulic Might.webp",
+    iconsrc: "/img/Poseidon/Hydraulic Might.webp",
   },
   {
     id: 'POS09',
@@ -944,7 +944,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Any Gemstones, Darkness or Obols chamber rewards are worth more.",
-    iconsrc: "/img/Boons/Ocean's Bounty.webp",
+    iconsrc: "/img/Poseidon/Oceans_Bounty.webp",
   },
   {
     id: 'POS10',
@@ -952,7 +952,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Gain an assortment of Gemstones, Darkness, Obols and Health.",
-    iconsrc: "/img/Boons/Sunken Treasure.webp",
+    iconsrc: "/img/Poseidon/Sunken_Treasure.webp",
   },
   {
     id: 'POS11',
@@ -960,7 +960,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Using knock-away effects also Rupture foes.",
-    iconsrc: "/img/Boons/Razor Shoals.webp",
+    iconsrc: "/img/Poseidon/Razor_Shoals.webp",
   },
   {
     id: 'POS12',
@@ -968,7 +968,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your God Gauge charges faster when you take damage.",
-    iconsrc: "/img/Boons/Boiling Point.webp",
+    iconsrc: "/img/Poseidon/Boiling_Point.webp",
   },
   {
     id: 'POS13',
@@ -976,15 +976,15 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Slamming foes into walls or corners creates a watery blast in the area.",
-    iconsrc: "/img/Boons/Breaking Wave.webp",
+    iconsrc: "/img/Poseidon/Breaking_Wave.webp",
   },
   {
     id: 'POS14',
     title: "Wave Pounding",
     god: 'POS',
     slot: null,
-    text: "Your boons with Knock-Away effects deal bonus damage to bosses.",
-    iconsrc: "/img/Boons/Wave Pounding.webp",
+    text: "Your Poseidon with Knock-Away effects deal bonus damage to bosses.",
+    iconsrc: "/img/Poseidon/Wave_Pounding.webp",
   },
   {
     id: 'POS15',
@@ -992,7 +992,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your Call pulls in foes and the effect lasts longer.",
-    iconsrc: "/img/Boons/Rip Current.webp",
+    iconsrc: "/img/Poseidon/Rip_Current.webp",
   },
   {
     id: 'POS16',
@@ -1000,7 +1000,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "You have a greater chance to find Fishing Point in each Chamber.",
-    iconsrc: "/img/Boons/Huge Catch.webp",
+    iconsrc: "/img/Poseidon/Huge_Catch.webp",
   },
   {
     id: 'POS17',
@@ -1008,7 +1008,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your knock-away effects shove foes a second time after the first.",
-    iconsrc: "/img/Boons/Second Wave.webp",
+    iconsrc: "/img/Poseidon/Second_Wave.webp",
   },
 
   // Zeus
@@ -1018,7 +1018,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'attack',
     text: "Your Attack emits chain-lightning when you damage a foe.",
-    iconsrc: "/img/Boons/Lightning Strike.webp",
+    iconsrc: "/img/Zeus/Lightning_Strike.webp",
   },
   {
     id: 'ZEU02',
@@ -1026,7 +1026,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'special',
     text: "Your Special causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Thunder Flourish.webp",
+    iconsrc: "/img/Zeus/Thunder_Flourish.webp",
   },
   {
     id: 'ZEU03',
@@ -1034,7 +1034,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'cast',
     text: "Your Cast is a burst of chain-lightning that bounces between foes.",
-    iconsrc: "/img/Boons/Electric Shot.webp",
+    iconsrc: "/img/Zeus/Electric_Shot.webp",
   },
   {
     id: 'ZEU04',
@@ -1042,7 +1042,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'cast',
     text: "Your Cast causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Electric Shot.webp",
+    iconsrc: "/img/Zeus/Thunder_Flare.webp",
   },
   {
     id: 'ZEU05',
@@ -1050,7 +1050,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'dash',
     text: "Your Dash causes a lightning bolt to strike nearby foes.",
-    iconsrc: "/img/Boons/Thunder Dash.webp",
+    iconsrc: "/img/Zeus/Thunder_Dash.webp",
   },
   {
     id: 'ZEU06',
@@ -1058,7 +1058,7 @@ export const boons = [
     god: 'ZEU',
     slot: 'call',
     text: "Your Call makes lightning strike nearby foes repeatedly for a few seconds.",
-    iconsrc: "/img/Boons/Zeus' Aid.webp",
+    iconsrc: "/img/Zeus/Zeus_Aid.webp",
   },
   {
     id: 'ZEU07',
@@ -1066,7 +1066,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After you take damage, your foe is struck by lightning.",
-    iconsrc: "/img/Boons/Heaven's Vengeance.webp",
+    iconsrc: "/img/Zeus/Heavens_Vengeance.webp",
   },
   {
     id: 'ZEU08',
@@ -1074,7 +1074,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After you Dash just before getting hit, a bolt strikes a nearby foes.",
-    iconsrc: "/img/Boons/Lightning Reflexes.webp",
+    iconsrc: "/img/Zeus/Lightning_Reflexes.webp",
   },
   {
     id: 'ZEU09',
@@ -1082,7 +1082,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your chain-lightning effects bounce more times before expiring.",
-    iconsrc: "/img/Boons/Storm Lightning.webp",
+    iconsrc: "/img/Zeus/Storm_Lightning.webp",
   },
   {
     id: 'ZEU10',
@@ -1090,7 +1090,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning bolt effects deal damage in a larger area.",
-    iconsrc: "/img/Boons/High Voltage.webp",
+    iconsrc: "/img/Zeus/High_Voltage.webp",
   },
   {
     id: 'ZEU11',
@@ -1098,7 +1098,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning bolt effects have a chance to strike twice.",
-    iconsrc: "/img/Boons/Double Strike.webp",
+    iconsrc: "/img/Zeus/Double_Strike.webp",
   },
   {
     id: 'ZEU12',
@@ -1106,7 +1106,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your lightning effects also make foes Jolted.",
-    iconsrc: "/img/Boons/Static Discharge.webp",
+    iconsrc: "/img/Zeus/Static_Discharge.webp",
   },
   {
     id: 'ZEU13',
@@ -1114,7 +1114,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "Your God Gauge charges faster when you deal or take damage.",
-    iconsrc: "/img/Boons/Clouded Judgment.webp",
+    iconsrc: "/img/Zeus/Clouded_Judgment.webp",
   },
   {
     id: 'ZEU14',
@@ -1122,7 +1122,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "After using Call, you deal more damage for a short time.",
-    iconsrc: "/img/Boons/Billowing Strength.webp",
+    iconsrc: "/img/Zeus/Billowing_Strength.webp",
   },
   {
     id: 'ZEU15',
@@ -1130,7 +1130,7 @@ export const boons = [
     god: 'ZEU',
     slot: null,
     text: "All your lightning effects create an additional burst.",
-    iconsrc: "/img/Boons/Splitting Bolt.webp",
+    iconsrc: "/img/Zeus/Splitting_Bolt.webp",
   },
 ];
 
