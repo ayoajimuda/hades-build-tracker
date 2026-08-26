@@ -7,13 +7,13 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-import * as chaosBoons from './src/chaos-boons.mjs';
-import * as curses from './src/chaos-curses.mjs';
-import * as companions from './src/companions.mjs';
-import * as hammers from './src/hammers.mjs';
-import * as duo from './src/duo-boons.mjs';
-import * as legendary from './src/legendary-boons.mjs';
-import * as wares from './src/wares.mjs';
+import * as chaosBoons from '../files (1)/src/chaos-boons.mjs';
+import * as curses from '../files (1)/src/chaos-curses.mjs';
+import * as companions from '../files (1)/src/companions.mjs';
+import * as hammers from '../files (1)/src/hammers.mjs';
+import * as duo from '../files (1)/src/duo-boons.mjs';
+import * as legendary from '../files (1)/src/legendary-boons.mjs';
+import * as wares from '../files (1)/src/wares.mjs';
 
 const WIKI = './wiki';
 const OUT = './out';

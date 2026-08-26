@@ -6,19 +6,19 @@
 // `excludes` is a hard block (both upgrades state it). `softConflicts` is
 // one-sided: legal, but the pair interacts badly. Exclusions never cross weapons.
 
-import { railHammers } from './rail.js';
-import { bowHammers } from './bow.js';
-import { shieldHammers } from './shield.js';
-import { spearHammers } from './spear.js';
-import { bladeHammers } from './blade.js';
-import { fistsHammers } from './fists.js';
+import { railHammers } from '../js/rail.js';
+import { bowHammers } from '../js/bow.js';
+import { shieldHammers } from '../js/shield.js';
+import { spearHammers } from '../js/spear.js';
+import { bladeHammers } from '../js/blade.js';
+import { fistsHammers } from '../js/fists.js';
 
-export { railHammers } from './rail.js';
-export { bowHammers } from './bow.js';
-export { shieldHammers } from './shield.js';
-export { spearHammers } from './spear.js';
-export { bladeHammers } from './blade.js';
-export { fistsHammers } from './fists.js';
+export { railHammers } from '../js/rail.js';
+export { bowHammers } from '../js/bow.js';
+export { shieldHammers } from '../js/shield.js';
+export { spearHammers } from '../js/spear.js';
+export { bladeHammers } from '../js/blade.js';
+export { fistsHammers } from '../js/fists.js';
 
 export const WEAPONS = [
   { id: 'rail', name: "Adamant Rail", aspects: ["Lucifer"] },
