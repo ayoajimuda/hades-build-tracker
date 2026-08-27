@@ -1,8 +1,4 @@
-// Shield of Chaos — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Beowulf, Chaos, Zeus.
-
-export const shieldHammers = [
+export const aegis_hammers = [
   {
     id: "HAMD01",
     title: "Dread Flight",
@@ -16,7 +12,7 @@ export const shieldHammers = [
     notes: [
       "With Chaos Aspect's multi-toss special, only the main shield thrown is affected; extra shields won't bounce among foes",
     ],
-    iconsrc: "/img/Hammers/Dread_Flight.webp",
+    iconsrc: "/img/Shield_of_Chaos/Dread_Flight.webp",
   },
   {
     id: "HAMD02",
@@ -27,7 +23,7 @@ export const shieldHammers = [
     text: "Your Bull Rush charges much faster.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Sudden_Rush.webp",
+    iconsrc: "/img/Shield_of_Chaos/Sudden_Rush.webp",
   },
   {
     id: "HAMD03",
@@ -41,7 +37,7 @@ export const shieldHammers = [
     notes: [
       "Only affects Bash. Dash-Strike & Bull Rush are not affected.",
     ],
-    iconsrc: "/img/Hammers/Pulverizing_Blow.webp",
+    iconsrc: "/img/Shield_of_Chaos/Pulverizing_Blow.webp",
   },
   {
     id: "HAMD04",
@@ -52,7 +48,7 @@ export const shieldHammers = [
     text: "Your Dash-Strike deals +50% damage in a larger area.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Dashing_Wallop.webp",
+    iconsrc: "/img/Shield_of_Chaos/Dashing_Wallop.webp",
   },
   {
     id: "HAMD05",
@@ -63,7 +59,7 @@ export const shieldHammers = [
     text: "Your Special deals 50 damage to nearby foes when you catch it.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Explosive_Return.webp",
+    iconsrc: "/img/Shield_of_Chaos/Explosive_Return.webp",
   },
   {
     id: "HAMD06",
@@ -74,7 +70,7 @@ export const shieldHammers = [
     text: "Your Bull Rush gains a Power Rush that does +500% damage.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Minotaur_Rush.webp",
+    iconsrc: "/img/Shield_of_Chaos/Minotaur_Rush.webp",
   },
   {
     id: "HAMD07",
@@ -85,7 +81,7 @@ export const shieldHammers = [
     text: "Your Bull Rush deals +400% damage to Armor.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Armor_Shredder.webp",
+    iconsrc: "/img/Shield_of_Chaos/Armor_Shredder.webp",
   },
   {
     id: "HAMD08",
@@ -99,7 +95,7 @@ export const shieldHammers = [
     notes: [
       "The projectile is also unblockable.",
     ],
-    iconsrc: "/img/Hammers/Charged Shot.webp",
+    iconsrc: "/img/Shield_of_Chaos/Charged_Shot.webp",
   },
   {
     id: "HAMD09",
@@ -111,7 +107,7 @@ export const shieldHammers = [
     excludes: ["HAMD11"],
     softConflicts: [],
     aspectIncompatible: ["Chaos", "Zeus"],
-    iconsrc: "/img/Hammers/Charged Flight.webp",
+    iconsrc: "/img/Shield_of_Chaos/Charged_Flight.webp",
   },
   {
     id: "HAMD10",
@@ -122,7 +118,7 @@ export const shieldHammers = [
     text: "After your Special hits, your next 2 Attacks deal +80% damage.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Empowering Flight.webp",
+    iconsrc: "/img/Shield_of_Chaos/Empowering_Flight.webp",
   },
   {
     id: "HAMD11",
@@ -137,7 +133,7 @@ export const shieldHammers = [
     notes: [
       "To execute, first use Dash, then Special. Bonus not applied if you first use Special and then Dash.",
     ],
-    iconsrc: "/img/Hammers/Dashing Flight.webp",
+    iconsrc: "/img/Shield_of_Chaos/Dashing_Flight.webp",
   },
   {
     id: "HAMD12",
@@ -148,7 +144,7 @@ export const shieldHammers = [
     text: "After blocking a foe, gain +20% damage and move speed for 10 Sec.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Ferocious Guard.webp",
+    iconsrc: "/img/Shield_of_Chaos/Ferocious_Guard.webp",
   },
   {
     id: "HAMD13",
@@ -160,6 +156,6 @@ export const shieldHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Beowulf",
-    iconsrc: "/img/Hammers/Unyielding Defense.webp",
+    iconsrc: "/img/Shield_of_Chaos/Unyielding_Defense.webp",
   },
 ];

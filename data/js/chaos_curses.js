@@ -1,7 +1,3 @@
-// Chaos curses - generated from the wiki curse table.
-// A Chaos boon is offered with a curse attached: endure the curse for N
-// encounters, then keep the boon for the rest of the run.
-
 export const chaos_curses = [
   {
     id: 'CUR01',
@@ -128,7 +124,7 @@ export const chaos_curses = [
   },
 ];
 
-export const cursesById = new Map(curses.map((c) => [c.id, c]));
+export const cursesById = new Map(chaos_curses.map((c) => [c.id, c]));
 
 /** Curses that punish a specific action - useful for warning on slot conflicts. */
-export const triggeredCurses = curses.filter((c) => c.trigger);
+export const triggeredCurses = chaos_curses.filter((c) => c.trigger);

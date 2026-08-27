@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { effectIndex, isRankBased, maxLevel } from '@/lib/skills';
+import { effectText, raritiesOf } from '@/lib/skills';
 
 export default function SkillCard({
   skill,
@@ -16,28 +16,38 @@ export default function SkillCard({
   dragging = false,
   mini = false,
 }) {
-  const rarityClass = level?.rarity ?? (level?.rank ? `rank${level.rank}` : '');
-  const effect = skill.effect?.[effectIndex(skill, level ?? {})];
+  if (!skill) return null;
+
+  const rarity = level?.rarity;
+  const rank = level?.rank;
+  const levelClass = rarity ?? (rank ? `rank${rank}` : '');
+  const canCycle = raritiesOf(skill).length > 1;
 
   return (
     <div
-      className={`skill ${mini ? 'mini' : ''} ${rarityClass} ${dragging ? 'dragging' : ''}`}
+      className={`skill ${mini ? 'mini' : ''} ${levelClass} ${dragging ? 'dragging' : ''}`}
       draggable={draggable}
       onDragStart={onDragStart}
       onDragEnter={onDragEnter}
       onDragEnd={onDragEnd}
-      onClick={onCycle}
+      onClick={canCycle ? onCycle : undefined}
       onContextMenu={(e) => {
         e.preventDefault();
         onInfo?.(skill);
       }}
     >
-      <Image className="icon" src={skill.iconsrc} alt="" width={96} height={96} draggable={false} />
+      <Image
+        className="icon"
+        src={skill.iconsrc}
+        alt=""
+        width={96}
+        height={96}
+        draggable={false}
+      />
 
       <div className="skill-body">
         <p className="skill-title">{skill.title}</p>
-        <p className="skill-text">{skill.text}</p>
-        {effect && <p className="skill-effect">▸ {effect}</p>}
+        <p className="skill-effect">{effectText(skill, level ?? {})}</p>
       </div>
 
       {skill.tags?.slice(0, 2).map((tag, i) => (
@@ -52,13 +62,13 @@ export default function SkillCard({
         />
       ))}
 
-      {level?.rank != null && (
-        <p className="skill-rank">{level.rank} / {maxLevel(skill)}</p>
+      {rank != null && (
+        <p className="skill-rank">{rank} / {raritiesOf(skill).length}</p>
       )}
-      {skill.price != null && <p className="skill-price">{skill.price}</p>}
 
       {onDelete && (
         <button
+          type="button"
           className="skill-deleter"
           onClick={(e) => { e.stopPropagation(); onDelete(); }}
           aria-label={`Remove ${skill.title}`}

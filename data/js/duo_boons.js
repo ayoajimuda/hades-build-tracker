@@ -8,7 +8,7 @@ export const duo_Boons = [
     kind: 'duo',
     gods: ['APH', 'ARE'],
     slot: null,
-    text: "Doom]] effects continuously strike Weak''' foes.",
+    text: "Your Doom effects continuously strike Weak foes.",
     stats: ["Successive Hit Damage: 50%"],
     requires: [
       { god: 'APH', any: ['APH01', 'APH02', 'APH03', 'APH05'] },
@@ -74,7 +74,7 @@ export const duo_Boons = [
     kind: 'duo',
     gods: ['APH', 'DIO'],
     slot: null,
-    text: "Hangover]] effects can stack even more times against Weak''' foes.",
+    text: "Your Hangover effects can stack even more times against Weak foes.",
     stats: ["Max Stacks vs Weak: +3"],
     requires: [
       { god: 'APH', any: ['APH01', 'APH02', 'APH03', 'APH05'] },
@@ -88,7 +88,7 @@ export const duo_Boons = [
     kind: 'duo',
     gods: ['APH', 'POS'],
     slot: null,
-    text: "Poms of Power]]''' you find are more effective.",
+    text: "Any Poms of Power you find are more effective.",
     stats: ["Bonus Level from Poms: +1"],
     requires: [
       { god: 'APH', any: ['APH01', 'APH02', 'APH03', 'APH04', 'APH05', 'APH06'] },
@@ -403,7 +403,7 @@ export const duo_Boons = [
     kind: 'duo',
     gods: ['DIO', 'POS'],
     slot: null,
-    text: "Any Duo you find have superior effects.",
+    text: "Any Boons you find have superior effects.",
     stats: ["Minimum Boon Rarity: Epic"],
     requires: [
       { god: 'DIO', any: ['DIO01', 'DIO02', 'DIO03', 'DIO04', 'DIO05', 'DIO06'] },

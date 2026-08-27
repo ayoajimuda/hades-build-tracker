@@ -62,7 +62,7 @@ export const chaos_boons = [
     title: "Favor",
     god: 'CHA',
     slot: null,
-    text: "Chaos have +X% chance to be Rare or better.",
+    text: "Boons have +X% chance to be Rare or better.",
     rarities: ['common', 'rare', 'epic'],
     effect: [
       "Boons have 11%–20% chance to be Rare or better.",

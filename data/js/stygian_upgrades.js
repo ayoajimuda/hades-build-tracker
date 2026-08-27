@@ -1,8 +1,4 @@
-// Stygian Blade — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Arthur.
-
-export const bladeHammers = [
+export const stygian_hammers = [
   {
     id: "HAMS01",
     title: "Breaching Slash",
@@ -15,7 +11,7 @@ export const bladeHammers = [
     notes: [
       "This upgrade also applies to Dash-Strike",
     ],
-    iconsrc: "/img/Hammers/Armor_Slayer.webp",
+    iconsrc: "/img/Stygian_Blade/Armor_Slayer.webp",
   },
   {
     id: "HAMS02",
@@ -30,7 +26,7 @@ export const bladeHammers = [
     notes: [
       "Although Dash-Strike looks like a thrust, it does not benefit from Cruel Thrust",
     ],
-    iconsrc: "/img/Hammers/Cruel_Thrust.webp",
+    iconsrc: "/img/Stygian_Blade/Cruel_Thrust.webp",
   },
   {
     id: "HAMS03",
@@ -46,7 +42,7 @@ export const bladeHammers = [
       "Dash-Strike does not restore health.",
       "Piercing Wave has no benefit from this upgrade; only melee strikes will restore health.",
     ],
-    iconsrc: "/img/Hammers/Cursed Slash.webp",
+    iconsrc: "/img/Stygian_Blade/Cursed_Slash.webp",
   },
   {
     id: "HAMS04",
@@ -60,7 +56,7 @@ export const bladeHammers = [
     notes: [
       "Lunges towards cursor, not in current direction of movement.",
     ],
-    iconsrc: "/img/Hammers/Sword Snap Nova.webp",
+    iconsrc: "/img/Stygian_Blade/Dash_Nova.webp",
   },
   {
     id: "HAMS05",
@@ -71,7 +67,7 @@ export const bladeHammers = [
     text: "Your Dash-Strike hits twice and deals +20% damage.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Double_Edge.webp",
+    iconsrc: "/img/Stygian_Blade/Double_Edge.webp",
   },
   {
     id: "HAMS06",
@@ -82,7 +78,7 @@ export const bladeHammers = [
     text: "Your Special hits twice but no longer knocks foes away.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Sudden_Sunder.webp",
+    iconsrc: "/img/Stygian_Blade/Sudden_Sunder.webp",
   },
   {
     id: "HAMS07",
@@ -94,7 +90,7 @@ export const bladeHammers = [
     excludes: ["HAMS12", "HAMS02"],
     softConflicts: [],
     aspectIncompatible: ["Arthur"],
-    iconsrc: "/img/Hammers/Flurry_Blade.webp",
+    iconsrc: "/img/Stygian_Blade/Flurry_Blade.webp",
   },
   {
     id: "HAMS08",
@@ -108,7 +104,7 @@ export const bladeHammers = [
     notes: [
       "This upgrade also applies to Dash-Strike",
     ],
-    iconsrc: "/img/Hammers/Sword Hoarding Slash.webp",
+    iconsrc: "/img/Stygian_Blade/Hoarding_Slash.webp",
   },
   {
     id: "HAMS09",
@@ -123,7 +119,7 @@ export const bladeHammers = [
       "Piercing Waves cannot restore health if used with Cursed Slash.",
       "This upgrade also applies to Dash-Strike",
     ],
-    iconsrc: "/img/Hammers/Piercing Wave.webp",
+    iconsrc: "/img/Stygian_Blade/Piercing_Wave.webp",
   },
   {
     id: "HAMS10",
@@ -139,7 +135,7 @@ export const bladeHammers = [
       "This upgrade does not apply to Dash-Strike",
       "This upgrade does not apply to Parting Shot",
     ],
-    iconsrc: "/img/Hammers/Shadow Slash.webp",
+    iconsrc: "/img/Stygian_Blade/Shadow_Slash.webp",
   },
   {
     id: "HAMS11",
@@ -154,7 +150,7 @@ export const bladeHammers = [
       "Increases damage radius by 20%",
       "Does not impact Hallowed Ground aura size",
     ],
-    iconsrc: "/img/Hammers/Super_Nova.webp",
+    iconsrc: "/img/Stygian_Blade/Super_Nova.webp",
   },
   {
     id: "HAMS12",
@@ -166,7 +162,7 @@ export const bladeHammers = [
     excludes: ["HAMS07", "HAMS02"],
     softConflicts: [],
     aspectIncompatible: ["Arthur"],
-    iconsrc: "/img/Hammers/World_Splitter.webp",
+    iconsrc: "/img/Stygian_Blade/World_Splitter.webp",
   },
   {
     id: "HAMS13",
@@ -178,6 +174,6 @@ export const bladeHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Arthur",
-    iconsrc: "/img/Hammers/Sword Greater Consecration.webp",
+    iconsrc: "/img/Stygian_Blade/Greater_Consecration.webp",
   },
 ];

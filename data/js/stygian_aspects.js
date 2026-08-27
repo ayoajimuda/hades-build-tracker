@@ -21,7 +21,7 @@ export const stygian_aspects = [
         iconsrc: "/img/Stygian_Blade/Aspect_of_Poseidon.webp"
     },
     {
-        id: 'ASP01',
+        id: 'ASP04',
         title: 'Aspect of Arthur',
         weapon: "Stygian Blade",
         description: "You have Holy Excalibur*, and +50 Health to your Life Total.",

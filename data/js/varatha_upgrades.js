@@ -1,8 +1,4 @@
-// Eternal Spear — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Achilles, Guan Yu, Hades.
-
-export const spearHammers = [
+export const varatha_hammers = [
   {
     id: "HAMP01",
     title: "Extending Jab",
@@ -17,7 +13,7 @@ export const spearHammers = [
       "Increases damage to foes farther than 475 away",
       "The damage bonus is additive.",
     ],
-    iconsrc: "/img/Hammers/Extended_Jab.webp",
+    iconsrc: "/img/Eternal_Spear/Extended_Jab.webp",
   },
   {
     id: "HAMP02",
@@ -29,7 +25,7 @@ export const spearHammers = [
     excludes: ["HAMP05"],
     softConflicts: [],
     aspectIncompatible: ["Guan Yu", "Achilles"],
-    iconsrc: "/img/Hammers/Multi_Skewer.webp",
+    iconsrc: "/img/Eternal_Spear/Multi_Skewer.webp",
   },
   {
     id: "HAMP03",
@@ -40,7 +36,7 @@ export const spearHammers = [
     text: "Your Special deals +400% damage to Armor.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Armor_Skewer.webp",
+    iconsrc: "/img/Eternal_Spear/Armor_Skewer.webp",
   },
   {
     id: "HAMP04",
@@ -53,7 +49,7 @@ export const spearHammers = [
     softConflicts: [],
     aspectIncompatible: ["Guan Yu"],
     notes: ["The damage bonus is additive."],
-    iconsrc: "/img/Hammers/Vicious_Skewer.webp",
+    iconsrc: "/img/Eternal_Spear/Vicious_Skewer.webp",
   },
   {
     id: "HAMP05",
@@ -68,7 +64,7 @@ export const spearHammers = [
     notes: [
       "Disables Special backstab bonuses",
     ],
-    iconsrc: "/img/Hammers/Exploding_Launcher.webp",
+    iconsrc: "/img/Eternal_Spear/Exploding_Launcher.webp",
   },
   {
     id: "HAMP06",
@@ -82,7 +78,7 @@ export const spearHammers = [
     notes: [
       "Increases damage radius of Spin Attack by 30%",
     ],
-    iconsrc: "/img/Hammers/Massive_Spin.webp",
+    iconsrc: "/img/Eternal_Spear/Massive_Spin.webp",
   },
   {
     id: "HAMP07",
@@ -96,7 +92,7 @@ export const spearHammers = [
     notes: [
       "New charge timing: 1st stage removed, 2nd stage 0.15s, 3rd stage 0.30s",
     ],
-    iconsrc: "/img/Hammers/Quick_Spin.webp",
+    iconsrc: "/img/Eternal_Spear/Quick_Spin.webp",
   },
   {
     id: "HAMP08",
@@ -108,7 +104,7 @@ export const spearHammers = [
     excludes: ["HAMP11", "HAMP06", "HAMP07"],
     softConflicts: [],
     aspectIncompatible: ["Hades", "Guan Yu"],
-    iconsrc: "/img/Hammers/Flurry_Jab.webp",
+    iconsrc: "/img/Eternal_Spear/Flurry_Jab.webp",
   },
   {
     id: "HAMP09",
@@ -123,7 +119,7 @@ export const spearHammers = [
     notes: [
       "Causes the spear to stop at a much closer distance than usual when the Special button is simply tapped",
     ],
-    iconsrc: "/img/Hammers/Spear Charged Skewer.webp",
+    iconsrc: "/img/Eternal_Spear/Charged_Skewer.webp",
   },
   {
     id: "HAMP10",
@@ -137,7 +133,7 @@ export const spearHammers = [
     notes: [
       "forcing a hit delay between dash-attacks",
     ],
-    iconsrc: "/img/Hammers/Spear Serrated Point.webp",
+    iconsrc: "/img/Eternal_Spear/Serrated_Point.webp",
   },
   {
     id: "HAMP11",
@@ -148,7 +144,7 @@ export const spearHammers = [
     text: "Charging your Spin Attack makes you Sturdy and pulse 40 damage.",
     excludes: ["HAMP08"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Spear Flaring Spin.webp",
+    iconsrc: "/img/Eternal_Spear/Flaring_Spin.webp",
   },
   {
     id: "HAMP12",
@@ -159,7 +155,7 @@ export const spearHammers = [
     text: "Your Attack strikes 3 times in a spread pattern.",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Spear Triple Jab.webp",
+    iconsrc: "/img/Eternal_Spear/Triple_Jab.webp",
   },
   {
     id: "HAMP13",
@@ -171,6 +167,6 @@ export const spearHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Guan Yu",
-    iconsrc: "/img/Hammers/Spear Winged Serpent.webp",
+    iconsrc: "/img/Eternal_Spear/Winged_Serpent.webp",
   },
 ];

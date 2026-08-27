@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import SlotIcon from '@/components/SlotIcon';
+import Section from '@/components/Section';
 import SkillPicker from '@/components/SkillPicker';
 import { SLOTS, EMPTY_SLOTS } from '@/lib/slots';
-import { boonsById, boonsForSlot } from '@/data/js/boons';
+import { byId, forSlot, boons, hammers, keepsakeSlot, duos } from '@/data';
 import { initialLevel, cycleLevel } from '@/lib/skills';
 import { subscribe, getSnapshot, getServerSnapshot, saveBuilds } from '@/lib/buildsStore';
 import '@/styles/create.css';
@@ -19,17 +20,23 @@ function uniqueSlug(base, builds) {
   return slug;
 }
 
+/** Anything that can go in a free-form section. */
+const ALL_PICKABLE = [...boons, ...hammers, ...keepsakeSlot, ...duos];
+
 export default function Create() {
   const builds = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const [title, setTitle] = useState('');
   const [slots, setSlots] = useState(EMPTY_SLOTS);
+  const [sections, setSections] = useState([]);   // { id, title, entries: [{uid, id, level}] }
+  const [activeSection, setActiveSection] = useState(null);
   const [currentSlug, setCurrentSlug] = useState(null);
-  const [picking, setPicking] = useState(null);   // slot id, or null
+  const [picking, setPicking] = useState(null);   // { kind: 'slot'|'section', target }
   const [loadOpen, setLoadOpen] = useState(false);
   const [status, setStatus] = useState(null);
 
   const loadRef = useRef(null);
+  const nextId = useRef(1);
 
   useEffect(() => {
     if (!loadOpen) return;
@@ -45,25 +52,107 @@ export default function Create() {
     };
   }, [loadOpen]);
 
-  const boonOf = (id) => boonsById.get(id);
+  /* ---------------------------------------------------------------- slots */
 
-  function assign(boon) {
-    setSlots((prev) => ({ ...prev, [picking]: { id: boon.id, level: initialLevel(boon) } }));
+  function cycleSlot(slotId) {
+    setSlots((prev) => {
+      const entry = prev[slotId];
+      if (!entry) return prev;
+      return { ...prev, [slotId]: { ...entry, level: cycleLevel(byId(entry.id), entry.level) } };
+    });
+  }
+
+  const clearSlot = (slotId) => setSlots((prev) => ({ ...prev, [slotId]: null }));
+
+  /* ------------------------------------------------------------- sections */
+
+  function addSection() {
+    const id = `s${nextId.current++}`;
+    setSections((prev) => [...prev, { id, title: `Section ${prev.length + 1}`, entries: [] }]);
+    setActiveSection(id);
+    return id;
+  }
+
+  function renameSection(id, title) {
+    setSections((prev) => prev.map((s) => (s.id === id ? { ...s, title } : s)));
+  }
+
+  function deleteSection(id) {
+    setSections((prev) => prev.filter((s) => s.id !== id));
+    setActiveSection((cur) => (cur === id ? null : cur));
+  }
+
+  function removeFromSection(sectionId, uid) {
+    setSections((prev) =>
+      prev.map((s) =>
+        s.id === sectionId ? { ...s, entries: s.entries.filter((e) => e.uid !== uid) } : s
+      )
+    );
+  }
+
+  function cycleInSection(sectionId, uid) {
+    setSections((prev) =>
+      prev.map((s) =>
+        s.id !== sectionId
+          ? s
+          : {
+              ...s,
+              entries: s.entries.map((e) =>
+                e.uid === uid ? { ...e, level: cycleLevel(byId(e.id), e.level) } : e
+              ),
+            }
+      )
+    );
+  }
+
+  /** Toolbar button: add to the active section, creating one if needed. */
+  function handleAddSkills() {
+    const target = activeSection ?? sections.at(-1)?.id ?? addSection();
+    setPicking({ kind: 'section', target });
+  }
+
+  /* --------------------------------------------------------------- picker */
+
+  function assign(item) {
+    if (picking.kind === 'slot') {
+      setSlots((prev) => ({
+        ...prev,
+        [picking.target]: { id: item.id, level: initialLevel(item) },
+      }));
+    } else {
+      setSections((prev) =>
+        prev.map((s) =>
+          s.id !== picking.target
+            ? s
+            : {
+                ...s,
+                entries: [
+                  ...s.entries,
+                  { uid: `e${nextId.current++}`, id: item.id, level: initialLevel(item) },
+                ],
+              }
+        )
+      );
+    }
     setPicking(null);
     setStatus(null);
   }
 
-  function cycle(slotId) {
-    setSlots((prev) => {
-      const entry = prev[slotId];
-      if (!entry) return prev;
-      return { ...prev, [slotId]: { ...entry, level: cycleLevel(boonOf(entry.id), entry.level) } };
-    });
-  }
+  const pickerProps = () => {
+    if (!picking) return null;
+    if (picking.kind === 'slot') {
+      return {
+        candidates: forSlot(picking.target),
+        slotLabel: SLOTS.find((s) => s.id === picking.target).label,
+      };
+    }
+    return {
+      candidates: ALL_PICKABLE,
+      slotLabel: sections.find((s) => s.id === picking.target)?.title ?? 'Section',
+    };
+  };
 
-  function clear(slotId) {
-    setSlots((prev) => ({ ...prev, [slotId]: null }));
-  }
+  /* ------------------------------------------------------------ save/load */
 
   function handleSave() {
     const name = title.trim();
@@ -72,17 +161,22 @@ export default function Create() {
       return;
     }
 
-    const slug = currentSlug ?? uniqueSlug(slugify(name), builds);
+  const slug = currentSlug ?? uniqueSlug(slugify(name), builds);
 
-    const icons = SLOTS
-      .map((slot) => ({ slot, entry: slots[slot.id] }))
-      .filter(({ entry }) => entry)
-      .map(({ slot, entry }) => {
-        const b = boonOf(entry.id);
-        return { src: b.iconsrc, alt: b.title, name: b.title, detail: slot.label };
-      });
+  const icons = [
+    ...SLOTS.map((slot) => ({ label: slot.label, entry: slots[slot.id] })),
+    ...sections.flatMap((s) => s.entries.map((e) => ({ label: s.title, entry: e }))),
+  ]
+    .filter(({ entry }) => entry)
+    .map(({ label, entry }) => ({ label, item: byId(entry.id) }))
+    .filter(({ item }) => item)                     // ← drop unresolved ids
+    .slice(0, 4)
+    .map(({ label, item }) => ({
+      src: item.iconsrc, alt: item.title, name: item.title, detail: label,
+    }));
 
-    const build = { slug, name, slots, icons, updatedAt: Date.now() };
+
+    const build = { slug, name, slots, sections, icons, updatedAt: Date.now() };
     const next = builds.some((b) => b.slug === slug)
       ? builds.map((b) => (b.slug === slug ? build : b))
       : [...builds, build];
@@ -99,17 +193,26 @@ export default function Create() {
   function handleLoad(build) {
     setTitle(build.name);
     setSlots({ ...EMPTY_SLOTS, ...(build.slots ?? {}) });
+    setSections(build.sections ?? []);
     setCurrentSlug(build.slug);
+    setActiveSection(null);
     setLoadOpen(false);
     setStatus(null);
+    // keep uid generation ahead of anything loaded
+    const used = (build.sections ?? []).flatMap((s) => s.entries.map((e) => e.uid));
+    nextId.current = used.length + (build.sections?.length ?? 0) + 1;
   }
 
   function handleNew() {
     setTitle('');
     setSlots(EMPTY_SLOTS);
+    setSections([]);
+    setActiveSection(null);
     setCurrentSlug(null);
     setStatus(null);
   }
+
+  /* ----------------------------------------------------------------- view */
 
   return (
     <main>
@@ -124,11 +227,21 @@ export default function Create() {
         />
 
         <div className="toolbar-actions">
-          <button className="board-button" onClick={handleNew}>New Build</button>
-          <button className="board-button" onClick={handleSave}>Save Build</button>
+          <button type="button" className="board-button" onClick={addSection}>
+            Add Section
+          </button>
+
+          <button type="button" className="board-button" onClick={handleAddSkills}>
+            Add Skills
+          </button>
+
+          <button type="button" className="board-button" onClick={handleSave}>
+            Save Build
+          </button>
 
           <div className="load-wrap" ref={loadRef}>
             <button
+              type="button"
               className="board-button"
               onClick={() => setLoadOpen((o) => !o)}
               aria-haspopup="menu"
@@ -144,7 +257,12 @@ export default function Create() {
                 ) : (
                   builds.map((b) => (
                     <li key={b.slug}>
-                      <button role="menuitem" className="load-item" onClick={() => handleLoad(b)}>
+                      <button
+                        type="button"
+                        role="menuitem"
+                        className="load-item"
+                        onClick={() => handleLoad(b)}
+                      >
                         {b.name}
                       </button>
                     </li>
@@ -153,6 +271,10 @@ export default function Create() {
               </ul>
             )}
           </div>
+
+          <button type="button" className="board-button" onClick={handleNew}>
+            New Build
+          </button>
         </div>
       </div>
 
@@ -168,25 +290,37 @@ export default function Create() {
               <SlotIcon
                 key={slot.id}
                 slot={slot}
-                boon={entry ? boonOf(entry.id) : null}
+                boon={entry ? byId(entry.id) : null}
                 level={entry?.level}
-                onPick={() => setPicking(slot.id)}
-                onCycle={() => cycle(slot.id)}
-                onClear={() => clear(slot.id)}
+                onPick={() => setPicking({ kind: 'slot', target: slot.id })}
+                onCycle={() => cycleSlot(slot.id)}
+                onClear={() => clearSlot(slot.id)}
               />
             );
           })}
         </div>
+
+        {sections.length > 0 && (
+          <div className="section-column">
+            {sections.map((s) => (
+              <Section
+                key={s.id}
+                section={s}
+                active={s.id === activeSection}
+                items={s.entries.map((e) => ({ ...e, item: byId(e.id) })).filter((e) => e.item)}
+                onFocus={() => setActiveSection(s.id)}
+                onRename={(t) => renameSection(s.id, t)}
+                onAdd={() => setPicking({ kind: 'section', target: s.id })}
+                onRemove={(uid) => removeFromSection(s.id, uid)}
+                onCycle={(uid) => cycleInSection(s.id, uid)}
+                onDelete={() => deleteSection(s.id)}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {picking && (
-        <SkillPicker
-          candidates={boonsForSlot(picking)}
-          slotLabel={SLOTS.find((s) => s.id === picking).label}
-          onPick={assign}
-          onClose={() => setPicking(null)}
-        />
-      )}
+      {picking && <SkillPicker {...pickerProps()} onPick={assign} onClose={() => setPicking(null)} />}
     </main>
   );
 }

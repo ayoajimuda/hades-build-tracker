@@ -1,8 +1,4 @@
-// Heart-Seeking Bow — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Chiron, Rama.
-
-export const bowHammers = [
+export const coronacht_hammers = [
   {
     id: "HAMB01",
     title: "Twin Shot",
@@ -13,7 +9,7 @@ export const bowHammers = [
     excludes: ["HAMB08", "HAMB02"],
     softConflicts: [],
     notes: ["Decreases attack range to 65%"],
-    iconsrc: "/img/Hammers/Twin_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Twin_Shot.webp",
   },
   {
     id: "HAMB02",
@@ -28,7 +24,7 @@ export const bowHammers = [
       "Increases damage to foes farther than 675 away",
       "Attack line gains marker for minimum range of \"distant foes\".",
     ],
-    iconsrc: "/img/Hammers/Sniper_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Sniper_Shot.webp",
   },
   {
     id: "HAMB03",
@@ -40,7 +36,7 @@ export const bowHammers = [
     excludes: ["HAMB04", "HAMB10"],
     softConflicts: [],
     notes: ["Damage Radius: 350", "Increase charge time by 100%", "The damage bonus is additive"],
-    iconsrc: "/img/Hammers/Explosive_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Explosive_Shot.webp",
   },
   {
     id: "HAMB04",
@@ -55,7 +51,7 @@ export const bowHammers = [
     notes: [
       "Attack damage: 60 (40 for dash attack)",
     ],
-    iconsrc: "/img/Hammers/Flurry_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Flurry_Shot.webp",
   },
   {
     id: "HAMB05",
@@ -68,7 +64,7 @@ export const bowHammers = [
     softConflicts: [],
     aspectIncompatible: ["Rama"],
     notes: ["Makes the Special Unblockable"],
-    iconsrc: "/img/Hammers/Piercing_Barrage.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Piercing_Barrage.webp",
   },
   {
     id: "HAMB06",
@@ -79,7 +75,7 @@ export const bowHammers = [
     text: "Your Power Shot is easier to execute and deals +150% damage.",
     excludes: ["HAMB04"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Perfect_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Perfect_Shot.webp",
   },
   {
     id: "HAMB07",
@@ -90,7 +86,7 @@ export const bowHammers = [
     text: "Your Special shoots +4 shots.",
     excludes: ["HAMB09"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Relentless_Barrage.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Relentless_Barrage.webp",
   },
   {
     id: "HAMB08",
@@ -101,7 +97,7 @@ export const bowHammers = [
     text: "Your Attack fires 3 shots in a spread pattern.",
     excludes: ["HAMB01"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Triple_Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Triple_Shot.webp",
   },
   {
     id: "HAMB09",
@@ -113,7 +109,7 @@ export const bowHammers = [
     excludes: ["HAMB07"],
     softConflicts: [],
     aspectIncompatible: ["Chiron", "Rama"],
-    iconsrc: "/img/Hammers/Bow_Charged_Volley.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Bow_Charged_Volley.webp",
   },
   {
     id: "HAMB10",
@@ -124,7 +120,7 @@ export const bowHammers = [
     text: "Your Attack bounces to up to 3 foes, dealing +15% damage for each.",
     excludes: ["HAMB03"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Bow Chain Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Bow_Chain_Shot.webp",
   },
   {
     id: "HAMB11",
@@ -139,7 +135,7 @@ export const bowHammers = [
       "Increases damage to foes closer than 330 away",
       "Attack line gains marker for maximum range of \"nearby foes\".",
     ],
-    iconsrc: "/img/Hammers/Bow Point-Blank Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Point_Blank_Shot.webp",
   },
   {
     id: "HAMB12",
@@ -151,7 +147,7 @@ export const bowHammers = [
     excludes: [],
     softConflicts: [],
     aspectIncompatible: ["Rama"],
-    iconsrc: "/img/Hammers/Bow Concentrated Volley.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Concentrated_Volley.webp",
   },
   {
     id: "HAMB13",
@@ -166,6 +162,6 @@ export const bowHammers = [
     notes: [
       "Blast Wave deals no damage, instead does Knockback",
     ],
-    iconsrc: "/img/Hammers/Bow Rama Repulse Shot.webp",
+    iconsrc: "/img/Heart_Seeking_Bow/Repulse_Shot.webp",
   },
 ];

@@ -1,223 +1,74 @@
-.board-toolbar {
+.board {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0.75rem 2rem;
-  background: #16181d;
-  border-bottom: 2px solid #3a3f47;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
-.board-title {
-  font-size: 2.5rem;
-  font-variant: small-caps;
-  letter-spacing: 0.04em;
+.section-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.board-section {
+  min-width: 26rem;
+  background: #16181d;
+  border: 2px solid #3a3f47;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.board-section.active { border-color: #d81e4a; }
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid #2a2f38;
+}
+
+.section-title {
+  flex: 1;
+  font-size: 1.15rem;
   color: #f2f2f2;
   background: transparent;
   border: none;
   outline: none;
-  width: 22ch;
   padding: 0;
 }
 
-.board-title::placeholder {
-  color: #f2f2f2;
-  opacity: 1;
-}
-
-.board-title:focus::placeholder {
-  opacity: 0.35;
-}
-
-.toolbar-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.board-button {
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #f2f2f2;
-  background: transparent;
-  border: 2px solid #d81e4a;
-  border-radius: 999px;
-  padding: 0.6rem 1.4rem;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.board-button:hover {
-  background: #d81e4a;
-}
-
-.board-button:focus-visible {
-  outline: 2px solid #f2f2f2;
-  outline-offset: 3px;
-}
-
-.load-wrap {
-  position: relative;
-}
-
-.load-menu {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  min-width: 14rem;
-  margin: 0;
-  padding: 0.35rem;
-  list-style: none;
-  background: #1c1f26;
-  border: 1px solid #3a3f47;
-  border-radius: 0.5rem;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.5);
-  z-index: 20;
-}
-
-.load-item {
-  display: block;
-  width: 100%;
-  text-align: left;
-  font: inherit;
-  color: #f2f2f2;
-  background: transparent;
-  border: none;
-  border-radius: 0.35rem;
-  padding: 0.55rem 0.75rem;
-  cursor: pointer;
-}
-
-.load-item:hover {
-  background: #2a2f38;
-}
-
-.load-empty {
-  padding: 0.55rem 0.75rem;
-  color: #8a8f98;
-  font-size: 0.9rem;
-}
-
-.board-status {
-  margin: 0.75rem 2rem 0;
-  font-size: 0.9rem;
-}
-
-.board-status.ok { color: #6ecb8b; }
-.board-status.error { color: #ff6b81; }
-
-.board {
-  min-height: calc(100vh - 12rem);
-  background-color: #0f1115;
-  background-size: 40px 40px;
-}
-
-
-.slot-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 2rem;
-}
-
-.slot {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  min-height: 108px;
-}
-
-.slot-diamond {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 108px;
-  height: 108px;
-  flex-shrink: 0;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-/* diamond backing so the near-black glyph is visible */
-.slot-plate {
-  position: absolute;
-  inset: 14px;
-  transform: rotate(45deg);
-  background: linear-gradient(135deg, #2c313a, #16181d);
-  border: 1px solid #3a3f47;
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-
-.slot-diamond img {
-  position: relative;
-  filter: brightness(2.6) saturate(1.4);
-  transition: filter 0.15s ease, transform 0.15s ease;
-}
-
-.slot-diamond:hover img { transform: scale(1.06); }
-.slot-diamond:hover .slot-plate { border-color: #d81e4a; }
-
-.slot-diamond:focus-visible { outline: none; }
-.slot-diamond:focus-visible .slot-plate {
-  border-color: #f2f2f2;
-  box-shadow: 0 0 0 2px rgb(242 242 242 / 0.3);
-}
-
-/* filled: boon art is full-colour, so drop the brightness boost */
-.filled .slot-diamond img { filter: none; }
-.filled .slot-plate {
-  background: linear-gradient(135deg, #3a2028, #1a1418);
-  border-color: #d81e4a;
-}
-
-.slot-text { position: relative; min-width: 24rem; }
-
-.slot-name {
-  margin: 0;
-  font-size: 1.35rem;
-  color: #f2f2f2;
-}
-
-.slot-effect {
-  margin: 0.2rem 0 0;
-  max-width: 42ch;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #9aa0a8;
-}
-
-.slot-placeholder {
-  margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #4a4f58;
-}
-
-.slot-clear {
-  position: absolute;
-  top: -0.25rem;
-  right: 0;
-  font-size: 1.3rem;
+.section-delete {
+  font-size: 1.2rem;
   line-height: 1;
   color: #6b7079;
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.15s ease, color 0.15s ease;
 }
 
-.slot:hover .slot-clear { opacity: 1; }
-.slot-clear:hover { color: #ff6b81; }
+.section-delete:hover { color: #ff6b81; }
 
-/* rarity tint on the plate */
-.filled.common    .slot-plate { border-color: #8a8f98; }
-.filled.rare      .slot-plate { border-color: #4a9fe0; }
-.filled.epic      .slot-plate { border-color: #a45fd8; }
-.filled.heroic    .slot-plate { border-color: #d8a13a; }
-.filled.legendary .slot-plate { border-color: #e0c04a; }
+.section-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.9rem;
+}
+
+.section-add {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  color: #6b7079;
+  background: transparent;
+  border: 2px dashed #3a3f47;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.section-add:hover { border-color: #d81e4a; color: #f2f2f2; }

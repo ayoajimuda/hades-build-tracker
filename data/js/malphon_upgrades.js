@@ -1,8 +1,4 @@
-// Twin Fists — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Demeter, Gilgamesh, Talos.
-
-export const fistsHammers = [
+export const malphon_hammers = [
   {
     id: "HAMF01",
     title: "Breaching Cross",
@@ -12,7 +8,7 @@ export const fistsHammers = [
     text: "Your Dash-Strike pierces foes and deals +900% damage to Armor",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Breaching_Cross.webp",
+    iconsrc: "/img/Twin_Fists/Breaching_Cross.webp",
   },
   {
     id: "HAMF02",
@@ -27,7 +23,7 @@ export const fistsHammers = [
     notes: [
       "Performs the Dash-Strike in place without moving Zagreus. Allows chaining from one combo immediately to the next.",
     ],
-    iconsrc: "/img/Hammers/Rolling_Knuckle.webp",
+    iconsrc: "/img/Twin_Fists/Rolling_Knuckle.webp",
   },
   {
     id: "HAMF03",
@@ -39,7 +35,7 @@ export const fistsHammers = [
     excludes: [],
     softConflicts: [],
     aspectIncompatible: ["Gilgamesh"],
-    iconsrc: "/img/Hammers/Long_Knuckle.webp",
+    iconsrc: "/img/Twin_Fists/Long_Knuckle.webp",
   },
   {
     id: "HAMF04",
@@ -53,7 +49,7 @@ export const fistsHammers = [
     notes: [
       "Healing also takes effect from enemies slain through Gilgamesh's Maim",
     ],
-    iconsrc: "/img/Hammers/Draining_Cutter.webp",
+    iconsrc: "/img/Twin_Fists/Draining_Cutter.webp",
   },
   {
     id: "HAMF05",
@@ -67,7 +63,7 @@ export const fistsHammers = [
     notes: [
       "Resets whenever a combo is broken, including after the final hit of a combo, meaning this lasts for a maximum of 5 attacks, but the streak can be kept by dash-attacking.",
     ],
-    iconsrc: "/img/Hammers/Concentrated_Knuckle.webp",
+    iconsrc: "/img/Twin_Fists/Concentrated_Knuckle.webp",
   },
   {
     id: "HAMF06",
@@ -78,7 +74,7 @@ export const fistsHammers = [
     text: "Your Dash-Upper deals +100% damage in an area",
     excludes: ["HAMF10"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Explosive_Upper.webp",
+    iconsrc: "/img/Twin_Fists/Explosive_Upper.webp",
   },
   {
     id: "HAMF07",
@@ -90,7 +86,7 @@ export const fistsHammers = [
     excludes: ["HAMF08", "HAMF10"],
     softConflicts: [],
     aspectIncompatible: ["Talos"],
-    iconsrc: "/img/Hammers/Flying_Cutter.webp",
+    iconsrc: "/img/Twin_Fists/Flying_Cutter.webp",
   },
   {
     id: "HAMF08",
@@ -105,7 +101,7 @@ export const fistsHammers = [
     notes: [
       "Can cross gaps and low barriers when targeting enemies across them",
     ],
-    iconsrc: "/img/Hammers/Rush_Kick.webp",
+    iconsrc: "/img/Twin_Fists/Rush_Kick.webp",
   },
   {
     id: "HAMF09",
@@ -121,7 +117,7 @@ export const fistsHammers = [
       "Damage is modified by increases to Special damage.",
       "Does not occur when performing Dash-Upper.",
     ],
-    iconsrc: "/img/Hammers/Quake_Cutter.webp",
+    iconsrc: "/img/Twin_Fists/Quake_Cutter.webp",
   },
   {
     id: "HAMF10",
@@ -136,7 +132,7 @@ export const fistsHammers = [
     notes: [
       "Can Power Shot for 75 base damage",
     ],
-    iconsrc: "/img/Hammers/Kinetic_Launcher.webp",
+    iconsrc: "/img/Twin_Fists/Kinetic_Launcher.webp",
   },
   {
     id: "HAMF11",
@@ -148,7 +144,7 @@ export const fistsHammers = [
     excludes: ["HAMF02"],
     softConflicts: [],
     aspectIncompatible: ["Gilgamesh"],
-    iconsrc: "/img/Hammers/Heavy_Knuckle.webp",
+    iconsrc: "/img/Twin_Fists/Heavy_Knuckle.webp",
   },
   {
     id: "HAMF12",
@@ -159,7 +155,7 @@ export const fistsHammers = [
     text: "While using your Attack or Special, you are Sturdy",
     excludes: [],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Colossus_Knuckle.webp",
+    iconsrc: "/img/Twin_Fists/Colossus_Knuckle.webp",
   },
   {
     id: "HAMF13",
@@ -171,6 +167,6 @@ export const fistsHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Gilgamesh",
-    iconsrc: "/img/Hammers/Rending_Claws.webp",
+    iconsrc: "/img/Twin_Fists/Rending_Claws.webp",
   },
 ];

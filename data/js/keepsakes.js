@@ -17,7 +17,7 @@ export const keepsakes = [
       "Gain +50 Health",
     ],
     bond: "From Cerberus; you share a ferocious bond.",
-    iconsrc: "/img/Keepsakes/Old_Spiked_Collar.png",
+    iconsrc: "/img/Keepsakes/Old_Spiked_Collar.webp",
   },
   {
     id: 'KEP_MYRMIDON_BRACER',
@@ -33,7 +33,7 @@ export const keepsakes = [
       "Take 30% less damage from the front, but 10% more from the back.",
     ],
     bond: "From Achilles; you share an Unyielding Bond.",
-    iconsrc: "/img/Keepsakes/Myrmidon_Bracer.png",
+    iconsrc: "/img/Keepsakes/Myrmidon_Bracer.webp",
   },
   {
     id: 'KEP_BLACK_SHAWL',
@@ -49,7 +49,7 @@ export const keepsakes = [
       "Deal 20% damage striking undamaged foes; also striking foes from behind.",
     ],
     bond: "From Nyx; you share an Eternal Bond.",
-    iconsrc: "/img/Keepsakes/Black_Shawl.png",
+    iconsrc: "/img/Keepsakes/Black_Shawl.webp",
   },
   {
     id: 'KEP_PIERCED_BUTTERFLY',
@@ -69,7 +69,7 @@ export const keepsakes = [
       "Infernal Trove fights do not give credit.",
       "The additional damage will be lost if the Pierced Butterfly is unequipped",
     ],
-    iconsrc: "/img/Keepsakes/Pierced_Butterfly.png",
+    iconsrc: "/img/Keepsakes/Pierced_Butterfly.webp",
   },
   {
     id: 'KEP_BONE_HOURGLASS',
@@ -88,7 +88,7 @@ export const keepsakes = [
     notes: [
       "Unequipping the Bone Hourglass does not remove the extended duration on items already purchased.",
     ],
-    iconsrc: "/img/Keepsakes/Bone_Hourglass.png",
+    iconsrc: "/img/Keepsakes/Bone_Hourglass.webp",
   },
   {
     id: 'KEP_CHTHONIC_COIN_PURSE',
@@ -107,7 +107,7 @@ export const keepsakes = [
     notes: [
       "The Chthonic Coin Purse can be safely removed with no gold penalty.",
     ],
-    iconsrc: "/img/Keepsakes/Chthonic Coin Purse.png",
+    iconsrc: "/img/Keepsakes/Chthonic Coin Purse.webp",
   },
   {
     id: 'KEP_SKULL_EARRING',
@@ -123,7 +123,7 @@ export const keepsakes = [
       "Deal 40% more damage while at 35% Health or less.",
     ],
     bond: "From Megaera; you share an Intense Bond.",
-    iconsrc: "/img/Keepsakes/Skull_Earring.png",
+    iconsrc: "/img/Keepsakes/Skull_Earring.webp",
   },
   {
     id: 'KEP_DISTANT_MEMORY',
@@ -139,7 +139,7 @@ export const keepsakes = [
       "Deal 30% more damage to distant foes (at least 500 units away).",
     ],
     bond: "From Orpheus; you share a Sonorous Bond.",
-    iconsrc: "/img/Keepsakes/Distant_Memory.png",
+    iconsrc: "/img/Keepsakes/Distant_Memory.webp",
   },
   {
     id: 'KEP_HARPY_FEATHER_DUSTER',
@@ -155,7 +155,7 @@ export const keepsakes = [
       "Broken urns have a 6% chance to contain healing items.",
     ],
     bond: "From Dusa; you share an Immaculate Bond.",
-    iconsrc: "/img/Keepsakes/Harpy_Feather_Duster.png",
+    iconsrc: "/img/Keepsakes/Harpy_Feather_Duster.webp",
   },
   {
     id: 'KEP_LUCKY_TOOTH',
@@ -174,7 +174,7 @@ export const keepsakes = [
     notes: [
       "The resurrection effect from Lucky Tooth will be consumed after all Death Defiance effects have been exhausted.",
     ],
-    iconsrc: "/img/Keepsakes/Lucky_Tooth.png",
+    iconsrc: "/img/Keepsakes/Lucky_Tooth.webp",
   },
   {
     id: 'KEP_THUNDER_SIGNET',
@@ -186,7 +186,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Zeus; you share a Thunderous Bond.",
-    iconsrc: "/img/Keepsakes/Thunder_Signet.png",
+    iconsrc: "/img/Keepsakes/Thunder_Signet.webp",
   },
   {
     id: 'KEP_CONCH_SHELL',
@@ -198,7 +198,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Poseidon; you share an Unshakable Bond.",
-    iconsrc: "/img/Keepsakes/Conch_Shell.png",
+    iconsrc: "/img/Keepsakes/Conch_Shell.webp",
   },
   {
     id: 'KEP_OWL_PENDANT',
@@ -210,7 +210,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Athena; you share a Knowing Bond.",
-    iconsrc: "/img/Keepsakes/Owl_Pendant.png",
+    iconsrc: "/img/Keepsakes/Owl_Pendant.webp",
   },
   {
     id: 'KEP_ETERNAL_ROSE',
@@ -222,7 +222,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Aphrodite; you share a Beautiful Bond.",
-    iconsrc: "/img/Keepsakes/Eternal_Rose.png",
+    iconsrc: "/img/Keepsakes/Eternal_Rose.webp",
   },
   {
     id: 'KEP_BLOOD_FILLED_VIAL',
@@ -234,7 +234,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Ares; you share a Blood-bound Bond.",
-    iconsrc: "/img/Keepsakes/Blood-Filled_Vial.png",
+    iconsrc: "/img/Keepsakes/Blood-Filled_Vial.webp",
   },
   {
     id: 'KEP_ADAMANT_ARROWHEAD',
@@ -246,7 +246,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Artemis; you share an Impenetrable Bond.",
-    iconsrc: "/img/Keepsakes/Adamant_Arrowhead.png",
+    iconsrc: "/img/Keepsakes/Adamant_Arrowhead.webp",
   },
   {
     id: 'KEP_OVERFLOWING_CUP',
@@ -258,7 +258,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Dionysus; you share a Jubilant Bond.",
-    iconsrc: "/img/Keepsakes/Overflowing_Cup.png",
+    iconsrc: "/img/Keepsakes/Overflowing_Cup.webp",
   },
   {
     id: 'KEP_LAMBENT_PLUME',
@@ -278,7 +278,7 @@ export const keepsakes = [
       "The amount of time to clear an encounter varies from room to room.",
       "Wearing the Plume unlocks access to Rush Delivery, Greater Recall and Bad News without needing the prerequisite Boons.",
     ],
-    iconsrc: "/img/Keepsakes/Lambent_Plume.png",
+    iconsrc: "/img/Keepsakes/Lambent_Plume.webp",
   },
   {
     id: 'KEP_FROSTBITTEN_HORN',
@@ -290,7 +290,7 @@ export const keepsakes = [
     text: "See Keepsakes from Olympians",
     olympian: true,
     bond: "From Demeter; you share a Nurturing Bond.",
-    iconsrc: "/img/Keepsakes/Frostbitten_Horn.png",
+    iconsrc: "/img/Keepsakes/Frostbitten_Horn.webp",
   },
   {
     id: 'KEP_COSMIC_EGG',
@@ -306,7 +306,7 @@ export const keepsakes = [
       "Enter Chaos Gates without losing Health. Blessings from Chaos have +40% chance to be Rare or better.",
     ],
     bond: "From Primordial Chaos; you share an Infinite Bond.",
-    iconsrc: "/img/Keepsakes/Cosmic_Egg.png",
+    iconsrc: "/img/Keepsakes/Cosmic_Egg.webp",
   },
   {
     id: 'KEP_SHATTERED_SHACKLE',
@@ -322,7 +322,7 @@ export const keepsakes = [
       "Your Attack, Special, and Cast each deal +100% damage while not empowered by a Boon.",
     ],
     bond: "From Sisyphus; you share a Rock-Solid Bond.",
-    iconsrc: "/img/Keepsakes/Shattered_Shackle.png",
+    iconsrc: "/img/Keepsakes/Shattered_Shackle.webp",
   },
   {
     id: 'KEP_EVERGREEN_ACORN',
@@ -338,7 +338,7 @@ export const keepsakes = [
       "in the final encounter in each underworld region, take 0 damage the first 5 times foes hit you.",
     ],
     bond: "From Eurydice; you share an Inspiring Bond.",
-    iconsrc: "/img/Keepsakes/Evergreen_Acorn.png",
+    iconsrc: "/img/Keepsakes/Evergreen_Acorn.webp",
   },
   {
     id: 'KEP_BROKEN_SPEARPOINT',
@@ -354,7 +354,7 @@ export const keepsakes = [
       "After taking damage, become impervious to damage for 1.5 sec. Refreshes after 7 Sec.",
     ],
     bond: "From Patroclus; you share an Enlightened Bond.",
-    iconsrc: "/img/Keepsakes/Broken_Spearpoint.png",
+    iconsrc: "/img/Keepsakes/Broken_Spearpoint.webp",
   },
   {
     id: 'KEP_POM_BLOSSOM',
@@ -374,7 +374,7 @@ export const keepsakes = [
       "Infernal Trove fights do not count toward Pom Blossom's Boon levels.",
       "Pom Blossom is not affected by Sweet Nectar.",
     ],
-    iconsrc: "/img/Keepsakes/Pom Blossom.png",
+    iconsrc: "/img/Keepsakes/Pom Blossom.webp",
   },
   {
     id: 'KEP_SIGIL_OF_THE_DEAD',
@@ -395,7 +395,7 @@ export const keepsakes = [
       "The Sigil of the Dead cannot be equipped if another god's Aid has been chosen.",
       "The Sigil is one of two Keepsakes that can only be acquired after finishing the main story, the other being the Pom Blossom.",
     ],
-    iconsrc: "/img/Keepsakes/Sigil of the Dead.png",
+    iconsrc: "/img/Keepsakes/Sigil of the Dead.webp",
   },
 ];
 

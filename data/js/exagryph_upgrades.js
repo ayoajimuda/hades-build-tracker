@@ -1,8 +1,6 @@
-// Adamant Rail — Daedalus Hammer upgrades.
-// Generated from the wiki; edit the parser, not this file.
-// Aspects that change the pool: Lucifer.
 
-export const railHammers = [
+
+export const exagryph_hammers = [
   {
     id: "HAMR01",
     title: "Flurry Fire",
@@ -14,7 +12,7 @@ export const railHammers = [
     softConflicts: [],
     aspectIncompatible: ["Lucifer"],
     notes: ["Reduce Attack cooldown to 60%"],
-    iconsrc: "/img/Hammers/Flurry_Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Flurry_Fire.webp",
   },
   {
     id: "HAMR02",
@@ -26,7 +24,7 @@ export const railHammers = [
     excludes: ["HAMR04", "HAMR03", "HAMR12"],
     softConflicts: [],
     aspectIncompatible: ["Lucifer"],
-    iconsrc: "/img/Hammers/Ricochet Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Ricochet_Fire.webp",
   },
   {
     id: "HAMR03",
@@ -42,7 +40,7 @@ export const railHammers = [
       "Reduce Attack range to 320",
       "Increase Attack cooldown to 150%",
     ],
-    iconsrc: "/img/Hammers/Spread_Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Spread_Fire.webp",
   },
   {
     id: "HAMR04",
@@ -55,7 +53,7 @@ export const railHammers = [
     softConflicts: [],
     aspectIncompatible: ["Lucifer"],
     notes: ["Damage radius: 275"],
-    iconsrc: "/img/Hammers/Explosive Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Explosive_Fire.webp",
   },
   {
     id: "HAMR05",
@@ -71,7 +69,7 @@ export const railHammers = [
       "Cooldown between each shot: decreased to 0.035 sec",
       "Cooldown between bursts of fire: 0.5 sec",
     ],
-    iconsrc: "/img/Hammers/Infinity_Chamber.webp",
+    iconsrc: "/img/Adamant_Rail/Infinity_Chamber.webp",
   },
   {
     id: "HAMR06",
@@ -85,7 +83,7 @@ export const railHammers = [
     notes: [
       "Makes the Attack Unblockable and Piercing",
     ],
-    iconsrc: "/img/Hammers/Piercing_Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Piercing_Fire.webp",
   },
   {
     id: "HAMR07",
@@ -96,7 +94,7 @@ export const railHammers = [
     text: "You can use your Special 3 times in rapid succession.",
     excludes: ["HAMR11", "HAMR10"],
     softConflicts: [],
-    iconsrc: "/img/Hammers/Triple_Bomb.webp",
+    iconsrc: "/img/Adamant_Rail/Triple_Bomb.webp",
   },
   {
     id: "HAMR08",
@@ -108,7 +106,7 @@ export const railHammers = [
     excludes: ["HAMR10"],
     softConflicts: [],
     aspectIncompatible: ["Lucifer"],
-    iconsrc: "/img/Hammers/Rocket_Bomb.webp",
+    iconsrc: "/img/Adamant_Rail/Rocket_Bomb.webp",
   },
   {
     id: "HAMR09",
@@ -120,7 +118,7 @@ export const railHammers = [
     excludes: [],
     softConflicts: [],
     notes: ["The damage bonus is additive."],
-    iconsrc: "/img/Hammers/Targeting System.webp",
+    iconsrc: "/img/Adamant_Rail/Targeting_System.webp",
   },
   {
     id: "HAMR10",
@@ -137,7 +135,7 @@ export const railHammers = [
       "The damage bonus is multiplicative.",
       "Deals 1% damage to Zag himself",
     ],
-    iconsrc: "/img/Hammers/Hazard_Bomb.webp",
+    iconsrc: "/img/Adamant_Rail/Hazard_Bomb.webp",
   },
   {
     id: "HAMR11",
@@ -153,7 +151,7 @@ export const railHammers = [
       "Reduce damage radius to 350",
       "If used with Rocket Bomb, 5 rockets are fired in a 150° spread over about a second, firing right to left",
     ],
-    iconsrc: "/img/Hammers/Cluster_Bomb.webp",
+    iconsrc: "/img/Adamant_Rail/Cluster_Bomb.webp",
   },
   {
     id: "HAMR12",
@@ -165,7 +163,7 @@ export const railHammers = [
     excludes: ["HAMR06", "HAMR02", "HAMR03"],
     softConflicts: [],
     aspectIncompatible: ["Lucifer"],
-    iconsrc: "/img/Hammers/Seeking_Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Seeking_Fire.webp",
   },
   {
     id: "HAMR13",
@@ -177,7 +175,7 @@ export const railHammers = [
     excludes: ["HAMR16"],
     softConflicts: [],
     aspectExclusive: "Lucifer",
-    iconsrc: "/img/Hammers/Concentrated_Beam.webp",
+    iconsrc: "/img/Adamant_Rail/Concentrated_Beam.webp",
   },
   {
     id: "HAMR14",
@@ -189,7 +187,7 @@ export const railHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Lucifer",
-    iconsrc: "/img/Hammers/Flash_Fire.webp",
+    iconsrc: "/img/Adamant_Rail/Flash_Fire.webp",
   },
   {
     id: "HAMR15",
@@ -201,7 +199,7 @@ export const railHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Lucifer",
-    iconsrc: "/img/Hammers/Triple_Beam.webp",
+    iconsrc: "/img/Adamant_Rail/Triple_Beam.webp",
   },
   {
     id: "HAMR16",
@@ -213,7 +211,7 @@ export const railHammers = [
     excludes: ["HAMR13"],
     softConflicts: [],
     aspectExclusive: "Lucifer",
-    iconsrc: "/img/Hammers/Eternal_Chamber.webp",
+    iconsrc: "/img/Adamant_Rail/Eternal_Chamber.webp",
   },
   {
     id: "HAMR17",
@@ -225,6 +223,6 @@ export const railHammers = [
     excludes: [],
     softConflicts: [],
     aspectExclusive: "Lucifer",
-    iconsrc: "/img/Hammers/Greater_Inferno.webp",
+    iconsrc: "/img/Adamant_Rail/Greater_Inferno.webp",
   },
 ];
