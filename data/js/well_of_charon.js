@@ -7,7 +7,7 @@ export const well_of_charon = [
     text: "You start Encounter(s) with your God Gauge 15% full.",
     price: {"obols":15,"text":"15 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters"},
-    iconsrc: "/img/Items/Aether Net.webp",
+    iconsrc: "/img/Items/Aether_Net.webp",
   },
   {
     id: 'WAR02',
@@ -25,7 +25,7 @@ export const well_of_charon = [
     text: "Gain +25 Max Health (without restoring Health).",
     price: {"obols":100,"text":"100 Obols"},
     duration: {"unit":"instant","text":"Instant"},
-    iconsrc: "/img/Items/Centaur Soul.webp",
+    iconsrc: "/img/Items/Centaur_Soul.webp",
   },
   {
     id: 'WAR04',
@@ -34,7 +34,7 @@ export const well_of_charon = [
     text: "Your Special deals +40% damage.",
     price: {"obols":35,"text":"35 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters"},
-    iconsrc: "/img/Items/Chimaera Jerky.webp",
+    iconsrc: "/img/Items/Chimaera_Jerky.webp",
   },
   {
     id: 'WAR05',
@@ -52,7 +52,7 @@ export const well_of_charon = [
     text: "You deal +50% damage striking undamaged foes.",
     price: {"obols":30,"text":"30 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters"},
-    iconsrc: "/img/Items/Eris Bangle.webp",
+    iconsrc: "/img/Items/Eris_Bangle.webp",
   },
   {
     id: 'WAR07',
@@ -70,7 +70,7 @@ export const well_of_charon = [
     text: "Gain a random item offered from the Well of Charon.",
     price: {"obols":45,"text":"45 Obols"},
     duration: {"unit":"instant","text":"Instant"},
-    iconsrc: "/img/Items/Fateful Twist.webp",
+    iconsrc: "/img/Items/Fateful_Twist.webp",
   },
   {
     id: 'WAR09',
@@ -79,7 +79,7 @@ export const well_of_charon = [
     text: "Prevent Flame Wheel foes from appearing in Encounter(s).",
     price: {"obols":75,"text":"75 Obols"},
     duration: {"amount":10,"unit":"encounters","text":"10 Encounters"},
-    iconsrc: "/img/Items/Flame Wheels Release.webp",
+    iconsrc: "/img/Items/Flame_Wheels_Release.webp",
   },
   {
     id: 'WAR10',
@@ -89,7 +89,7 @@ export const well_of_charon = [
     price: {"variable":true,"text":"Obols = 350% Gemstones (rounded up)"},
     duration: {"unit":"instant","text":"Instant"},
     incomplete: true,
-    iconsrc: "/img/Items/Gaea's Treasure.webp",
+    iconsrc: "/img/Items/Gaeas_Treasure.webp",
   },
   {
     id: 'WAR11',
@@ -143,7 +143,7 @@ export const well_of_charon = [
     text: "You deal +50% damage to Armor.",
     price: {"obols":65,"text":"65 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters"},
-    iconsrc: "/img/Items/Nail of Talos.webp",
+    iconsrc: "/img/Items/Nail_of_Talos.webp",
   },
   {
     id: 'WAR17',
@@ -152,7 +152,7 @@ export const well_of_charon = [
     text: "You deal +50% damage striking foes from behind.",
     price: {"obols":60,"text":"60 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters"},
-    iconsrc: "/img/Items/Nemesis Crest.webp",
+    iconsrc: "/img/Items/Nemesis_Crest.webp",
   },
   {
     id: 'WAR18',
@@ -161,7 +161,7 @@ export const well_of_charon = [
     text: "Gain +1 use of your Chthonic Companion's Summon.",
     price: {"obols":40,"text":"40 Obols"},
     duration: {"unit":"instant","text":"Instant"},
-    iconsrc: "/img/Items/Night Spindle.webp",
+    iconsrc: "/img/Items/Night_Spindle.webp",
   },
   {
     id: 'WAR19',
@@ -171,7 +171,7 @@ export const well_of_charon = [
     price: {"health":"10–50","text":"10–50 Health"},
     duration: {"unit":"instant","text":"Instant"},
     incomplete: true,
-    iconsrc: "/img/Items/Price of Midas.webp",
+    iconsrc: "/img/Items/Price_of_Midas.webp",
   },
   {
     id: 'WAR20',
@@ -189,7 +189,7 @@ export const well_of_charon = [
     text: "Ensure a Fishing Point will spawn ahead (where possible).",
     price: {"obols":60,"text":"60 Obols"},
     duration: {"unit":"until","text":"Until Spawn"},
-    iconsrc: "/img/Items/Skeletal Lure.webp",
+    iconsrc: "/img/Items/Skeletal_Lure.webp",
   },
   {
     id: 'WAR22',
@@ -198,7 +198,7 @@ export const well_of_charon = [
     text: "Traps deal +500% damage to your foes.",
     price: {"obols":35,"text":"35 Obols"},
     duration: {"amount":6,"unit":"encounters","text":"6 Encounters next Boon"},
-    iconsrc: "/img/Items/Stygian Shard.webp",
+    iconsrc: "/img/Items/Stygian_Shard.webp",
   },
   {
     id: 'WAR23',
@@ -216,7 +216,7 @@ export const well_of_charon = [
     text: "Your Stubborn Defiance restores +10% Health.",
     price: {"obols":55,"text":"55 Obols"},
     duration: {"amount":15,"unit":"encounters","text":"15 Encounters"},
-    iconsrc: "/img/Items/Kiss of Styx.webp",
+    iconsrc: "/img/Items/Touch_of_Styx.webp",
   },
   {
     id: 'WAR25',

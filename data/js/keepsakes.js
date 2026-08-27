@@ -1,7 +1,3 @@
-// Keepsakes - generated from the wiki keepsake table.
-// Keepsakes have three RANKS, not rarities. `ranks[0..2]` is the full effect
-// text at each rank. Companions share this slot - see companions.js.
-
 export const keepsakes = [
   {
     id: 'KEP_OLD_SPIKED_COLLAR',
@@ -107,7 +103,7 @@ export const keepsakes = [
     notes: [
       "The Chthonic Coin Purse can be safely removed with no gold penalty.",
     ],
-    iconsrc: "/img/Keepsakes/Chthonic Coin Purse.webp",
+    iconsrc: "/img/Keepsakes/Chthonic_Coin_Purse.webp",
   },
   {
     id: 'KEP_SKULL_EARRING',
@@ -374,7 +370,7 @@ export const keepsakes = [
       "Infernal Trove fights do not count toward Pom Blossom's Boon levels.",
       "Pom Blossom is not affected by Sweet Nectar.",
     ],
-    iconsrc: "/img/Keepsakes/Pom Blossom.webp",
+    iconsrc: "/img/Keepsakes/Pom_Blossom.webp",
   },
   {
     id: 'KEP_SIGIL_OF_THE_DEAD',
@@ -395,7 +391,7 @@ export const keepsakes = [
       "The Sigil of the Dead cannot be equipped if another god's Aid has been chosen.",
       "The Sigil is one of two Keepsakes that can only be acquired after finishing the main story, the other being the Pom Blossom.",
     ],
-    iconsrc: "/img/Keepsakes/Sigil of the Dead.webp",
+    iconsrc: "/img/Keepsakes/Sigil_of_the_Dead.webp",
   },
 ];
 

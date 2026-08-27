@@ -68,10 +68,14 @@ export function hammersFor(weaponId, aspectShort = null) {
 }
 
 /** Whether a hammer can join an already-chosen set. */
-export function canCombine(id, chosenIds) {
+export function canCombine(id, chosenIds = []) {
   const h = byId(id);
-  if (!h || h.kind !== 'hammer' || chosenIds.includes(id)) return false;
-  return !chosenIds.some((c) => h.excludes.includes(c) || byId(c)?.excludes?.includes(id));
+  if (!h || h.kind !== 'hammer') return false;
+  if (chosenIds.includes(id)) return false;
+  return !chosenIds.some((c) => {
+    const other = byId(c);
+    return h.excludes?.includes(c) || other?.excludes?.includes(id);
+  });
 }
 
 /** Legal-but-awkward hammer pairings. */

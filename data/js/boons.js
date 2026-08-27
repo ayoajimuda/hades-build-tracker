@@ -936,7 +936,7 @@ export const boons = [
     god: 'POS',
     slot: null,
     text: "Your Attack and Special are stronger the first few seconds of an Encounter.",
-    iconsrc: "/img/Poseidon/Hydraulic Might.webp",
+    iconsrc: "/img/Poseidon/Hydraulic_Might.webp",
   },
   {
     id: 'POS09',

@@ -25,7 +25,7 @@ export const featuredBuilds = [
         icons: [
             { src: '/img/Builds/Perfect_Aim/Aspect_of_Chiron.webp', name: 'Aspect of Chiron', detail: 'Weapon Aspect' },
             { src: '/img/Builds/Perfect_Aim/Deadly_Flourish.webp', name: 'Deadly Flourish', detail: 'Attack Boon' },
-            { src: '/img/Builds/Perfect_Aim/Lightning_Strike.webp', name: 'Lightning_Strike', detail: 'Support Boon' },
+            { src: '/img/Builds/Perfect_Aim/Lightning_Strike.webp', name: 'Lightning Strike', detail: 'Support Boon' },
             { src: '/img/Builds/Perfect_Aim/Concentrated_Volley.webp', name: 'Concentrated Volley', detail: 'Hammer Upgrade' },
         ],
     },

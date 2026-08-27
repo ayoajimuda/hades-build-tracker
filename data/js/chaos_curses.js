@@ -90,7 +90,7 @@ export const chaos_curses = [
     text: "For the next 3–4 encounters, you cannot earn Obols.",
     duration: { min: 3, max: 4, unit: 'encounters' },
     trigger: null,
-    iconsrc: "/img/Chaos/Pauper's.webp",
+    iconsrc: "/img/Chaos/Paupers.webp",
     notes: ["Applies to all possible sources of Obol. Obol chamber rewards will still appear but do nothing. Price of Midas may also be offered but it will only inflict damage without giving anything."],
   },
   {
