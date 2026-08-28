@@ -122,3 +122,7 @@ export function curseConflicts(slots, activeCurseIds) {
     .filter((c) => c.trigger && active.has(c.id) && slots[c.trigger])
     .map((c) => `${c.title} punishes your ${c.trigger}`);
 }
+
+if (typeof window !== 'undefined') {
+  window.__data = { byId, boons };
+}

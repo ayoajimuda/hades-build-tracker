@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import SlotIcon from '@/components/SlotIcon';
 import Section from '@/components/Section';
+import QuickSearch from '@/components/QuickSearch';
+import { useBoardDrag } from '@/lib/useBoardDrag';
 import SkillCard from '@/components/SkillCard';
 import SkillInfo from '@/components/SkillInfo';
 import SkillPicker from '@/components/SkillPicker';
@@ -17,8 +19,6 @@ import '@/styles/create.css';
 const slugify = (s) =>
   s.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
-
-
 function uniqueSlug(base, builds) {
   let slug = base || 'untitled';
   let n = 2;
@@ -28,25 +28,21 @@ function uniqueSlug(base, builds) {
 
 /** A skill sitting directly on the board, outside any section. */
 function LooseSkill({ entry, onMove, onCycle, onRemove, onInfo }) {
-  const onPointerDown = useDrag(entry.position, onMove);
-  const moved = useRef(false);
+  const { onPointerDown, isDragging } = useDrag(entry.position, onMove);
 
   return (
     <div
       className="loose-skill"
       style={{ left: entry.position.x, top: entry.position.y }}
       onPointerDown={(e) => {
-        // let buttons inside the card handle their own clicks
         if (e.target.closest('button')) return;
-        moved.current = false;
         onPointerDown(e);
       }}
-      onPointerMove={() => { moved.current = true; }}
     >
       <SkillCard
         skill={entry.item}
         level={entry.level}
-        onCycle={() => { if (!moved.current) onCycle(); }}
+        onCycle={() => { if (!isDragging()) onCycle(); }}
         onDelete={onRemove}
         onInfo={onInfo}
       />
@@ -68,9 +64,11 @@ export default function Create() {
   const [browsing, setBrowsing] = useState(false);
   const [loadOpen, setLoadOpen] = useState(false);
   const [status, setStatus] = useState(null);
+  const [showInfo, setShowInfo] = useState(true);
 
   const loadRef = useRef(null);
   const nextId = useRef(1);
+  const sectionDrag = useRef(null);
 
   useEffect(() => {
     if (!loadOpen) return;
@@ -149,6 +147,51 @@ export default function Create() {
       })
     );
 
+
+    /** Move an entry between loose and sections, or reposition it. */
+    const handleDrop = useCallback(({ payload, sectionId, x, y }) => {
+      const { entry, from } = payload;
+
+      // remove from wherever it was
+      if (from.type === 'loose') {
+        setLoose((prev) => prev.filter((e) => e.uid !== entry.uid));
+      } else {
+        setSections((prev) =>
+          prev.map((s) =>
+            s.id === from.sectionId
+              ? { ...s, entries: s.entries.filter((e) => e.uid !== entry.uid) }
+              : s
+          )
+        );
+      }
+
+      // put it where it landed
+      if (sectionId) {
+        setSections((prev) =>
+          prev.map((s) =>
+            s.id === sectionId
+              ? { ...s, entries: [...s.entries, { uid: entry.uid, id: entry.id, level: entry.level }] }
+              : s
+          )
+        );
+      } else {
+        const canvas = document.querySelector('.board-canvas')?.getBoundingClientRect();
+        setLoose((prev) => [
+          ...prev,
+          {
+            uid: entry.uid,
+            id: entry.id,
+            level: entry.level,
+            position: {
+              x: Math.max(0, x - (canvas?.left ?? 0)),
+              y: Math.max(0, y - (canvas?.top ?? 0)),
+            },
+          },
+        ]);
+      }
+    }, []);
+
+const { drag, start: startDrag, isDragging } = useBoardDrag(handleDrop);
   /* ------------------------------------------------------------ loose skills */
 
   const moveLoose = (uid, position) =>
@@ -226,6 +269,30 @@ function addFromBrowser(item) {
         src: item.iconsrc, alt: item.title, name: item.title, detail: label,
       }));
   }
+
+  function startSectionDrag(e, section) {
+  sectionDrag.current = {
+    id: section.id,
+    px: e.clientX, py: e.clientY,
+    x: section.position.x, y: section.position.y,
+  };
+
+  const move = (ev) => {
+    const s = sectionDrag.current;
+    if (!s) return;
+    moveSection(s.id, {
+      x: Math.max(0, s.x + ev.clientX - s.px),
+      y: Math.max(0, s.y + ev.clientY - s.py),
+    });
+  };
+  const up = () => {
+    sectionDrag.current = null;
+    window.removeEventListener('pointermove', move);
+    window.removeEventListener('pointerup', up);
+  };
+  window.addEventListener('pointermove', move);
+  window.addEventListener('pointerup', up);
+}
 
   function handleSave() {
     const name = title.trim();
@@ -318,6 +385,7 @@ function addFromBrowser(item) {
         />
 
         <div className="toolbar-actions">
+          <QuickSearch onPick={addFromBrowser}/>
           <button type="button" className="board-button" onClick={addSection}>
             Add Section
           </button>
@@ -364,6 +432,22 @@ function addFromBrowser(item) {
           <button type="button" className="board-button" onClick={handleNew}>
             New Build
           </button>
+            <button
+              type="button"
+              className={`board-button ghost ${showInfo ? 'on' : ''}`}
+              onClick={() => setShowInfo((v) => !v)}
+              aria-pressed={showInfo}
+            >
+              Info
+            </button>
+
+            {showInfo && (
+              <SkillInfo
+                item={inspecting?.item}
+                level={inspecting?.level}
+                onClose={() => setShowInfo(false)}
+              />
+            )}
         </div>
       </div>
 
@@ -388,58 +472,64 @@ function addFromBrowser(item) {
             );
           })}
         </div>
-        onCycle={() => {
-          console.log('CLICK', {
-            title: item.title,
-            kind: item.kind,
-            rarities: item.rarities,
-            levelBefore: e.level,
-          });
-          cycleLoose(e.uid);
+
+<div className="board-canvas" onPointerDown={(e) => {
+  if (e.target.classList.contains('board-canvas')) setActiveSection(null);
+}}>
+  {sections.map((s) => (
+    <Section
+      key={s.id}
+      section={s}
+      active={s.id === activeSection}
+      dragOver={Boolean(drag)}
+      items={s.entries.map((e) => ({ ...e, item: byId(e.id) })).filter((e) => e.item)}
+      onFocus={() => setActiveSection(s.id)}
+      onHeadPointerDown={(e) => startSectionDrag(e, s)}
+      onCardPointerDown={(e, entry) =>
+        startDrag(e, { entry, from: { type: 'section', sectionId: s.id } })
+      }
+      onRename={(t) => renameSection(s.id, t)}
+      onAdd={() => setPicking({ kind: 'section', target: s.id })}
+      onRemove={(uid) => removeFromSection(s.id, uid)}
+      onCycle={(uid) => cycleInSection(s.id, uid)}
+      onInfo={(entry) => setInspecting({ item: entry.item, level: entry.level })}
+      onDelete={() => deleteSection(s.id)}
+    />
+  ))}
+
+  {loose.map((e) => {
+    const item = byId(e.id);
+    if (!item) return null;
+    if (drag?.payload.entry.uid === e.uid) return null;   // hidden while dragging
+    return (
+      <div
+        key={e.uid}
+        className="loose-skill"
+        style={{ left: e.position.x, top: e.position.y }}
+        onPointerDown={(ev) => {
+          if (ev.target.closest('button')) return;
+          startDrag(ev, { entry: e, from: { type: 'loose' } });
         }}
-        <div
-          className="board-canvas"
-          onPointerDown={(e) => {
-            if (e.target.classList.contains('board-canvas')) setActiveSection(null);
-          }}
-        >
-          {sections.map((s) => (
-            <Section
-              key={s.id}
-              section={s}
-              active={s.id === activeSection}
-              items={s.entries.map((e) => ({ ...e, item: byId(e.id) })).filter((e) => e.item)}
-              onFocus={() => setActiveSection(s.id)}
-              onMove={(p) => moveSection(s.id, p)}
-              onRename={(t) => renameSection(s.id, t)}
-              onAdd={() => setPicking({ kind: 'section', target: s.id })}
-              onRemove={(uid) => removeFromSection(s.id, uid)}
-              onCycle={(uid) => cycleInSection(s.id, uid)}
-              onDelete={() => deleteSection(s.id)}
-            />
-          ))}
+      >
+        <SkillCard
+          skill={item}
+          level={e.level}
+          onCycle={() => { if (!isDragging()) cycleLoose(e.uid); }}
+          onDelete={() => removeLoose(e.uid)}
+          onInfo={() => setInspecting({ item, level: e.level })}
+        />
+      </div>
+    );
+  })}
 
-          {loose.map((e) => {
-            const item = byId(e.id);
-            if (!item) return null;
-            return (
-              <LooseSkill
-                key={e.uid}
-                entry={{ ...e, item }}
-                onMove={(p) => moveLoose(e.uid, p)}
-                onCycle={() => cycleLoose(e.uid)}
-                onRemove={() => removeLoose(e.uid)}
-                onInfo={() => setInspecting({ item, level: e.level })}
-              />
-            );
-          })}
+  {sections.length === 0 && loose.length === 0 && (
+    <p className="canvas-empty">
+      Use <strong>Quick add</strong> or <strong>Add Skills</strong> to start, or
+      <strong> Add Section</strong> to group them.
+    </p>
+  )}
+</div>
 
-          {sections.length === 0 && loose.length === 0 && (
-            <p className="canvas-empty">
-              Click <strong>Add Skills</strong> to browse boons, or <strong>Add Section</strong> to group them.
-            </p>
-          )}
-        </div>
         <SkillInfo
             item={inspecting?.item}
             level={inspecting?.level}
@@ -458,6 +548,16 @@ function addFromBrowser(item) {
           }
           onClose={() => setPicking(null)}
         />
+      )}
+
+
+      {drag && (
+        <div
+          className="drag-preview"
+          style={{ left: drag.x - drag.offsetX, top: drag.y - drag.offsetY }}
+        >
+          <SkillCard skill={byId(drag.payload.entry.id)} level={drag.payload.entry.level} />
+        </div>
       )}
     </main>
   );

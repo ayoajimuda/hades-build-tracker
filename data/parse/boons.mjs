@@ -22,8 +22,7 @@ export function parseBoons() {
     }
 
     // rarities drive the cycle; fall back to the full ladder when absent
-    const rarities = raw.rarities ?? RARITIES;
-    if (raw.effect && raw.effect.length !== rarities.length)
+      const rarities = (raw.rarities ?? RARITIES).filter((r) => r !== 'legendary');    if (raw.effect && raw.effect.length !== rarities.length)
       problems.push(`boon "${raw.title}": ${raw.effect.length} effects for ${rarities.length} rarities`);
 
     items.push({

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { effectText, raritiesOf, maxLevel } from '@/lib/skills';
+import { effectText, maxLevel } from '@/lib/skills';
 
 export default function SkillCard({
   skill,
@@ -9,11 +9,6 @@ export default function SkillCard({
   onCycle,
   onInfo,
   onDelete,
-  draggable = false,
-  onDragStart,
-  onDragEnter,
-  onDragEnd,
-  dragging = false,
   mini = false,
 }) {
   if (!skill) return null;
@@ -21,21 +16,19 @@ export default function SkillCard({
   const rarity = level?.rarity;
   const rank = level?.rank;
   const levelClass = rarity ?? (rank ? `rank${rank}` : '');
-  const canCycle = maxLevel(skill) > 1;
+  const levels = maxLevel(skill);
+  const canCycle = levels > 1;
 
   return (
     <div
-      className={`skill ${mini ? 'mini' : ''} ${levelClass} ${dragging ? 'dragging' : ''}`}
-      draggable={draggable}
-      onDragStart={onDragStart}
-      onDragEnter={onDragEnter}
-      onDragEnd={onDragEnd}
+      className={`skill ${mini ? 'mini' : ''} ${levelClass}`}
       onClick={canCycle ? onCycle : undefined}
       style={canCycle ? undefined : { cursor: 'default' }}
       onContextMenu={(e) => {
         e.preventDefault();
         onInfo?.(skill);
       }}
+      title={canCycle ? 'Click to change rarity · right-click for details' : 'Right-click for details'}
     >
       <Image
         className="icon"
@@ -51,21 +44,7 @@ export default function SkillCard({
         <p className="skill-effect">{effectText(skill, level ?? {})}</p>
       </div>
 
-      {skill.tags?.slice(0, 2).map((tag, i) => (
-        <Image
-          key={tag}
-          className={`tag ${i === 1 ? 'left-tag' : ''}`}
-          src={`/img/Tags/${tag}.webp`}
-          alt=""
-          width={32}
-          height={32}
-          draggable={false}
-        />
-      ))}
-
-      {rank != null && (
-        <p className="skill-rank">{rank} / {raritiesOf(skill).length}</p>
-      )}
+      {rank != null && <p className="skill-rank">{rank} / {levels}</p>}
 
       {onDelete && (
         <button
