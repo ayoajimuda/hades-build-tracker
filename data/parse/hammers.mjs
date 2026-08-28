@@ -31,6 +31,7 @@ export function parseHammers() {
       items.push({
         ...raw,
         kind: 'hammer',
+        weaponId: weapon,
         excludes: raw.excludes ?? [],
         softConflicts: raw.softConflicts ?? [],
         aspectIncompatible: raw.aspectIncompatible ?? [],

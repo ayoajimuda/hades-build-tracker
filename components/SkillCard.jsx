@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { effectText, raritiesOf } from '@/lib/skills';
+import { effectText, raritiesOf, maxLevel } from '@/lib/skills';
 
 export default function SkillCard({
   skill,
@@ -21,7 +21,7 @@ export default function SkillCard({
   const rarity = level?.rarity;
   const rank = level?.rank;
   const levelClass = rarity ?? (rank ? `rank${rank}` : '');
-  const canCycle = raritiesOf(skill).length > 1;
+  const canCycle = maxLevel(skill) > 1;
 
   return (
     <div
@@ -31,6 +31,7 @@ export default function SkillCard({
       onDragEnter={onDragEnter}
       onDragEnd={onDragEnd}
       onClick={canCycle ? onCycle : undefined}
+      style={canCycle ? undefined : { cursor: 'default' }}
       onContextMenu={(e) => {
         e.preventDefault();
         onInfo?.(skill);
