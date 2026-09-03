@@ -1,17 +1,31 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { byId } from '@/data';
-import { effectText, raritiesOf } from '@/lib/skills';
+import Image from "next/image";
+import { byId } from "@/data";
+import { effectText, raritiesOf } from "@/lib/skills";
 
 const GOD_NAMES = {
-  APH: 'Aphrodite', ARE: 'Ares', ART: 'Artemis', ATH: 'Athena', DEM: 'Demeter',
-  DIO: 'Dionysus', HER: 'Hermes', POS: 'Poseidon', ZEU: 'Zeus', CHA: 'Chaos',
+  APH: "Aphrodite",
+  ARE: "Ares",
+  ART: "Artemis",
+  ATH: "Athena",
+  DEM: "Demeter",
+  DIO: "Dionysus",
+  HER: "Hermes",
+  POS: "Poseidon",
+  ZEU: "Zeus",
+  CHA: "Chaos",
 };
 
 const KIND_LABEL = {
-  boon: 'Boon', duo: 'Duo Boon', hammer: 'Hammer Upgrade', aspect: 'Weapon Aspect',
-  keepsake: 'Keepsake', companion: 'Companion', ware: 'Well of Charon', curse: 'Chaos Curse',
+  boon: "Boon",
+  duo: "Duo Boon",
+  hammer: "Hammer Upgrade",
+  aspect: "Weapon Aspect",
+  keepsake: "Keepsake",
+  companion: "Companion",
+  ware: "Well of Charon",
+  curse: "Chaos Curse",
 };
 
 /** A row of icon + name, used for requirement and exclusion lists. */
@@ -20,7 +34,13 @@ function ItemRow({ id }) {
   if (!item) return null;
   return (
     <li className="info-ref">
-      <Image src={item.iconsrc} alt="" width={28} height={28} draggable={false} />
+      <Image
+        src={item.iconsrc}
+        alt=""
+        width={28}
+        height={28}
+        draggable={false}
+      />
       <span>{item.title}</span>
     </li>
   );
@@ -36,7 +56,7 @@ export default function SkillInfo({ item, level, onClose }) {
     );
   }
 
-  const kind = KIND_LABEL[item.kind] ?? 'Item';
+  const kind = KIND_LABEL[item.kind] ?? "Item";
   const rarities = raritiesOf(item);
 
   return (
@@ -44,14 +64,25 @@ export default function SkillInfo({ item, level, onClose }) {
       <div className="info-top">
         <h2 className="info-heading">Skill Info</h2>
         {onClose && (
-          <button type="button" className="info-close" onClick={onClose} aria-label="Clear">
+          <button
+            type="button"
+            className="info-close"
+            onClick={onClose}
+            aria-label="Clear"
+          >
             ×
           </button>
         )}
       </div>
 
-      <div className={`info-card ${level?.rarity ?? ''}`}>
-        <Image src={item.iconsrc} alt="" width={72} height={72} draggable={false} />
+      <div className={`info-card ${level?.rarity ?? ""}`}>
+        <Image
+          src={item.iconsrc}
+          alt=""
+          width={72}
+          height={72}
+          draggable={false}
+        />
         <div className="info-card-text">
           <p className="info-name">{item.title}</p>
           <p className="info-effect">{effectText(item, level ?? {})}</p>
@@ -61,7 +92,10 @@ export default function SkillInfo({ item, level, onClose }) {
       <dl className="info-meta">
         <div>
           <dt>Type</dt>
-          <dd>{kind}{item.legendary ? ' (Legendary)' : ''}</dd>
+          <dd>
+            {kind}
+            {item.legendary ? " (Legendary)" : ""}
+          </dd>
         </div>
 
         {item.god && (
@@ -74,7 +108,7 @@ export default function SkillInfo({ item, level, onClose }) {
         {item.gods && (
           <div>
             <dt>Gods</dt>
-            <dd>{item.gods.map((g) => GOD_NAMES[g] ?? g).join(' + ')}</dd>
+            <dd>{item.gods.map((g) => GOD_NAMES[g] ?? g).join(" + ")}</dd>
           </div>
         )}
 
@@ -95,21 +129,26 @@ export default function SkillInfo({ item, level, onClose }) {
         {item.affects && (
           <div>
             <dt>Affects</dt>
-            <dd className="cap">{item.affects.replace('-', ' ')}</dd>
+            <dd className="cap">{item.affects.replace("-", " ")}</dd>
           </div>
         )}
 
         {level?.rarity && rarities.length > 1 && (
           <div>
             <dt>Rarity</dt>
-            <dd className="cap">{level.rarity} — {rarities.indexOf(level.rarity) + 1} of {rarities.length}</dd>
+            <dd className="cap">
+              {level.rarity} — {rarities.indexOf(level.rarity) + 1} of{" "}
+              {rarities.length}
+            </dd>
           </div>
         )}
 
         {level?.rank && (
           <div>
             <dt>Rank</dt>
-            <dd>{level.rank} of {item.ranks.length}</dd>
+            <dd>
+              {level.rank} of {item.ranks.length}
+            </dd>
           </div>
         )}
 
@@ -130,7 +169,10 @@ export default function SkillInfo({ item, level, onClose }) {
         {item.duration && (
           <div>
             <dt>Duration</dt>
-            <dd>{item.duration.text ?? `${item.duration.min}–${item.duration.max} ${item.duration.unit}`}</dd>
+            <dd>
+              {item.duration.text ??
+                `${item.duration.min}–${item.duration.max} ${item.duration.unit}`}
+            </dd>
           </div>
         )}
       </dl>
@@ -139,7 +181,9 @@ export default function SkillInfo({ item, level, onClose }) {
         <section className="info-block">
           <h3>Values</h3>
           <ul className="info-list">
-            {item.stats.map((s) => <li key={s}>{s}</li>)}
+            {item.stats.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
           </ul>
         </section>
       )}
@@ -151,7 +195,9 @@ export default function SkillInfo({ item, level, onClose }) {
             <div key={r.god} className="info-group">
               <p className="info-group-label">{GOD_NAMES[r.god] ?? r.god}</p>
               <ul className="info-refs">
-                {r.any.map((id) => <ItemRow key={id} id={id} />)}
+                {r.any.map((id) => (
+                  <ItemRow key={id} id={id} />
+                ))}
               </ul>
             </div>
           ))}
@@ -164,15 +210,19 @@ export default function SkillInfo({ item, level, onClose }) {
           {item.prerequisites.map((g, i) => (
             <div key={i} className="info-group">
               <p className="info-group-label">
-                {g.count === 1 ? 'One of' : `${g.count} of`}
+                {g.count === 1 ? "One of" : `${g.count} of`}
               </p>
               <ul className="info-refs">
-                {g.any.map((id) => <ItemRow key={id} id={id} />)}
+                {g.any.map((id) => (
+                  <ItemRow key={id} id={id} />
+                ))}
               </ul>
             </div>
           ))}
           {item.prerequisiteItems?.map((x) => (
-            <p key={x} className="info-note">Or: {x}</p>
+            <p key={x} className="info-note">
+              Or: {x}
+            </p>
           ))}
         </section>
       )}
@@ -181,7 +231,9 @@ export default function SkillInfo({ item, level, onClose }) {
         <section className="info-block">
           <h3>Cannot combine with</h3>
           <ul className="info-refs">
-            {item.excludes.map((id) => <ItemRow key={id} id={id} />)}
+            {item.excludes.map((id) => (
+              <ItemRow key={id} id={id} />
+            ))}
           </ul>
         </section>
       )}
@@ -190,18 +242,22 @@ export default function SkillInfo({ item, level, onClose }) {
         <section className="info-block">
           <h3>Interacts poorly with</h3>
           <ul className="info-refs">
-            {item.softConflicts.map((id) => <ItemRow key={id} id={id} />)}
+            {item.softConflicts.map((id) => (
+              <ItemRow key={id} id={id} />
+            ))}
           </ul>
         </section>
       )}
 
       {item.aspectExclusive && (
-        <p className="info-note accent">Aspect of {item.aspectExclusive} only.</p>
+        <p className="info-note accent">
+          Aspect of {item.aspectExclusive} only.
+        </p>
       )}
 
       {item.aspectIncompatible?.length > 0 && (
         <p className="info-note">
-          Not available with Aspect of {item.aspectIncompatible.join(' or ')}.
+          Not available with Aspect of {item.aspectIncompatible.join(" or ")}.
         </p>
       )}
 
@@ -211,7 +267,9 @@ export default function SkillInfo({ item, level, onClose }) {
         <section className="info-block">
           <h3>Drops</h3>
           <ul className="info-list">
-            {item.drops.map((d) => <li key={d}>{d}</li>)}
+            {item.drops.map((d) => (
+              <li key={d}>{d}</li>
+            ))}
           </ul>
         </section>
       )}
@@ -220,7 +278,9 @@ export default function SkillInfo({ item, level, onClose }) {
         <section className="info-block">
           <h3>Additional Information</h3>
           <ul className="info-list">
-            {item.notes.map((n) => <li key={n}>{n}</li>)}
+            {item.notes.map((n) => (
+              <li key={n}>{n}</li>
+            ))}
           </ul>
         </section>
       )}

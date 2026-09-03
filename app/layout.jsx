@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata = {
   title: "Hades Build Tracker",

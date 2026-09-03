@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import '../styles/header.css';
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "../styles/header.css";
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/builds', label: 'Builds' },
-  { href: '/tutorial', label: 'Tutorial' },
-  { href: '/create', label: 'Create', right: true },
+  { href: "/", label: "Home" },
+  { href: "/builds", label: "Builds" },
+  { href: "/tutorial", label: "Tutorial" },
+  { href: "/create", label: "Create", right: true },
 ];
 
 const Header = () => {
@@ -21,14 +21,14 @@ const Header = () => {
         <ul>
           {links.map(({ href, label, right }) => {
             const isActive =
-              href === '/' ? pathname === '/' : pathname.startsWith(href);
+              href === "/" ? pathname === "/" : pathname.startsWith(href);
 
             return (
-              <li key={href} className={right ? 'right' : undefined}>
+              <li key={href} className={right ? "right" : undefined}>
                 <Link
                   href={href}
-                  className={isActive ? 'active' : undefined}
-                  aria-current={isActive ? 'page' : undefined}
+                  className={isActive ? "active" : undefined}
+                  aria-current={isActive ? "page" : undefined}
                 >
                   {label}
                 </Link>

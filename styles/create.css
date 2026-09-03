@@ -4,26 +4,30 @@
 
 .board-page,
 .browser-layout {
-  --bg:            #0f1115;
-  --panel:         #16181d;
-  --panel-raised:  #1c1f26;
-  --line:          #3a3f47;
-  --line-soft:     #2a2f38;
-  --text:          #f2f2f2;
-  --text-dim:      #9aa0a8;
-  --text-faint:    #6b7079;
-  --accent:        #d81e4a;
-  --ok:            #6ecb8b;
-  --bad:           #ff6b81;
+  --bg: #0f1115;
+  --panel: #16181d;
+  --panel-raised: #1c1f26;
+  --line: #3a3f47;
+  --line-soft: #2a2f38;
+  --text: #f2f2f2;
+  --text-dim: #9aa0a8;
+  --text-faint: #6b7079;
+  --accent: #d81e4a;
+  --ok: #6ecb8b;
+  --bad: #ff6b81;
 
-  --common:    #8a8f98;
-  --rare:      #4a9fe0;
-  --epic:      #a45fd8;
-  --heroic:    #d8a13a;
+  --common: #8a8f98;
+  --rare: #4a9fe0;
+  --epic: #a45fd8;
+  --heroic: #d8a13a;
   --legendary: #e0c04a;
 
   --radius: 0.5rem;
-  --gap:    1.5rem;
+  --gap: 1.5rem;
+}
+
+.board-page {
+  overflow-x: hidden;
 }
 
 /* ---------------------------------------------------------------- toolbar */
@@ -31,51 +35,66 @@
 .board-toolbar {
   display: flex;
   align-items: center;
-  gap: var(--gap);
-  padding: 0.75rem 2rem;
+  flex-wrap: wrap; /* wrap instead of overflowing */
+  gap: 0.75rem 1rem;
+  padding: 0.7rem 1.5rem;
   background: var(--panel);
   border-bottom: 2px solid var(--line);
 }
 
 .board-title {
-  font-size: 2.5rem;
+  flex: 0 1 auto;
+  min-width: 8ch;
+  width: 16ch; /* was 22ch */
+  font-size: 2rem; /* was 2.5rem */
   font-variant: small-caps;
   letter-spacing: 0.04em;
   color: var(--text);
   background: transparent;
   border: none;
   outline: none;
-  width: 22ch;
   padding: 0;
 }
 
-.board-title::placeholder { color: var(--text); opacity: 1; }
-.board-title:focus::placeholder { opacity: 0.35; }
+.board-title::placeholder {
+  color: var(--text);
+  opacity: 1;
+}
+.board-title:focus::placeholder {
+  opacity: 0.35;
+}
 
 .toolbar-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0; /* lets the row shrink */
+  justify-content: flex-end;
 }
 
 .board-button {
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* was 0.9rem */
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--text);
   background: transparent;
   border: 2px solid var(--accent);
   border-radius: 999px;
-  padding: 0.55rem 1.3rem;
+  padding: 0.45rem 0.95rem; /* was 0.55rem 1.3rem */
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
-.board-button:hover { background: var(--accent); }
+.board-button:hover {
+  background: var(--accent);
+}
 
 .board-button:focus-visible {
   outline: 2px solid var(--text);
@@ -84,7 +103,9 @@
 
 /* -------------------------------------------------------------- load menu */
 
-.load-wrap { position: relative; }
+.load-wrap {
+  position: relative;
+}
 
 .load-menu {
   position: absolute;
@@ -116,7 +137,9 @@
   cursor: pointer;
 }
 
-.load-item:hover { background: var(--line-soft); }
+.load-item:hover {
+  background: var(--line-soft);
+}
 
 .load-empty {
   padding: 0.55rem 0.75rem;
@@ -129,8 +152,12 @@
   font-size: 0.9rem;
 }
 
-.board-status.ok    { color: var(--ok); }
-.board-status.error { color: var(--bad); }
+.board-status.ok {
+  color: var(--ok);
+}
+.board-status.error {
+  color: var(--bad);
+}
 
 /* ------------------------------------------------------------------ board */
 
@@ -145,6 +172,7 @@
     linear-gradient(to right, #23262d 1px, transparent 1px),
     linear-gradient(to bottom, #23262d 1px, transparent 1px);
   background-size: 40px 40px;
+  overflow: hidden;
 }
 
 /* ------------------------------------------------------------ slot column */
@@ -184,33 +212,52 @@
   transform: rotate(45deg);
   background: linear-gradient(135deg, #2c313a, var(--panel));
   border: 1px solid var(--line);
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
 }
 
 .slot-diamond img {
   position: relative;
   filter: brightness(2.6) saturate(1.4);
-  transition: filter 0.15s ease, transform 0.15s ease;
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease;
 }
 
-.slot-diamond:hover img { transform: scale(1.06); }
-.slot-diamond:hover .slot-plate { border-color: var(--accent); }
+.slot-diamond:hover img {
+  transform: scale(1.06);
+}
+.slot-diamond:hover .slot-plate {
+  border-color: var(--accent);
+}
 
-.slot-diamond:focus-visible { outline: none; }
+.slot-diamond:focus-visible {
+  outline: none;
+}
 .slot-diamond:focus-visible .slot-plate {
   border-color: var(--text);
   box-shadow: 0 0 0 2px rgb(242 242 242 / 0.3);
 }
 
-.slot.filled .slot-diamond img { filter: none; }
+.slot.filled .slot-diamond img {
+  filter: none;
+}
 .slot.filled .slot-plate {
   background: linear-gradient(135deg, #3a2028, #1a1418);
   border-color: var(--accent);
 }
 
-.slot-text { position: relative; min-width: 22rem; }
+.slot-text {
+  position: relative;
+  min-width: 22rem;
+}
 
-.slot-name { margin: 0; font-size: 1.35rem; color: var(--text); }
+.slot-name {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--text);
+}
 
 .slot-effect {
   margin: 0.2rem 0 0;
@@ -238,18 +285,34 @@
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.45;                    /* was hidden until hover */
-  transition: opacity 0.15s ease, color 0.15s ease;
+  opacity: 0.45; /* was hidden until hover */
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
 }
 
-.slot:hover .slot-clear { opacity: 1; }
-.slot-clear:hover { color: var(--bad); }
+.slot:hover .slot-clear {
+  opacity: 1;
+}
+.slot-clear:hover {
+  color: var(--bad);
+}
 
-.slot.common    .slot-plate { border-color: var(--common); }
-.slot.rare      .slot-plate { border-color: var(--rare); }
-.slot.epic      .slot-plate { border-color: var(--epic); }
-.slot.heroic    .slot-plate { border-color: var(--heroic); }
-.slot.legendary .slot-plate { border-color: var(--legendary); }
+.slot.common .slot-plate {
+  border-color: var(--common);
+}
+.slot.rare .slot-plate {
+  border-color: var(--rare);
+}
+.slot.epic .slot-plate {
+  border-color: var(--epic);
+}
+.slot.heroic .slot-plate {
+  border-color: var(--heroic);
+}
+.slot.legendary .slot-plate {
+  border-color: var(--legendary);
+}
 
 /* ----------------------------------------------------------- board canvas */
 
@@ -281,7 +344,10 @@
   transition: border-color 0.15s ease;
 }
 
-.board-section.active { border-color: var(--accent); z-index: 2; }
+.board-section.active {
+  border-color: var(--accent);
+  z-index: 2;
+}
 
 .section-head {
   display: flex;
@@ -294,9 +360,15 @@
   user-select: none;
 }
 
-.section-head:active { cursor: grabbing; }
+.section-head:active {
+  cursor: grabbing;
+}
 
-.drag-handle { color: var(--text-faint); font-size: 1rem; line-height: 1; }
+.drag-handle {
+  color: var(--text-faint);
+  font-size: 1rem;
+  line-height: 1;
+}
 
 .section-title {
   flex: 1;
@@ -311,7 +383,9 @@
   cursor: text;
 }
 
-.section-title:focus { border-bottom: 1px solid var(--line); }
+.section-title:focus {
+  border-bottom: 1px solid var(--line);
+}
 
 .section-delete {
   font-size: 1.3rem;
@@ -321,11 +395,17 @@
   border: none;
   cursor: pointer;
   opacity: 0.55;
-  transition: opacity 0.15s ease, color 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
 }
 
-.board-section:hover .section-delete { opacity: 1; }
-.section-delete:hover { color: var(--bad); }
+.board-section:hover .section-delete {
+  opacity: 1;
+}
+.section-delete:hover {
+  color: var(--bad);
+}
 
 .section-grid {
   display: flex;
@@ -345,11 +425,19 @@
   border: 2px dashed var(--line);
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
-.section-add:hover { border-color: var(--accent); color: var(--text); }
-.section-add span:first-child { font-size: 1.3rem; line-height: 1; }
+.section-add:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.section-add span:first-child {
+  font-size: 1.3rem;
+  line-height: 1;
+}
 
 .loose-skill {
   position: absolute;
@@ -358,8 +446,12 @@
   touch-action: none;
 }
 
-.loose-skill:active { cursor: grabbing; }
-.loose-skill .skill { cursor: pointer; }
+.loose-skill:active {
+  cursor: grabbing;
+}
+.loose-skill .skill {
+  cursor: pointer;
+}
 
 /* ------------------------------------------------------------ skill cards */
 
@@ -373,16 +465,30 @@
   border: 2px solid var(--common);
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
 }
 
-.skill:hover { background: #232830; }
+.skill:hover {
+  background: #232830;
+}
 
-.skill .icon { width: 56px; height: 56px; flex-shrink: 0; }
+.skill .icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
 
-.skill-body { min-width: 0; }
+.skill-body {
+  min-width: 0;
+}
 
-.skill-title { margin: 0; font-size: 1rem; color: var(--text); }
+.skill-title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
 
 .skill-effect {
   margin: 0.15rem 0 0;
@@ -408,7 +514,9 @@
   height: 22px;
 }
 
-.skill .tag.left-tag { right: 2.1rem; }
+.skill .tag.left-tag {
+  right: 2.1rem;
+}
 
 .skill-deleter {
   position: absolute;
@@ -420,23 +528,50 @@
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.45;                    /* was hidden until hover */
-  transition: opacity 0.15s ease, color 0.15s ease;
+  opacity: 0.45; /* was hidden until hover */
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
 }
 
-.skill:hover .skill-deleter { opacity: 1; }
-.skill-deleter:hover { color: var(--bad); }
+.skill:hover .skill-deleter {
+  opacity: 1;
+}
+.skill-deleter:hover {
+  color: var(--bad);
+}
 
-.skill.mini { padding: 0.35rem; }
-.skill.mini .icon { width: 36px; height: 36px; }
-.skill.mini .skill-effect { display: none; }
+.skill.mini {
+  padding: 0.35rem;
+}
+.skill.mini .icon {
+  width: 36px;
+  height: 36px;
+}
+.skill.mini .skill-effect {
+  display: none;
+}
 
-.skill.common    { border-color: var(--common); }
-.skill.rare      { border-color: var(--rare); }
-.skill.epic      { border-color: var(--epic); }
-.skill.heroic    { border-color: var(--heroic); }
-.skill.legendary { border-color: var(--legendary); }
-.skill.rank1, .skill.rank2, .skill.rank3 { border-color: var(--common); }
+.skill.common {
+  border-color: var(--common);
+}
+.skill.rare {
+  border-color: var(--rare);
+}
+.skill.epic {
+  border-color: var(--epic);
+}
+.skill.heroic {
+  border-color: var(--heroic);
+}
+.skill.legendary {
+  border-color: var(--legendary);
+}
+.skill.rank1,
+.skill.rank2,
+.skill.rank3 {
+  border-color: var(--common);
+}
 
 /* ================================================= skill selection browser */
 
@@ -447,15 +582,15 @@
   grid-template-columns: 1fr 26rem;
   background: var(--bg);
   z-index: 50;
-  overflow: hidden;          /* add */
+  overflow: hidden; /* add */
 }
 
 .browser {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 0;             /* add — lets the flex child shrink below content height */
-  overflow: hidden;          /* add */
+  min-height: 0; /* add — lets the flex child shrink below content height */
+  overflow: hidden; /* add */
 }
 
 .browser-head {
@@ -506,11 +641,18 @@
   border-bottom: 2px solid transparent;
   padding: 0.5rem 0.9rem;
   cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
-.browser-tab:hover { color: var(--text); }
-.browser-tab.on { color: var(--text); border-bottom-color: var(--accent); }
+.browser-tab:hover {
+  color: var(--text);
+}
+.browser-tab.on {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
 
 .tab-count {
   font-size: 0.75rem;
@@ -520,7 +662,9 @@
   padding: 0.05rem 0.4rem;
 }
 
-.browser-tab.on .tab-count { color: var(--text-dim); }
+.browser-tab.on .tab-count {
+  color: var(--text-dim);
+}
 
 /* filter bar — label and chips share one baseline */
 .browser-filters {
@@ -558,10 +702,16 @@
   border-radius: 999px;
   padding: 0.28rem 0.75rem;
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease;
 }
 
-.filter-chip:hover { color: var(--text); border-color: var(--text-faint); }
+.filter-chip:hover {
+  color: var(--text);
+  border-color: var(--text-faint);
+}
 
 .filter-chip.on {
   color: var(--text);
@@ -579,7 +729,9 @@
   white-space: nowrap;
 }
 
-.filter-clear:hover { color: var(--text); }
+.filter-clear:hover {
+  color: var(--text);
+}
 
 .browser-body {
   flex: 1;
@@ -587,8 +739,12 @@
   padding: 2rem;
 }
 
-.browser-group { margin-bottom: 3rem; }
-.browser-group:last-child { margin-bottom: 0; }
+.browser-group {
+  margin-bottom: 3rem;
+}
+.browser-group:last-child {
+  margin-bottom: 0;
+}
 
 .group-heading {
   margin: 0 0 1.25rem;
@@ -618,7 +774,10 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.1s ease;
 }
 
 .browse-card:hover {
@@ -695,7 +854,9 @@
   color: var(--text-faint);
 }
 
-.picker-category:first-child { margin-top: 0; }
+.picker-category:first-child {
+  margin-top: 0;
+}
 
 /* one row per option — this is the block that was missing */
 .picker-row {
@@ -712,7 +873,9 @@
   border: 1px solid var(--line-soft);
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
 }
 
 .picker-row:hover {
@@ -720,7 +883,9 @@
   border-color: var(--accent);
 }
 
-.picker-row:last-child { margin-bottom: 0; }
+.picker-row:last-child {
+  margin-bottom: 0;
+}
 
 .picker-row img {
   flex-shrink: 0;
@@ -753,7 +918,9 @@
   box-shadow: 0 0 0 1px var(--heroic);
 }
 
-.browse-card img { flex-shrink: 0; }
+.browse-card img {
+  flex-shrink: 0;
+}
 
 .browse-card-text {
   display: flex;
@@ -787,7 +954,9 @@
   outline: none;
 }
 
-.picker-search:focus { border-color: var(--accent); }
+.picker-search:focus {
+  border-color: var(--accent);
+}
 
 .picker-empty {
   padding: 3rem 0;
@@ -797,22 +966,30 @@
 
 /* ---------------------------------------------------------- quick search */
 
-.quick-search { position: relative; margin-right: auto; }
+.quick-search {
+  position: relative;
+  flex: 1 1 12rem;
+  min-width: 10rem;
+  max-width: 20rem;
+  /* margin-right: auto  ← remove this */
+}
 
 .quick-input {
-  width: 18rem;
+  width: 100%; /* was 18rem */
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text);
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   outline: none;
+  transition: border-color 0.15s ease;
 }
 
-.quick-input:focus { border-color: var(--accent); width: 24rem; }
-.quick-input { transition: width 0.15s ease, border-color 0.15s ease; }
+.quick-input:focus {
+  border-color: var(--accent);
+}
 
 .quick-results {
   position: absolute;
@@ -845,8 +1022,13 @@
   cursor: pointer;
 }
 
-.quick-result.on { background: var(--line-soft); }
-.quick-name { flex: 1; min-width: 0; }
+.quick-result.on {
+  background: var(--line-soft);
+}
+.quick-name {
+  flex: 1;
+  min-width: 0;
+}
 
 .quick-kind {
   font-size: 0.72rem;
@@ -873,7 +1055,9 @@
   z-index: 70;
 }
 
-.board-section.drop-target { border-style: dashed; }
+.board-section.drop-target {
+  border-style: dashed;
+}
 
 .board-section.drop-target:hover {
   border-color: var(--ok);
@@ -881,8 +1065,12 @@
   box-shadow: 0 0 0 2px rgb(110 203 139 / 0.25);
 }
 
-.section-grid > div { cursor: grab; }
-.section-grid > div:active { cursor: grabbing; }
+.section-grid > div {
+  cursor: grab;
+}
+.section-grid > div:active {
+  cursor: grabbing;
+}
 
 /* --------------------------------------------------------- info toggle */
 
@@ -891,8 +1079,13 @@
   color: var(--text-faint);
 }
 
-.board-button.ghost:hover { background: var(--line-soft); }
-.board-button.ghost.on { border-color: var(--accent); color: var(--text); }
+.board-button.ghost:hover {
+  background: var(--line-soft);
+}
+.board-button.ghost.on {
+  border-color: var(--accent);
+  color: var(--text);
+}
 
 /* -------------------------------------------------------------- info panel */
 
@@ -909,7 +1102,10 @@
   min-height: 0;
 }
 
-.info-top { display: flex; align-items: center; }
+.info-top {
+  display: flex;
+  align-items: center;
+}
 
 .info-heading {
   flex: 1;
@@ -930,7 +1126,9 @@
   cursor: pointer;
 }
 
-.info-close:hover { color: var(--bad); }
+.info-close:hover {
+  color: var(--bad);
+}
 
 .info-empty {
   padding: 2rem 0;
@@ -948,13 +1146,25 @@
   border-radius: var(--radius);
 }
 
-.info-card.rare      { border-color: var(--rare); }
-.info-card.epic      { border-color: var(--epic); }
-.info-card.heroic    { border-color: var(--heroic); }
-.info-card.legendary { border-color: var(--legendary); }
+.info-card.rare {
+  border-color: var(--rare);
+}
+.info-card.epic {
+  border-color: var(--epic);
+}
+.info-card.heroic {
+  border-color: var(--heroic);
+}
+.info-card.legendary {
+  border-color: var(--legendary);
+}
 
-.info-card img { flex-shrink: 0; }
-.info-card-text { min-width: 0; }
+.info-card img {
+  flex-shrink: 0;
+}
+.info-card-text {
+  min-width: 0;
+}
 
 .info-name {
   margin: 0 0 0.3rem;
@@ -977,7 +1187,10 @@
   font-size: 0.85rem;
 }
 
-.info-meta > div { display: flex; gap: 0.75rem; }
+.info-meta > div {
+  display: flex;
+  gap: 0.75rem;
+}
 
 .info-meta dt {
   width: 5.5rem;
@@ -985,8 +1198,13 @@
   color: var(--text-faint);
 }
 
-.info-meta dd { margin: 0; color: var(--text); }
-.info-meta .cap { text-transform: capitalize; }
+.info-meta dd {
+  margin: 0;
+  color: var(--text);
+}
+.info-meta .cap {
+  text-transform: capitalize;
+}
 
 .info-block {
   padding-top: 1rem;
@@ -1009,9 +1227,13 @@
   color: var(--text-dim);
 }
 
-.info-list li { margin-bottom: 0.35rem; }
+.info-list li {
+  margin-bottom: 0.35rem;
+}
 
-.info-group { margin-bottom: 0.9rem; }
+.info-group {
+  margin-bottom: 0.9rem;
+}
 
 .info-group-label {
   margin: 0 0 0.35rem;
@@ -1040,24 +1262,64 @@
   padding: 0.2rem 0.6rem 0.2rem 0.2rem;
 }
 
-.info-note { margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-dim); }
-.info-note.accent { color: var(--heroic); }
-.info-note.warn   { color: var(--bad); }
+.info-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.info-note.accent {
+  color: var(--heroic);
+}
+.info-note.warn {
+  color: var(--bad);
+}
 
 /* ----------------------------------------------------------------- mobile */
 
 @media (max-width: 75rem) {
-  .browser-layout { grid-template-columns: 1fr; }
-  .browser-layout .skill-info { display: none; }
+  .browser-layout {
+    grid-template-columns: 1fr;
+  }
+  .browser-layout .skill-info {
+    display: none;
+  }
 }
 
 @media (max-width: 60rem) {
-  .board { flex-direction: column; gap: 2rem; padding: 2rem; }
-  .board .skill-info { width: 100%; border-left: none; border-top: 2px solid var(--line); }
-  .board-toolbar { flex-wrap: wrap; gap: 1rem; }
-  .toolbar-actions { margin-left: 0; }
-  .board-title { width: 100%; font-size: 2rem; }
-  .slot-text { min-width: 0; }
-  .board-section { position: static; width: 100%; margin-bottom: 1rem; }
-  .loose-skill { position: static; width: 100%; margin-bottom: 0.75rem; }
+  .board {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .board .skill-info {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid var(--line);
+  }
+  .board-title {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+  .quick-search {
+    flex: 1 1 100%;
+    max-width: none;
+    order: -1;
+  }
+  .toolbar-actions {
+    justify-content: flex-start;
+  }
+  .slot-text {
+    min-width: 0;
+  }
+  .board-section {
+    position: static;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .loose-skill {
+    position: static;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
 }

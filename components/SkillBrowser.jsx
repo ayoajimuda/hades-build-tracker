@@ -7,29 +7,29 @@ import { effectText } from '@/lib/skills';
 
 const GODS = [
   { code: 'APH', name: 'Aphrodite' }, { code: 'ARE', name: 'Ares' },
-  { code: 'ART', name: 'Artemis' },   { code: 'ATH', name: 'Athena' },
-  { code: 'DEM', name: 'Demeter' },   { code: 'DIO', name: 'Dionysus' },
-  { code: 'HER', name: 'Hermes' },    { code: 'POS', name: 'Poseidon' },
-  { code: 'ZEU', name: 'Zeus' },      { code: 'CHA', name: 'Chaos' },
+  { code: 'ART', name: 'Artemis' }, { code: 'ATH', name: 'Athena' },
+  { code: 'DEM', name: 'Demeter' }, { code: 'DIO', name: 'Dionysus' },
+  { code: 'HER', name: 'Hermes' }, { code: 'POS', name: 'Poseidon' },
+  { code: 'ZEU', name: 'Zeus' }, { code: 'CHA', name: 'Chaos' },
 ];
 
 const WEAPONS = [
-  { id: 'rail', name: 'Adamant Rail' },   { id: 'bow', name: 'Heart-Seeking Bow' },
+  { id: 'rail', name: 'Adamant Rail' }, { id: 'bow', name: 'Heart-Seeking Bow' },
   { id: 'shield', name: 'Shield of Chaos' }, { id: 'spear', name: 'Eternal Spear' },
-  { id: 'blade', name: 'Stygian Blade' },  { id: 'fists', name: 'Twin Fists' },
+  { id: 'blade', name: 'Stygian Blade' }, { id: 'fists', name: 'Twin Fists' },
 ];
 
 const alpha = (l) => [...l].sort((a, b) => a.title.localeCompare(b.title));
 
 const CATEGORIES = [
-  { id: 'boons',     label: 'Boons',          items: alpha(boons.filter((b) => !b.legendary)), groupBy: 'god' },
-  { id: 'duos',      label: 'Duos',           items: alpha(duos),                              groupBy: null },
-  { id: 'legendary', label: 'Legendary',      items: alpha(boons.filter((b) => b.legendary)),  groupBy: 'god' },
-  { id: 'hammers',   label: 'Hammers',        items: alpha(hammers),                           groupBy: 'weapon' },
-  { id: 'aspects',   label: 'Aspects',        items: alpha(aspects),                           groupBy: 'weapon' },
-  { id: 'keepsakes', label: 'Keepsakes',      items: alpha([...keepsakes, ...companions]),     groupBy: null },
-  { id: 'wares',     label: 'Well of Charon', items: alpha(wares),                             groupBy: null },
-  { id: 'curses',    label: 'Curses',         items: alpha(curses),                            groupBy: null },
+  { id: 'boons', label: 'Boons', items: alpha(boons.filter((b) => !b.legendary)), groupBy: 'god' },
+  { id: 'duos', label: 'Duos', items: alpha(duos), groupBy: null },
+  { id: 'legendary', label: 'Legendary', items: alpha(boons.filter((b) => b.legendary)), groupBy: 'god' },
+  { id: 'hammers', label: 'Hammers', items: alpha(hammers), groupBy: 'weapon' },
+  { id: 'aspects', label: 'Aspects', items: alpha(aspects), groupBy: 'weapon' },
+  { id: 'keepsakes', label: 'Keepsakes', items: alpha([...keepsakes, ...companions]), groupBy: null },
+  { id: 'wares', label: 'Well of Charon', items: alpha(wares), groupBy: null },
+  { id: 'curses', label: 'Curses', items: alpha(curses), groupBy: null },
 ];
 
 export default function SkillBrowser({ onPick, onInspect, selectedId, onClose }) {
@@ -44,12 +44,12 @@ export default function SkillBrowser({ onPick, onInspect, selectedId, onClose })
   const results = useMemo(() => {
     const q = search.trim().toLowerCase();
     return category.items.filter((item) => {
-    if (filters.length) {
-    const keys = category.groupBy === 'god'
-        ? (item.gods ?? (item.god ? [item.god] : []))
-        : [item.weaponId ?? item.weapon].filter(Boolean);
-    if (!keys.some((k) => filters.includes(k))) return false;
-    }
+      if (filters.length) {
+        const keys = category.groupBy === 'god'
+          ? (item.gods ?? (item.god ? [item.god] : []))
+          : [item.weaponId ?? item.weapon].filter(Boolean);
+        if (!keys.some((k) => filters.includes(k))) return false;
+      }
       if (!q) return true;
       return `${item.title} ${item.text ?? ''} ${item.description ?? ''}`
         .toLowerCase().includes(q);
@@ -61,8 +61,8 @@ export default function SkillBrowser({ onPick, onInspect, selectedId, onClose })
     if (!category.groupBy || search.trim()) return [{ label: null, items: results }];
     const set = category.groupBy === 'god' ? GODS : WEAPONS;
     const key = category.groupBy === 'god'
-    ? (i) => i.god
-    : (i) => i.weaponId ?? i.weapon; 
+      ? (i) => i.god
+      : (i) => i.weaponId ?? i.weapon;
     return set
       .map((g) => ({
         label: g.name,
